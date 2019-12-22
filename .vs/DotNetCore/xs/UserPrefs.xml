@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{DB09FF11-EEAC-48E4-8077-8F352B33F632}|Default">
+  <MonoDevelop.Ide.ItemProperties.Jabo.WebSite.Jabo.Core PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Jabo.Tools/ProtoBufTool.cs">
+    <Files>
+      <File FileName="Jabo.Tools/ProtoBufTool.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DotNetCore" expanded="True">
+            <Node name="Jabo.Tools" expanded="True">
+              <Node name="Jabo.Tools" expanded="True">
+                <Node name="ProtoBufTool.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

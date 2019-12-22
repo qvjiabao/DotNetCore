@@ -16,7 +16,7 @@ namespace Jabo.Tools
         /// 序列化
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="t"></param>
+        /// <param name="obj"></param>
         /// <returns></returns>
         public static byte[] Serialize(object obj)
         {
@@ -40,7 +40,7 @@ namespace Jabo.Tools
         /// 反序列化
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="content"></param>
+        /// <param name="data"></param>
         /// <returns></returns>
         public static T DeSerialize<T>(byte[] data)
         {
