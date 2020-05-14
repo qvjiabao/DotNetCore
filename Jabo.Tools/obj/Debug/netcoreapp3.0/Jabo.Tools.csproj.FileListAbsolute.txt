@@ -8,7 +8,6 @@
 /Users/soft/dotnet/DotNetCore/Jabo.Tools/bin/Debug/netcoreapp3.0/Jabo.Tools.deps.json
 /Users/soft/dotnet/DotNetCore/Jabo.Tools/bin/Debug/netcoreapp3.0/Jabo.Tools.dll
 /Users/soft/dotnet/DotNetCore/Jabo.Tools/bin/Debug/netcoreapp3.0/Jabo.Tools.pdb
-/Users/soft/dotnet/DotNetCore/Jabo.Tools/obj/Debug/netcoreapp3.0/Jabo.Tools.csprojAssemblyReference.cache
 /Users/soft/dotnet/DotNetCore/Jabo.Tools/obj/Debug/netcoreapp3.0/Jabo.Tools.AssemblyInfoInputs.cache
 /Users/soft/dotnet/DotNetCore/Jabo.Tools/obj/Debug/netcoreapp3.0/Jabo.Tools.AssemblyInfo.cs
 /Users/soft/dotnet/DotNetCore/Jabo.Tools/obj/Debug/netcoreapp3.0/Jabo.Tools.dll

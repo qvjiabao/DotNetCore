@@ -1,19 +1,21 @@
 ﻿<Properties StartupConfiguration="{DB09FF11-EEAC-48E4-8077-8F352B33F632}|Default">
   <MonoDevelop.Ide.ItemProperties.Jabo.WebSite.Jabo.Core PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Jabo.Tools/ProtoBufTool.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="Jabo.Tools/ProtoBufTool.cs" Line="1" Column="1" />
+      <File FileName="Jabo.Core/Controllers/HomeController.cs" />
+      <File FileName="Jabo.Core/Models/ErrorViewModel.cs" />
+      <File FileName="Jabo.Dapper/DapperTest.cs" />
+      <File FileName="Jabo.Dapper/DataBase.cs" />
+      <File FileName="Jabo.Redis/RedisBase.cs" />
+      <File FileName="Jabo.Tools/XmlTool.cs" Line="65" Column="30" />
+      <File FileName="Jabo.Core/Program.cs" Line="1" Column="1" />
+      <File FileName="Jabo.Core/Startup.cs" Line="16" Column="53" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="DotNetCore" expanded="True">
-            <Node name="Jabo.Tools" expanded="True">
-              <Node name="Jabo.Tools" expanded="True">
-                <Node name="ProtoBufTool.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="DotNetCore" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

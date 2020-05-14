@@ -1,7 +1,6 @@
 /Users/soft/dotnet/DotNetCore/Jabo.Core/bin/Debug/netcoreapp3.0/appsettings.Development.json
 /Users/soft/dotnet/DotNetCore/Jabo.Core/bin/Debug/netcoreapp3.0/appsettings.json
 /Users/soft/dotnet/DotNetCore/Jabo.Core/bin/Debug/netcoreapp3.0/Properties/launchSettings.json
-/Users/soft/dotnet/DotNetCore/Jabo.Core/bin/Debug/netcoreapp3.0/Jabo.Core
 /Users/soft/dotnet/DotNetCore/Jabo.Core/bin/Debug/netcoreapp3.0/Jabo.Core.deps.json
 /Users/soft/dotnet/DotNetCore/Jabo.Core/bin/Debug/netcoreapp3.0/Jabo.Core.runtimeconfig.json
 /Users/soft/dotnet/DotNetCore/Jabo.Core/bin/Debug/netcoreapp3.0/Jabo.Core.runtimeconfig.dev.json
@@ -11,9 +10,6 @@
 /Users/soft/dotnet/DotNetCore/Jabo.Core/bin/Debug/netcoreapp3.0/Jabo.Core.Views.pdb
 /Users/soft/dotnet/DotNetCore/Jabo.Core/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Caching.Redis.dll
 /Users/soft/dotnet/DotNetCore/Jabo.Core/bin/Debug/netcoreapp3.0/StackExchange.Redis.StrongName.dll
-/Users/soft/dotnet/DotNetCore/Jabo.Core/obj/Debug/netcoreapp3.0/Jabo.Core.csprojAssemblyReference.cache
-/Users/soft/dotnet/DotNetCore/Jabo.Core/obj/Debug/netcoreapp3.0/staticwebassets/Jabo.Core.StaticWebAssets.Manifest.cache
-/Users/soft/dotnet/DotNetCore/Jabo.Core/obj/Debug/netcoreapp3.0/staticwebassets/Jabo.Core.StaticWebAssets.xml
 /Users/soft/dotnet/DotNetCore/Jabo.Core/obj/Debug/netcoreapp3.0/Jabo.Core.MvcApplicationPartsAssemblyInfo.cache
 /Users/soft/dotnet/DotNetCore/Jabo.Core/obj/Debug/netcoreapp3.0/Jabo.Core.RazorAssemblyInfo.cache
 /Users/soft/dotnet/DotNetCore/Jabo.Core/obj/Debug/netcoreapp3.0/Jabo.Core.RazorAssemblyInfo.cs
@@ -33,5 +29,7 @@
 /Users/soft/dotnet/DotNetCore/Jabo.Core/obj/Debug/netcoreapp3.0/Jabo.Core.RazorTargetAssemblyInfo.cs
 /Users/soft/dotnet/DotNetCore/Jabo.Core/obj/Debug/netcoreapp3.0/Jabo.Core.Views.pdb
 /Users/soft/dotnet/DotNetCore/Jabo.Core/obj/Debug/netcoreapp3.0/Jabo.Core.csproj.CopyComplete
+/Users/soft/dotnet/DotNetCore/Jabo.Core/obj/Debug/netcoreapp3.0/staticwebassets/Jabo.Core.StaticWebAssets.Manifest.cache
+/Users/soft/dotnet/DotNetCore/Jabo.Core/obj/Debug/netcoreapp3.0/staticwebassets/Jabo.Core.StaticWebAssets.xml
 /Users/soft/dotnet/DotNetCore/Jabo.Core/obj/Debug/netcoreapp3.0/Jabo.Core.dll
 /Users/soft/dotnet/DotNetCore/Jabo.Core/obj/Debug/netcoreapp3.0/Jabo.Core.pdb
