@@ -17,7 +17,7 @@ namespace Jabo.Dapper
         {
             SetDialect(_dialect);
         }
-        private static Dialect _dialect = Dialect.MySQL;
+        private static Dialect _dialect = Dialect.SQLServer;
         private static string _encapsulation;
         private static string _getIdentitySql;
         private static string _getPagedListSql;
