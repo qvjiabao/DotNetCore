@@ -210,7 +210,7 @@
       ]
     },
     "System.Security.Principal.Windows/4.5.0": {
-      "sha512": "WA9ETb/pY3BjnxKjBUHEgO59B7d/nnmjHFsqjJ2eDT780nD769CT1/bw2ia0Z6W7NqlcqokE6sKGKa6uw88XGA==",
+      "sha512": "U77HfRXlZlOeIXd//Yoj6Jnk8AXlbeisf1oq1os+hxOGVnuG+lGSfGqTwTZBoORFF6j/0q7HXIl8cqwQ9aUGqQ==",
       "type": "package",
       "path": "system.security.principal.windows/4.5.0",
       "files": [
@@ -311,28 +311,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/qvjiabao/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Jabo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/soft/dotnet/DotNetCore/Jabo.Tools/Jabo.Tools.csproj",
+      "projectUniqueName": "D:\\git\\DotNetCore\\Jabo.Tools\\Jabo.Tools.csproj",
       "projectName": "Jabo.Tools",
-      "projectPath": "/Users/soft/dotnet/DotNetCore/Jabo.Tools/Jabo.Tools.csproj",
-      "packagesPath": "/Users/qvjiabao/.nuget/packages/",
-      "outputPath": "/Users/soft/dotnet/DotNetCore/Jabo.Tools/obj/",
+      "projectPath": "D:\\git\\DotNetCore\\Jabo.Tools\\Jabo.Tools.csproj",
+      "packagesPath": "C:\\Users\\Jabo\\.nuget\\packages\\",
+      "outputPath": "D:\\git\\DotNetCore\\Jabo.Tools\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/Users/qvjiabao/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Jabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -369,7 +367,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

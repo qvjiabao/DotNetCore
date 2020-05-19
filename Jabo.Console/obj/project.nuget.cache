@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "DlH+yMTwEhlUGZTqKXMuNlMc4I7j+UWkl45644Of3RdMsC1hlK18QffnAXv+IRoYXzhpktGwVf0HZmvDSQlA7g==",
+  "success": true,
+  "projectFilePath": "D:\\git\\DotNetCore\\Jabo.Console\\Jabo.Console.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.netcore.targets\\1.1.2\\microsoft.netcore.targets.1.1.2.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\pipelines.sockets.unofficial\\2.1.6\\pipelines.sockets.unofficial.2.1.6.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\stackexchange.redis\\2.1.30\\stackexchange.redis.2.1.30.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.console\\4.3.1\\system.console.4.3.1.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.diagnostics.performancecounter\\4.7.0\\system.diagnostics.performancecounter.4.7.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.io.pipelines\\4.7.0\\system.io.pipelines.4.7.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.threading.channels\\4.7.0\\system.threading.channels.4.7.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

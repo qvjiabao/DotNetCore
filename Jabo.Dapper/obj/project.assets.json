@@ -2519,7 +2519,7 @@
       ]
     },
     "System.Buffers/4.5.0": {
-      "sha512": "xpHYjjtyTEpzMwtSQBWdVc3dPjLdQtvyUg6fBlBqcLl1r2Y7gDG/W/enAYOB98nG3oD3Q153Y2FBO8JDWd+0Xw==",
+      "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
       "type": "package",
       "path": "system.buffers/4.5.0",
       "files": [
@@ -3789,7 +3789,7 @@
       ]
     },
     "System.Net.Http/4.3.0": {
-      "sha512": "Z1UfSF6dlpCdZdxh6LeoGlYH+q6ptG/iiIWgUUeKhE3DbQACmZkU7Sz2nOX0qdHjz72MOdYRbkSJ5Qwl6sZgvg==",
+      "sha512": "sYg+FtILtRQuYWSIAuNOELwVuVsxVyJGWQyOnlAzhV4xvhyFnON1bAzYYC+jjRW8JREM45R0R5Dgi8MTC5sEwA==",
       "type": "package",
       "path": "system.net.http/4.3.0",
       "files": [
@@ -6188,28 +6188,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/qvjiabao/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Jabo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/soft/dotnet/DotNetCore/Jabo.Dapper/Jabo.Dapper.csproj",
+      "projectUniqueName": "D:\\git\\DotNetCore\\Jabo.Dapper\\Jabo.Dapper.csproj",
       "projectName": "Jabo.Dapper",
-      "projectPath": "/Users/soft/dotnet/DotNetCore/Jabo.Dapper/Jabo.Dapper.csproj",
-      "packagesPath": "/Users/qvjiabao/.nuget/packages/",
-      "outputPath": "/Users/soft/dotnet/DotNetCore/Jabo.Dapper/obj/",
+      "projectPath": "D:\\git\\DotNetCore\\Jabo.Dapper\\Jabo.Dapper.csproj",
+      "packagesPath": "C:\\Users\\Jabo\\.nuget\\packages\\",
+      "outputPath": "D:\\git\\DotNetCore\\Jabo.Dapper\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/Users/qvjiabao/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Jabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6254,7 +6252,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

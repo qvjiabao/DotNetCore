@@ -24,14 +24,6 @@ namespace Jabo.Core
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
-            //添加分布式缓存
-            services.AddDistributedRedisCache(option =>
-            {
-                option.InstanceName = "session";
-                option.Configuration = "192.168.43.121:6379";
-            });
-
             services.AddSession();
 
         }

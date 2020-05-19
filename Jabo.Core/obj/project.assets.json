@@ -1512,7 +1512,7 @@
   },
   "libraries": {
     "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
-      "sha512": "3phHFN5lXktB6Id1D0tvojf9GohSyoTwCadVZmCeKEDVj2u2xR3hLtj+lf9mpmCC5FuLbcyVjepZgFFHazHjIA==",
+      "sha512": "spsJkYo8gGJapaxTSQFN/wqA+ghpJMLwB4ZyTB+fSdpd7AmMFP/YSpIcGmczcw4KggpxLGhLk7lCkSIlgvHaqQ==",
       "type": "package",
       "path": "microsoft.extensions.caching.abstractions/2.2.0",
       "files": [
@@ -1525,7 +1525,7 @@
       ]
     },
     "Microsoft.Extensions.Caching.Redis/2.2.0": {
-      "sha512": "t4PK+PDGx8WLYxZR5LmSv5iBv/8RfnblYct+f7QwSNboeAhgO2WZm/AhuyXXv6scBOhlyuyAHNGflSPgmbhHIA==",
+      "sha512": "cb21miiGDVjlNl8TRBKIi7OEFdlKuV8d4ZoYqFOhKdZhzo7Sv+b8Puy3NLW3y/g+UDclt7FTh+Za7ykurtaVMQ==",
       "type": "package",
       "path": "microsoft.extensions.caching.redis/2.2.0",
       "files": [
@@ -1538,7 +1538,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/2.2.0": {
-      "sha512": "YZcHF0/+XeKv12ZEo+OmrAa6rNayjye0qvEjYSDIhN99StqxnS2gZpwkcCrH/8JuXxzzcDSVpZw5Bruz8xYfXQ==",
+      "sha512": "f9hstgjVmr6rmrfGSpfsVOl2irKAgr1QjrSi3FgnS7kulxband50f2brRLwySAQTADPZeTdow0mpSMcoAdadCw==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection.abstractions/2.2.0",
       "files": [
@@ -1551,7 +1551,7 @@
       ]
     },
     "Microsoft.Extensions.Options/2.2.0": {
-      "sha512": "onhaA2X0DkQmyybJhbTHO+63NnO90nIPHTC9a+1QLTM1hT934DM80OvgwKubEIQuPyvSHD6X1Q01PSTJRNHo8w==",
+      "sha512": "UpZLNLBpIZ0GTebShui7xXYh6DmBHjWM8NxGxZbdQh/bPZ5e6YswqI+bru6BnEL5eWiOdodsXtEz3FROcgi/qg==",
       "type": "package",
       "path": "microsoft.extensions.options/2.2.0",
       "files": [
@@ -1564,7 +1564,7 @@
       ]
     },
     "Microsoft.Extensions.Primitives/2.2.0": {
-      "sha512": "Sv8EDHvN2852bE5G1yosKCa7sUw/x0Z/rCaI5LIWHseAXprG1h9oberAh3NRBO7w2zTZq79WPeQDMsPBVSf99w==",
+      "sha512": "azyQtqbm4fSaDzZHD/J+V6oWMFaf2tWP4WEGIYePLCMw3+b2RQdj9ybgbQyjCshcitQKQ4lEDOZjmSlTTrHxUg==",
       "type": "package",
       "path": "microsoft.extensions.primitives/2.2.0",
       "files": [
@@ -1577,7 +1577,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -2095,7 +2095,7 @@
       ]
     },
     "System.Collections.NonGeneric/4.3.0": {
-      "sha512": "/D3jtX0+u5+6rS3RGvTMyICPpIuzBgqtUYLjK1aXLua0nWH4JpM1H/tRk1Uxs6Fo0fe22jyJaTpoXPSu0il8Ug==",
+      "sha512": "prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
       "type": "package",
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
@@ -2134,7 +2134,7 @@
       ]
     },
     "System.ComponentModel.Annotations/4.5.0": {
-      "sha512": "IjDa643EO77A4CL9dhxfZ6zzGu+pM8Ar0NYPRMN3TvDiga4uGDzFHOj/ArpyNxxKyO5IFT2LZ0rK3kUog7g3jA==",
+      "sha512": "UxYQ3FGUOtzJ7LfSdnYSFd7+oEv6M8NgUatatIN2HxNtDdlcvFAf+VIq4Of9cDMJEJC0aSRv/x898RYhB4Yppg==",
       "type": "package",
       "path": "system.componentmodel.annotations/4.5.0",
       "files": [
@@ -3053,7 +3053,7 @@
       ]
     },
     "System.Memory/4.5.1": {
-      "sha512": "vcG3/MbfpxznMkkkaAblJi7RHOmuP7kawQMhDgLSuA1tRpRQYsFSCTxRSINDUgn2QNn2jWeLxv8er5BXbyACkw==",
+      "sha512": "sDJYJpGtTgx+23Ayu5euxG5mAXWdkDb4+b0rD0Cab0M1oQS9H0HXGPriKcqpXuiJDTV7fTp/d+fMDJmnr6sNvA==",
       "type": "package",
       "path": "system.memory/4.5.1",
       "files": [
@@ -3078,7 +3078,7 @@
       ]
     },
     "System.Net.Http/4.3.0": {
-      "sha512": "Z1UfSF6dlpCdZdxh6LeoGlYH+q6ptG/iiIWgUUeKhE3DbQACmZkU7Sz2nOX0qdHjz72MOdYRbkSJ5Qwl6sZgvg==",
+      "sha512": "sYg+FtILtRQuYWSIAuNOELwVuVsxVyJGWQyOnlAzhV4xvhyFnON1bAzYYC+jjRW8JREM45R0R5Dgi8MTC5sEwA==",
       "type": "package",
       "path": "system.net.http/4.3.0",
       "files": [
@@ -3160,11 +3160,12 @@
       ]
     },
     "System.Net.NameResolution/4.3.0": {
-      "sha512": "DPvMSdd32CbEOCTtOpO4nY9UvbP6LJe375F1yEQjy667WT5LEh1Ek2T4DSVw1STR0K3LSawWfBFwoeSG0TXFeA==",
+      "sha512": "AFYl08R7MrsrEjqpQWTZWBadqXyTzNDaWpMqyxhb0d6sGhV6xMDKueuBXlLL30gz+DIRY6MpdgnHWlCh5wmq9w==",
       "type": "package",
       "path": "system.net.nameresolution/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3941,7 +3942,7 @@
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.5.1": {
-      "sha512": "qUJMNWhbm9oZ3XaMFiEMiYmRPszbnXIkRIi7+4b2Md2xZ6JUOepf0/kY3S85qistRohl9OdMe4PsO+RdG2kTIQ==",
+      "sha512": "Zh8t8oqolRaFa9vmOZfdQm/qKejdqz0J9kr7o2Fu0vPeoH3BL1EOXipKWwkWtLT1JPzjByrF19fGuFlNbmPpiw==",
       "type": "package",
       "path": "system.runtime.compilerservices.unsafe/4.5.1",
       "files": [
@@ -5273,28 +5274,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/qvjiabao/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Jabo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/soft/dotnet/DotNetCore/Jabo.Core/Jabo.Core.csproj",
+      "projectUniqueName": "D:\\git\\DotNetCore\\Jabo.Core\\Jabo.Core.csproj",
       "projectName": "Jabo.Core",
-      "projectPath": "/Users/soft/dotnet/DotNetCore/Jabo.Core/Jabo.Core.csproj",
-      "packagesPath": "/Users/qvjiabao/.nuget/packages/",
-      "outputPath": "/Users/soft/dotnet/DotNetCore/Jabo.Core/obj/",
+      "projectPath": "D:\\git\\DotNetCore\\Jabo.Core\\Jabo.Core.csproj",
+      "packagesPath": "C:\\Users\\Jabo\\.nuget\\packages\\",
+      "outputPath": "D:\\git\\DotNetCore\\Jabo.Core\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/Users/qvjiabao/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Jabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5334,7 +5333,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

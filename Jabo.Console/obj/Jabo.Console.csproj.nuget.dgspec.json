@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/soft/dotnet/DotNetCore/Jabo.Console/Jabo.Console.csproj": {}
+    "D:\\git\\DotNetCore\\Jabo.Console\\Jabo.Console.csproj": {}
   },
   "projects": {
-    "/Users/soft/dotnet/DotNetCore/Jabo.Console/Jabo.Console.csproj": {
+    "D:\\git\\DotNetCore\\Jabo.Console\\Jabo.Console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/soft/dotnet/DotNetCore/Jabo.Console/Jabo.Console.csproj",
+        "projectUniqueName": "D:\\git\\DotNetCore\\Jabo.Console\\Jabo.Console.csproj",
         "projectName": "Jabo.Console",
-        "projectPath": "/Users/soft/dotnet/DotNetCore/Jabo.Console/Jabo.Console.csproj",
-        "packagesPath": "/Users/qvjiabao/.nuget/packages/",
-        "outputPath": "/Users/soft/dotnet/DotNetCore/Jabo.Console/obj/",
+        "projectPath": "D:\\git\\DotNetCore\\Jabo.Console\\Jabo.Console.csproj",
+        "packagesPath": "C:\\Users\\Jabo\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\DotNetCore\\Jabo.Console\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/qvjiabao/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Jabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
