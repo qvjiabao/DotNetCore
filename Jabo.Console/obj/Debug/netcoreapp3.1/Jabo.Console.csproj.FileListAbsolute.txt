@@ -22,10 +22,13 @@ D:\git\DotNetCore\Jabo.Console\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcorea
 D:\git\DotNetCore\Jabo.Console\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\git\DotNetCore\Jabo.Console\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\git\DotNetCore\Jabo.Console\obj\Debug\netcoreapp3.1\Jabo.Console.csprojAssemblyReference.cache
-D:\git\DotNetCore\Jabo.Console\obj\Debug\netcoreapp3.1\Jabo.Console.csproj.CoreCompileInputs.cache
 D:\git\DotNetCore\Jabo.Console\obj\Debug\netcoreapp3.1\Jabo.Console.AssemblyInfoInputs.cache
 D:\git\DotNetCore\Jabo.Console\obj\Debug\netcoreapp3.1\Jabo.Console.AssemblyInfo.cs
 D:\git\DotNetCore\Jabo.Console\obj\Debug\netcoreapp3.1\Jabo.Console.csproj.CopyComplete
 D:\git\DotNetCore\Jabo.Console\obj\Debug\netcoreapp3.1\Jabo.Console.dll
 D:\git\DotNetCore\Jabo.Console\obj\Debug\netcoreapp3.1\Jabo.Console.pdb
 D:\git\DotNetCore\Jabo.Console\obj\Debug\netcoreapp3.1\Jabo.Console.genruntimeconfig.cache
+D:\git\DotNetCore\Jabo.Console\bin\Debug\netcoreapp3.1\Autofac.dll
+D:\git\DotNetCore\Jabo.Console\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+D:\git\DotNetCore\Jabo.Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\git\DotNetCore\Jabo.Console\obj\Debug\netcoreapp3.1\Jabo.Console.csproj.CoreCompileInputs.cache

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using MySql.Data.MySqlClient;
 
 namespace Jabo.Dapper
 {
@@ -164,19 +163,9 @@ namespace Jabo.Dapper
 
             private IDbConnection GetOpenConnection()
             {
-
                 IDbConnection connection;
-                if (_dbtype == DataBase.Dialect.MySQL)
-                {
-                    connection = new MySqlConnection(String.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};", "localhost", "3306", "admin", "admin", "testdb"));
-                    DataBase.SetDialect(DataBase.Dialect.MySQL);
-                }
-                else
-                {
-                    connection = new SqlConnection(@"Data Source = .\sqlexpress;Initial Catalog=DapperSimpleCrudTestDb;Integrated Security=True;MultipleActiveResultSets=true;");
-                    DataBase.SetDialect(DataBase.Dialect.SQLServer);
-                }
-
+                connection = new SqlConnection(@"Data Source = .\sqlexpress;Initial Catalog=DapperSimpleCrudTestDb;Integrated Security=True;MultipleActiveResultSets=true;");
+                DataBase.SetDialect(DataBase.Dialect.SQLServer);
                 connection.Open();
                 return connection;
             }

@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "DlH+yMTwEhlUGZTqKXMuNlMc4I7j+UWkl45644Of3RdMsC1hlK18QffnAXv+IRoYXzhpktGwVf0HZmvDSQlA7g==",
+  "dgSpecHash": "v3dBljwFx7O+8VhT/T9yJ5SJ7kBbo4l0Cki36P0pkr+d3D6cIV7ofiVNGITsfsqQKAvOBws9k1oCAPxCtWQAWg==",
   "success": true,
   "projectFilePath": "D:\\git\\DotNetCore\\Jabo.Console\\Jabo.Console.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jabo\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\autofac.extensions.dependencyinjection\\6.0.0\\autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.netcore.targets\\1.1.2\\microsoft.netcore.targets.1.1.2.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
