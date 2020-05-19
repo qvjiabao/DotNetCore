@@ -44,7 +44,6 @@ namespace Jabo.Core
 
             app.UseSession();
 
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();

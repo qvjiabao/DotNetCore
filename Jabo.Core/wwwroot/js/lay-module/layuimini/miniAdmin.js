@@ -80,8 +80,8 @@ layui.define(["jquery", "miniMenu", "element","miniPage", "miniTheme"], function
          * 初始化logo
          * @param data
          */
-        renderLogo: function (data) {
-            var html = '<a href="javascript:;"><img src="' + data.image + '" alt="logo"><h1>' + data.title + '</h1></a>';
+        renderLogo: function () {
+            var html = '<a href="javascript:;"><img src="images/logo.png" alt="logo"><h1>燕翔嘉业货运</h1></a>';
             $('.layuimini-logo').html(html);
         },
 
