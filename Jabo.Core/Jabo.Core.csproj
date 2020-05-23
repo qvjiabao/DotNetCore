@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Business\Interface\" />
-    <Folder Include="Business\Impl\" />
-    <Folder Include="Data\Interface\" />
-    <Folder Include="Data\Impl\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
 

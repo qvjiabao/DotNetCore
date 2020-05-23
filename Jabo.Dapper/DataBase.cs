@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using Dapper;
+using Jabo.Dapper.Attribute;
 using Microsoft.CSharp.RuntimeBinder;
 
 namespace Jabo.Dapper
@@ -879,7 +880,7 @@ namespace Jabo.Dapper
             if (TableNames.TryGetValue(type, out tableName))
                 return tableName;
 
-            tableName = _tableNameResolver.ResolveTableName(type);
+            tableName = _tableNameResolver.ResolveTableName(type, Encapsulate);
 
             TableNames.AddOrUpdate(type, tableName, (t, v) => tableName);
 
@@ -893,7 +894,7 @@ namespace Jabo.Dapper
             if (ColumnNames.TryGetValue(key, out columnName))
                 return columnName;
 
-            columnName = _columnNameResolver.ResolveColumnName(propertyInfo);
+            columnName = _columnNameResolver.ResolveColumnName(propertyInfo, Encapsulate);
 
             ColumnNames.AddOrUpdate(key, columnName, (t, v) => columnName);
 
@@ -932,236 +933,7 @@ namespace Jabo.Dapper
             PostgreSQL,
             MySQL,
         }
-
-        public interface ITableNameResolver
-        {
-            string ResolveTableName(Type type);
-        }
-
-        public interface IColumnNameResolver
-        {
-            string ResolveColumnName(PropertyInfo propertyInfo);
-        }
-
-        public class TableNameResolver : ITableNameResolver
-        {
-            public virtual string ResolveTableName(Type type)
-            {
-                var tableName = Encapsulate(type.Name);
-
-                var tableattr = type.GetCustomAttributes(true).SingleOrDefault(attr => attr.GetType().Name == typeof(TableAttribute).Name) as dynamic;
-                if (tableattr != null)
-                {
-                    tableName = Encapsulate(tableattr.Name);
-                    try
-                    {
-                        if (!String.IsNullOrEmpty(tableattr.Schema))
-                        {
-                            string schemaName = Encapsulate(tableattr.Schema);
-                            tableName = String.Format("{0}.{1}", schemaName, tableName);
-                        }
-                    }
-                    catch (RuntimeBinderException)
-                    {
-                        //Schema doesn't exist on this attribute.
-                    }
-                }
-
-                return tableName;
-            }
-        }
-
-        public class ColumnNameResolver : IColumnNameResolver
-        {
-            public virtual string ResolveColumnName(PropertyInfo propertyInfo)
-            {
-                var columnName = Encapsulate(propertyInfo.Name);
-
-                var columnattr = propertyInfo.GetCustomAttributes(true).SingleOrDefault(attr => attr.GetType().Name == typeof(ColumnAttribute).Name) as dynamic;
-                if (columnattr != null)
-                {
-                    columnName = Encapsulate(columnattr.Name);
-                    if (Debugger.IsAttached)
-                        Trace.WriteLine(String.Format("Column name for type overridden from {0} to {1}", propertyInfo.Name, columnName));
-                }
-                return columnName;
-            }
-        }
-    }
-
-    /// <summary>
-    /// Optional Table attribute.
-    /// You can use the System.ComponentModel.DataAnnotations version in its place to specify the table name of a poco
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Class)]
-    public class TableAttribute : Attribute
-    {
-        /// <summary>
-        /// Optional Table attribute.
-        /// </summary>
-        /// <param name="tableName"></param>
-        public TableAttribute(string tableName)
-        {
-            Name = tableName;
-        }
-        /// <summary>
-        /// Name of the table
-        /// </summary>
-        public string Name { get; private set; }
-        /// <summary>
-        /// Name of the schema
-        /// </summary>
-        public string Schema { get; set; }
-    }
-
-    /// <summary>
-    /// Optional Column attribute.
-    /// You can use the System.ComponentModel.DataAnnotations version in its place to specify the table name of a poco
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Property)]
-    public class ColumnAttribute : Attribute
-    {
-        /// <summary>
-        /// Optional Column attribute.
-        /// </summary>
-        /// <param name="columnName"></param>
-        public ColumnAttribute(string columnName)
-        {
-            Name = columnName;
-        }
-        /// <summary>
-        /// Name of the column
-        /// </summary>
-        public string Name { get; private set; }
-    }
-
-    /// <summary>
-    /// Optional Key attribute.
-    /// You can use the System.ComponentModel.DataAnnotations version in its place to specify the Primary Key of a poco
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Property)]
-    public class KeyAttribute : Attribute
-    {
-    }
-
-    /// <summary>
-    /// Optional NotMapped attribute.
-    /// You can use the System.ComponentModel.DataAnnotations version in its place to specify that the property is not mapped
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Property)]
-    public class NotMappedAttribute : Attribute
-    {
-    }
-
-    /// <summary>
-    /// Optional Key attribute.
-    /// You can use the System.ComponentModel.DataAnnotations version in its place to specify a required property of a poco
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Property)]
-    public class RequiredAttribute : Attribute
-    {
-    }
-
-    /// <summary>
-    /// Optional Editable attribute.
-    /// You can use the System.ComponentModel.DataAnnotations version in its place to specify the properties that are editable
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Property)]
-    public class EditableAttribute : Attribute
-    {
-        /// <summary>
-        /// Optional Editable attribute.
-        /// </summary>
-        /// <param name="iseditable"></param>
-        public EditableAttribute(bool iseditable)
-        {
-            AllowEdit = iseditable;
-        }
-        /// <summary>
-        /// Does this property persist to the database?
-        /// </summary>
-        public bool AllowEdit { get; private set; }
-    }
-
-    /// <summary>
-    /// Optional Readonly attribute.
-    /// You can use the System.ComponentModel version in its place to specify the properties that are editable
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Property)]
-    public class ReadOnlyAttribute : Attribute
-    {
-        /// <summary>
-        /// Optional ReadOnly attribute.
-        /// </summary>
-        /// <param name="isReadOnly"></param>
-        public ReadOnlyAttribute(bool isReadOnly)
-        {
-            IsReadOnly = isReadOnly;
-        }
-        /// <summary>
-        /// Does this property persist to the database?
-        /// </summary>
-        public bool IsReadOnly { get; private set; }
-    }
-
-    /// <summary>
-    /// Optional IgnoreSelect attribute.
-    /// Custom for Dapper.SimpleCRUD to exclude a property from Select methods
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Property)]
-    public class IgnoreSelectAttribute : Attribute
-    {
-    }
-
-    /// <summary>
-    /// Optional IgnoreInsert attribute.
-    /// Custom for Dapper.SimpleCRUD to exclude a property from Insert methods
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Property)]
-    public class IgnoreInsertAttribute : Attribute
-    {
-    }
-
-    /// <summary>
-    /// Optional IgnoreUpdate attribute.
-    /// Custom for Dapper.SimpleCRUD to exclude a property from Update methods
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Property)]
-    public class IgnoreUpdateAttribute : Attribute
-    {
-    }
-
-}
-
-internal static class TypeExtension
-{
-    //You can't insert or update complex types. Lets filter them out.
-    public static bool IsSimpleType(this Type type)
-    {
-        var underlyingType = Nullable.GetUnderlyingType(type);
-        type = underlyingType ?? type;
-        var simpleTypes = new List<Type>
-                               {
-                                   typeof(byte),
-                                   typeof(sbyte),
-                                   typeof(short),
-                                   typeof(ushort),
-                                   typeof(int),
-                                   typeof(uint),
-                                   typeof(long),
-                                   typeof(ulong),
-                                   typeof(float),
-                                   typeof(double),
-                                   typeof(decimal),
-                                   typeof(bool),
-                                   typeof(string),
-                                   typeof(char),
-                                   typeof(Guid),
-                                   typeof(DateTime),
-                                   typeof(DateTimeOffset),
-                                   typeof(byte[])
-                               };
-        return simpleTypes.Contains(type) || type.IsEnum;
     }
 }
+
 

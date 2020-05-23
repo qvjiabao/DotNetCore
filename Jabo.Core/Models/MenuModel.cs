@@ -1,4 +1,5 @@
 ﻿using Jabo.Dapper;
+using Jabo.Dapper.Attribute;
 using System;
 using System.Collections.Generic;
 using System.Linq;
