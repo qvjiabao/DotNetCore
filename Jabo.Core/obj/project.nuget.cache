@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "/q9LFsFKlP9mLVrS5B1RDMlum/n4LsYJNjkV/oyrswgd/chR/WylupEMj0xCcfYndW0fmfhi89l749djN86qxA==",
+  "dgSpecHash": "9/UjdXiqEqLzxB1SHHUhtK47j3qMB3sJ/ij0DxiwHBCGNRj+wquMZTkh9Wxb/TqDx7M/2gJo1wkrYRvfcaGK8A==",
   "success": true,
   "projectFilePath": "D:\\git\\DotNetCore\\Jabo.Core\\Jabo.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jabo\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\autofac.extensions.dependencyinjection\\6.0.0\\autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\2.2.0\\microsoft.extensions.caching.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.extensions.caching.redis\\2.2.0\\microsoft.extensions.caching.redis.2.2.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.2.0\\microsoft.extensions.dependencyinjection.abstractions.2.2.0.nupkg.sha512",

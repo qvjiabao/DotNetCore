@@ -7,15 +7,18 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="5.2.0" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Jabo.Dapper\Jabo.Dapper.csproj" />
+    <ProjectReference Include="..\Jabo.IRepository\Jabo.IRepository.csproj" />
+    <ProjectReference Include="..\Jabo.IServices\Jabo.IServices.csproj" />
+    <ProjectReference Include="..\Jabo.Models\Jabo.Models.csproj" />
+    <ProjectReference Include="..\Jabo.Repository\Jabo.Repository.csproj" />
+    <ProjectReference Include="..\Jabo.Services\Jabo.Services.csproj" />
   </ItemGroup>
 </Project>

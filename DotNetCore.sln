@@ -30,6 +30,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jabo.Repository", "Jabo.Rep
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jabo.Services", "Jabo.Services", "{BADCF5B5-F01E-4047-BED1-5949716056F9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jabo.Model", "Jabo.Model", "{81FE34BE-F4DF-4C94-9037-E09BD5D9F111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jabo.Models", "Jabo.Models\Jabo.Models.csproj", "{1889BF04-6FA3-472D-B801-07F3E371D27D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,6 +76,10 @@ Global
 		{F8F58366-52C7-4E4D-BAFD-C1FC9623791F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8F58366-52C7-4E4D-BAFD-C1FC9623791F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8F58366-52C7-4E4D-BAFD-C1FC9623791F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1889BF04-6FA3-472D-B801-07F3E371D27D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1889BF04-6FA3-472D-B801-07F3E371D27D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1889BF04-6FA3-472D-B801-07F3E371D27D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1889BF04-6FA3-472D-B801-07F3E371D27D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,6 +94,7 @@ Global
 		{434D06C5-2869-4790-9BAA-A0C6E8BEC36C} = {E7348A2D-089F-4747-9E4E-65B2CECC0BEA}
 		{0D08BAC3-26FA-43EB-950B-6A62D57E80B9} = {BADCF5B5-F01E-4047-BED1-5949716056F9}
 		{F8F58366-52C7-4E4D-BAFD-C1FC9623791F} = {BADCF5B5-F01E-4047-BED1-5949716056F9}
+		{1889BF04-6FA3-472D-B801-07F3E371D27D} = {81FE34BE-F4DF-4C94-9037-E09BD5D9F111}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3527AD37-31E6-4830-A8CF-D675A5E34E4F}

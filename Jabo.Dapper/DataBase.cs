@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
@@ -932,6 +933,15 @@ namespace Jabo.Dapper
             SQLServer,
             PostgreSQL,
             MySQL,
+        }
+
+        public static IDbConnection GetOpenConnection()
+        {
+            IDbConnection connection;
+            connection = new SqlConnection(@"server=.;database=YX_DataBase;uid=sa;pwd=1qaz@WSX");
+            DataBase.SetDialect(_dialect);
+            connection.Open();
+            return connection;
         }
     }
 }

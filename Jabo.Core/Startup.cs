@@ -27,7 +27,6 @@ namespace Jabo.Core
         {
             services.AddControllersWithViews();
             services.AddSession();
-
         }
 
         public void ConfigureContainer(ContainerBuilder builder)

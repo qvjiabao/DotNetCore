@@ -5,24 +5,37 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Jabo.Core.Models;
 using Microsoft.AspNetCore.Http;
+using Jabo.IServices;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Jabo.Core.ViewModels;
+using AutoMapper;
+using Jabo.Models;
 
 namespace Jabo.Core.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IMenuService _menuService;
+        private readonly IMapper _mapper;
+
+        public HomeController(IMapper mapper, IMenuService menuService)
         {
-            _logger = logger;
+            _menuService = menuService;
+            _mapper = mapper;
         }
 
         public IActionResult Index()
         {
-            _logger.LogWarning("222");
             return View();
+        }
+
+        public IEnumerable<MenuVModel> GetAllMenu()
+        {
+            var menuList = _menuService.GetAllMenu();
+            return _mapper.Map<IEnumerable<MenuModel>, IEnumerable<MenuVModel>>(menuList);
         }
     }
 }

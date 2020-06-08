@@ -1,7 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jabo.Dapper\Jabo.Dapper.csproj" />
+    <ProjectReference Include="..\Jabo.IRepository\Jabo.IRepository.csproj" />
+    <ProjectReference Include="..\Jabo.Models\Jabo.Models.csproj" />
+  </ItemGroup>
 
 </Project>

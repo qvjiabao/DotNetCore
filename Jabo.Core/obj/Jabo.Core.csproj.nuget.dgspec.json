@@ -29,6 +29,21 @@
             "projectReferences": {
               "D:\\git\\DotNetCore\\Jabo.Dapper\\Jabo.Dapper.csproj": {
                 "projectPath": "D:\\git\\DotNetCore\\Jabo.Dapper\\Jabo.Dapper.csproj"
+              },
+              "D:\\git\\DotNetCore\\Jabo.IRepository\\Jabo.IRepository.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.IRepository\\Jabo.IRepository.csproj"
+              },
+              "D:\\git\\DotNetCore\\Jabo.IServices\\Jabo.IServices.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.IServices\\Jabo.IServices.csproj"
+              },
+              "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj"
+              },
+              "D:\\git\\DotNetCore\\Jabo.Repository\\Jabo.Repository.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.Repository\\Jabo.Repository.csproj"
+              },
+              "D:\\git\\DotNetCore\\Jabo.Services\\Jabo.Services.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.Services\\Jabo.Services.csproj"
               }
             }
           }
@@ -42,6 +57,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Autofac": {
               "target": "Package",
               "version": "[5.2.0, )"
@@ -124,6 +147,298 @@
               "version": "[4.8.1, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\git\\DotNetCore\\Jabo.IRepository\\Jabo.IRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\DotNetCore\\Jabo.IRepository\\Jabo.IRepository.csproj",
+        "projectName": "Jabo.IRepository",
+        "projectPath": "D:\\git\\DotNetCore\\Jabo.IRepository\\Jabo.IRepository.csproj",
+        "packagesPath": "C:\\Users\\Jabo\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\DotNetCore\\Jabo.IRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\git\\DotNetCore\\Jabo.IServices\\Jabo.IServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\DotNetCore\\Jabo.IServices\\Jabo.IServices.csproj",
+        "projectName": "Jabo.IServices",
+        "projectPath": "D:\\git\\DotNetCore\\Jabo.IServices\\Jabo.IServices.csproj",
+        "packagesPath": "C:\\Users\\Jabo\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\DotNetCore\\Jabo.IServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj",
+        "projectName": "Jabo.Models",
+        "projectPath": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj",
+        "packagesPath": "C:\\Users\\Jabo\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\DotNetCore\\Jabo.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\git\\DotNetCore\\Jabo.Dapper\\Jabo.Dapper.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.Dapper\\Jabo.Dapper.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\git\\DotNetCore\\Jabo.Repository\\Jabo.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\DotNetCore\\Jabo.Repository\\Jabo.Repository.csproj",
+        "projectName": "Jabo.Repository",
+        "projectPath": "D:\\git\\DotNetCore\\Jabo.Repository\\Jabo.Repository.csproj",
+        "packagesPath": "C:\\Users\\Jabo\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\DotNetCore\\Jabo.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\git\\DotNetCore\\Jabo.Dapper\\Jabo.Dapper.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.Dapper\\Jabo.Dapper.csproj"
+              },
+              "D:\\git\\DotNetCore\\Jabo.IRepository\\Jabo.IRepository.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.IRepository\\Jabo.IRepository.csproj"
+              },
+              "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\git\\DotNetCore\\Jabo.Services\\Jabo.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\DotNetCore\\Jabo.Services\\Jabo.Services.csproj",
+        "projectName": "Jabo.Services",
+        "projectPath": "D:\\git\\DotNetCore\\Jabo.Services\\Jabo.Services.csproj",
+        "packagesPath": "C:\\Users\\Jabo\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\DotNetCore\\Jabo.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\git\\DotNetCore\\Jabo.IRepository\\Jabo.IRepository.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.IRepository\\Jabo.IRepository.csproj"
+              },
+              "D:\\git\\DotNetCore\\Jabo.IServices\\Jabo.IServices.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.IServices\\Jabo.IServices.csproj"
+              },
+              "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
           "imports": [
             "net461",
             "net462",
