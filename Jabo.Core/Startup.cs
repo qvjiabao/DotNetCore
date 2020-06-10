@@ -54,6 +54,8 @@ namespace Jabo.Core
                 app.UseHsts();
             }
 
+            app.UseStatusCodePagesWithReExecute("/Other/Error{0}"); //“Ï≥£“≥√Ê
+
             app.UseSession();
 
             app.UseStaticFiles();
@@ -66,8 +68,9 @@ namespace Jabo.Core
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Login}/{id?}");
             });
+
         }
     }
 }

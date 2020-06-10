@@ -35,7 +35,12 @@ namespace Jabo.Core.Controllers
         {
             return View();
         }
-        
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
         public IEnumerable<MenuVModel> GetAllMenu()
         {
             var menuList = _menuService.GetAllMenu();
