@@ -13,7 +13,7 @@ namespace Jabo.Repository
         {
             using (var connection = Dapper.DataBase.GetOpenConnection())
             {
-                var list = connection.GetList<MenuModel>();
+                var list = connection.GetList<MenuModel>(" order by sort ");
 
                 return list;
             }

@@ -31,11 +31,19 @@ namespace Jabo.Core.Controllers
         {
             return View();
         }
+        public IActionResult Welcome()
+        {
+            return View();
+        }
+        
 
         public IEnumerable<MenuVModel> GetAllMenu()
         {
             var menuList = _menuService.GetAllMenu();
-            return _mapper.Map<IEnumerable<MenuModel>, IEnumerable<MenuVModel>>(menuList);
+
+            var list = _mapper.Map<IEnumerable<MenuModel>, IEnumerable<MenuVModel>>(menuList);
+
+            return list;
         }
     }
 }

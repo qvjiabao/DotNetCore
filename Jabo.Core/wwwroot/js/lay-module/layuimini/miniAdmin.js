@@ -4,7 +4,7 @@
  * version:2.0
  * description:layuimini 主体框架扩展
  */
-layui.define(["jquery", "miniMenu", "element","miniPage", "miniTheme"], function (exports) {
+layui.define(["jquery", "miniMenu", "element", "miniPage", "miniTheme"], function (exports) {
     var $ = layui.$,
         element = layui.element,
         layer = layui.layer,
@@ -40,24 +40,31 @@ layui.define(["jquery", "miniMenu", "element","miniPage", "miniTheme"], function
             options.loadingTime = options.loadingTime || 1;
             options.pageAnim = options.pageAnim || false;
             $.getJSON(options.iniUrl, function (data) {
+                console.log(data);
                 if (data == null) {
                     miniAdmin.error('暂无菜单信息')
                 } else {
-                    miniAdmin.renderLogo(data.logoInfo);
+                    miniAdmin.renderLogo('燕翔嘉业货运');
                     miniAdmin.renderClear(options.clearUrl);
                     miniAdmin.renderAnim(options.pageAnim);
                     miniAdmin.listen({
-                        homeInfo:data.homeInfo,
+                        homeInfo: {
+                            "title": "首页",
+                            "href": "/Home/Welcome"
+                        },
                         multiModule: options.multiModule,
                     });
                     miniMenu.render({
-                        menuList: data.menuInfo,
+                        menuList: data,
                         multiModule: options.multiModule,
                         menuChildOpen: options.menuChildOpen
                     });
                     miniPage.render({
-                        homeInfo:data.homeInfo,
-                        menuList: data.menuInfo,
+                        homeInfo: {
+                            "title": "首页",
+                            "href": "/Home/Welcome"
+                        },
+                        menuList: data,
                         multiModule: options.multiModule,
                         renderPageVersion: options.renderPageVersion,
                         menuChildOpen: options.menuChildOpen,
@@ -80,8 +87,8 @@ layui.define(["jquery", "miniMenu", "element","miniPage", "miniTheme"], function
          * 初始化logo
          * @param data
          */
-        renderLogo: function () {
-            var html = '<a href="javascript:;"><img src="images/logo.png" alt="logo"><h1>燕翔嘉业货运</h1></a>';
+        renderLogo: function (name) {
+            var html = '<a href="javascript:;"><img src="images/logo.png" alt="logo"><h1>' + name + '</h1></a>';
             $('.layuimini-logo').html(html);
         },
 
@@ -90,7 +97,7 @@ layui.define(["jquery", "miniMenu", "element","miniPage", "miniTheme"], function
          * @param clearUrl
          */
         renderClear: function (clearUrl) {
-            $('.layuimini-clear').attr('data-href',clearUrl);
+            $('.layuimini-clear').attr('data-href', clearUrl);
         },
 
         /**
@@ -151,7 +158,7 @@ layui.define(["jquery", "miniMenu", "element","miniPage", "miniTheme"], function
                 el.msExitFullscreen();
             } else if (el.oRequestFullscreen) {
                 el.oCancelFullScreen();
-            }else if (el.mozCancelFullScreen) {
+            } else if (el.mozCancelFullScreen) {
                 el.mozCancelFullScreen();
             } else if (el.webkitCancelFullScreen) {
                 el.webkitCancelFullScreen();
@@ -189,7 +196,7 @@ layui.define(["jquery", "miniMenu", "element","miniPage", "miniTheme"], function
          * @returns {*}
          */
         success: function (title) {
-            return layer.msg(title, {icon: 1, shade: this.shade, scrollbar: false, time: 2000, shadeClose: true});
+            return layer.msg(title, { icon: 1, shade: this.shade, scrollbar: false, time: 2000, shadeClose: true });
         },
 
         /**
@@ -198,7 +205,7 @@ layui.define(["jquery", "miniMenu", "element","miniPage", "miniTheme"], function
          * @returns {*}
          */
         error: function (title) {
-            return layer.msg(title, {icon: 2, shade: this.shade, scrollbar: false, time: 3000, shadeClose: true});
+            return layer.msg(title, { icon: 2, shade: this.shade, scrollbar: false, time: 3000, shadeClose: true });
         },
 
         /**
@@ -231,7 +238,7 @@ layui.define(["jquery", "miniMenu", "element","miniPage", "miniTheme"], function
              * 清理
              */
             $('body').on('click', '[data-clear]', function () {
-                var loading = layer.load(0, {shade: false, time: 2 * 1000});
+                var loading = layer.load(0, { shade: false, time: 2 * 1000 });
                 sessionStorage.clear();
 
                 // 判断是否清理服务端
@@ -273,14 +280,14 @@ layui.define(["jquery", "miniMenu", "element","miniPage", "miniTheme"], function
                     tips = $(this).prop("innerHTML"),
                     isShow = $('.layuimini-tool i').attr('data-side-fold');
                 if (isShow == 0 && tips) {
-                    tips = "<ul class='layuimini-menu-left-zoom layui-nav layui-nav-tree layui-this'><li class='layui-nav-item layui-nav-itemed'>"+tips+"</li></ul>" ;
+                    tips = "<ul class='layuimini-menu-left-zoom layui-nav layui-nav-tree layui-this'><li class='layui-nav-item layui-nav-itemed'>" + tips + "</li></ul>";
                     window.openTips = layer.tips(tips, $(this), {
                         tips: [2, '#2f4056'],
                         time: 300000,
-                        skin:"popup-tips",
-                        success:function (el) {
-                            var left = $(el).position().left - 10 ;
-                            $(el).css({ left:left });
+                        skin: "popup-tips",
+                        success: function (el) {
+                            var left = $(el).position().left - 10;
+                            $(el).css({ left: left });
                             element.render();
                         }
                     });
