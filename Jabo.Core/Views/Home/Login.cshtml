@@ -122,7 +122,7 @@
             <div class="layui-form login-form">
                 <form class="layui-form" action="">
                     <div class="layui-form-item logo-title">
-                        <h1>燕翔嘉业货运后台管理</h1>
+                        <h1>燕翔嘉业货运管理系统</h1>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-icon layui-icon-username" for="username"></label>
@@ -169,7 +169,15 @@
                     layer.msg('密码不能为空');
                     return false;
                 }
-                window.location = '/Home/Index';
+
+                $.post("/Home/VerifyLogin", data, function (success) {
+                    if (success) {
+                        window.location = '/Home/Index';
+                    } else {
+                        layer.msg('用户名或密码错误');
+                        return false;
+                    }
+                });
                 return false;
             });
         });</script>

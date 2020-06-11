@@ -20,11 +20,13 @@ namespace Jabo.Core.Controllers
 
         private readonly IMenuService _menuService;
         private readonly IMapper _mapper;
+        private readonly IUserService _userService;
 
-        public HomeController(IMapper mapper, IMenuService menuService)
+        public HomeController(IMapper mapper, IMenuService menuService, IUserService userService)
         {
             _menuService = menuService;
             _mapper = mapper;
+            _userService = userService;
         }
 
         public IActionResult Index()
@@ -40,6 +42,14 @@ namespace Jabo.Core.Controllers
         {
             return View();
         }
+
+        public bool VerifyLogin()
+        {
+            var a = _userService.GetUserByUserNameAndPwd("234", "234");
+
+            return a != null;
+        }
+
 
         public IEnumerable<MenuVModel> GetAllMenu()
         {
