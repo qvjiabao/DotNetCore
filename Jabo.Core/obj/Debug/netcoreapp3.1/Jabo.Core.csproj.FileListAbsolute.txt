@@ -31,6 +31,7 @@ D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.C
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\protobuf-net.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\StackExchange.Redis.StrongName.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
@@ -38,6 +39,8 @@ D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\System.Composition.Hosting.d
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\System.ServiceModel.Primitives.dll
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\System.ServiceModel.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
@@ -95,18 +98,22 @@ D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard2.0\System.Private.ServiceModel.dll
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Private.ServiceModel.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.Dapper.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.IRepository.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.IServices.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.Models.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.Repository.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.Services.dll
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.Tools.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.Dapper.pdb
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.IRepository.pdb
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.IServices.pdb
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.Models.pdb
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.Repository.pdb
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.Services.pdb
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.Tools.pdb
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.csprojAssemblyReference.cache
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.csproj.CoreCompileInputs.cache
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.MvcApplicationPartsAssemblyInfo.cache
@@ -118,7 +125,9 @@ D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.TagHelpers.input.c
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.TagHelpers.output.cache
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.RazorCoreGenerate.cache
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Home\Welcome.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Other\Error404.cshtml.g.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.RazorTargetAssemblyInfo.cache
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.RazorTargetAssemblyInfo.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.Views.pdb
@@ -128,5 +137,3 @@ D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\staticwebassets\Jabo.Core.St
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.dll
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.pdb
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.genruntimeconfig.cache
-D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
-D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Other\Error404.cshtml.g.cs

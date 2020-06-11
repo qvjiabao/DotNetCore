@@ -12,10 +12,11 @@ using Microsoft.AspNetCore.Authentication;
 using Jabo.Core.ViewModels;
 using AutoMapper;
 using Jabo.Models;
+using Jabo.Tools;
 
 namespace Jabo.Core.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
 
         private readonly IMenuService _menuService;
@@ -31,6 +32,8 @@ namespace Jabo.Core.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.displayName = GetUser.DisplayName;
+
             return View();
         }
         public IActionResult Welcome()
@@ -43,11 +46,18 @@ namespace Jabo.Core.Controllers
             return View();
         }
 
-        public bool VerifyLogin()
+        public bool VerifyLogin(string username, string password)
         {
-            var a = _userService.GetUserByUserNameAndPwd("234", "234");
+            var user = _userService.GetUserByUserNameAndPwd(username, password);
 
-            return a != null;
+            if (user != null)
+            {
+                var vModel = _mapper.Map<UserVModel>(user);
+
+                HttpContext.Session.Set("userInfo", ProtoBufHelper.Serialize(vModel));
+            }
+
+            return user != null;
         }
 
 

@@ -21,5 +21,6 @@
     <ProjectReference Include="..\Jabo.Models\Jabo.Models.csproj" />
     <ProjectReference Include="..\Jabo.Repository\Jabo.Repository.csproj" />
     <ProjectReference Include="..\Jabo.Services\Jabo.Services.csproj" />
+    <ProjectReference Include="..\Jabo.Tools\Jabo.Tools.csproj" />
   </ItemGroup>
 </Project>

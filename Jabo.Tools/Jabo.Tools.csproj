@@ -10,4 +10,7 @@
   <ItemGroup>
     <PackageReference Include="protobuf-net" Version="2.4.6" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jabo.Models\Jabo.Models.csproj" />
+  </ItemGroup>
 </Project>

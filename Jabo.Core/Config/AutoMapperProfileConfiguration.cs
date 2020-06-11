@@ -17,6 +17,8 @@ namespace Jabo.Core.Config
             CreateMap<MenuModel, MenuVModel>()
                 .ForMember(dest => dest.href, opt => opt.MapFrom(src => src.Url))
                 .ForMember(dest => dest.child, opts => opts.MapFrom(src => src.Children));
+
+            CreateMap<UserModel, UserVModel>();
         }
     }
 }
