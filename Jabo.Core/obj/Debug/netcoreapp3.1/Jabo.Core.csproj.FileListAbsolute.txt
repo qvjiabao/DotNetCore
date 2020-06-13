@@ -126,7 +126,10 @@ D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.TagHelpers.output.
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.RazorCoreGenerate.cache
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Home\Welcome.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Index\Login.cshtml.g.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Other\Error404.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Other\LoginInvalid.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\User\UserList.cshtml.g.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.RazorTargetAssemblyInfo.cache
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.RazorTargetAssemblyInfo.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.Views.pdb
@@ -136,6 +139,3 @@ D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\staticwebassets\Jabo.Core.St
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.dll
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.pdb
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.genruntimeconfig.cache
-D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Other\LoginInvalid.cshtml.g.cs
-D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Index\Login.cshtml.g.cs
-D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\User\UserList.cshtml.g.cs
