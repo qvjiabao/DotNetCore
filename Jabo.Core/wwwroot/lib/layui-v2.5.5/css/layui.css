@@ -825,7 +825,7 @@ a {
     top: 0;
     bottom: 0;
     z-index: 999;
-    width: 200px;
+    width: 220px;
     overflow-x: hidden
 }
 
@@ -838,7 +838,7 @@ a {
 
 .layui-body {
     position: absolute;
-    left: 200px;
+    left: 220px;
     right: 0;
     top: 0;
     bottom: 0;
@@ -858,7 +858,7 @@ a {
 
 .layui-layout-admin .layui-side {
     top: 60px;
-    width: 200px;
+    width: 220px;
     overflow-x: hidden
 }
 
@@ -875,7 +875,7 @@ a {
 
 .layui-layout-admin .layui-footer {
     position: fixed;
-    left: 200px;
+    left: 220px;
     right: 0;
     bottom: 0;
     height: 44px;
@@ -888,7 +888,7 @@ a {
     position: absolute;
     left: 0;
     top: 0;
-    width: 200px;
+    width: 220px;
     height: 100%;
     line-height: 60px;
     text-align: center;
@@ -902,7 +902,7 @@ a {
 
 .layui-layout-left {
     position: absolute !important;
-    left: 200px;
+    left: 220px;
     top: 0
 }
 
@@ -3672,7 +3672,7 @@ body .layui-table-tips .layui-layer-content {
         }
 
 .layui-nav-tree {
-    width: 200px;
+    width: 220px;
     padding: 0
 }
 

@@ -6,9 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Jabo.Core.Controllers
 {
-    public class OtherController : Controller
+    public class OtherController : BaseController
     {
         public IActionResult Error404()
+        {
+            return View();
+        }
+        public IActionResult LoginInvalid()
         {
             return View();
         }

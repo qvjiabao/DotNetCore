@@ -13,9 +13,13 @@ using Jabo.Core.ViewModels;
 using AutoMapper;
 using Jabo.Models;
 using Jabo.Tools;
+using Jabo.Core.Result;
+using Jabo.Core.Filter;
 
 namespace Jabo.Core.Controllers
 {
+
+    [CheckLogin]
     public class HomeController : BaseController
     {
 
@@ -39,25 +43,6 @@ namespace Jabo.Core.Controllers
         public IActionResult Welcome()
         {
             return View();
-        }
-
-        public IActionResult Login()
-        {
-            return View();
-        }
-
-        public bool VerifyLogin(string username, string password)
-        {
-            var user = _userService.GetUserByUserNameAndPwd(username, password);
-
-            if (user != null)
-            {
-                var vModel = _mapper.Map<UserVModel>(user);
-
-                HttpContext.Session.Set("userInfo", ProtoBufHelper.Serialize(vModel));
-            }
-
-            return user != null;
         }
 
 

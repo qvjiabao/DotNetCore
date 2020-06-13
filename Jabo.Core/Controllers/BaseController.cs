@@ -20,11 +20,18 @@ namespace Jabo.Core.Controllers
         {
             get
             {
-                var bytes = HttpContext.Session.Get("userInfo");
+                if (HttpContext.Session.Keys.Contains("userInfo"))
+                {
+                    var bytes = HttpContext.Session.Get("userInfo");
 
-                var obj = ProtoBufHelper.DeSerialize<UserVModel>(bytes);
+                    var obj = ProtoBufHelper.DeSerialize<UserVModel>(bytes);
 
-                return obj;
+                    return obj;
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
     }

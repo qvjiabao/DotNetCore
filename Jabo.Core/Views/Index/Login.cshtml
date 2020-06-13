@@ -127,11 +127,11 @@
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-icon layui-icon-username" for="username"></label>
-                        <input type="text" name="username" lay-verify="required|account" placeholder="用户账号" autocomplete="off" class="layui-input">
+                        <input type="text" name="username" lay-verify="required|account" placeholder="用户账号" value="zhangsan" autocomplete="off" class="layui-input">
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-icon layui-icon-password" for="password"></label>
-                        <input type="password" name="password" lay-verify="required|password" placeholder="用户密码" autocomplete="off" class="layui-input">
+                        <input type="password" name="password" lay-verify="required|password" placeholder="用户密码" value="zhangsan" autocomplete="off" class="layui-input">
                     </div>
                     <div class="layui-form-item">
                         <button class="layui-btn layui-btn layui-btn-normal layui-btn-fluid" lay-submit="" lay-filter="login">登 录</button>
@@ -171,8 +171,8 @@
                     return false;
                 }
 
-                $.post("/Home/VerifyLogin", data, function (success) {
-                    if (success) {
+                $.post("/Index/VerifyLogin", data, function (json) {
+                    if (json.DataValue) {
                         window.location = '/Home/Index';
                     } else {
                         layer.msg('用户名或密码错误');

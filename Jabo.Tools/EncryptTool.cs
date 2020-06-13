@@ -9,6 +9,7 @@ namespace Jabo.Tools
         public EncryptTool()
         {
         }
+
         /// <summary>
         /// SHA1 加密，返回大写字符串
         /// </summary>

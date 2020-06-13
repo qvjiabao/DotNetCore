@@ -68,7 +68,7 @@ namespace Jabo.Core
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Login}/{id?}");
+                    pattern: "{controller=Index}/{action=Login}/{id?}");
             });
 
         }
