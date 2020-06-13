@@ -33,15 +33,15 @@ namespace Jabo.Core.Controllers
         {
             var all = _userService.GetAllUsers(displayName);
 
-            var query = all.Skip((page - 1) * limit).Take(limit);
+            var list = all.Skip((page - 1) * limit).Take(limit);
 
-            var list = _mapper.Map<IEnumerable<UserModel>, IEnumerable<UserVModel>>(query);
+            var convertList = _mapper.Map<IEnumerable<UserModel>, IEnumerable<UserVModel>>(query);
 
             var tab = new Hashtable();
 
             tab["count"] = all.Count();
 
-            tab["data"] = list;
+            tab["data"] = convertList;
 
             tab["code"] = "0";
 
