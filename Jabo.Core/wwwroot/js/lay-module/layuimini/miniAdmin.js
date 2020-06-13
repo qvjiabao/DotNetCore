@@ -40,7 +40,6 @@ layui.define(["jquery", "miniMenu", "element", "miniPage", "miniTheme"], functio
             options.loadingTime = options.loadingTime || 1;
             options.pageAnim = options.pageAnim || false;
             $.getJSON(options.iniUrl, function (data) {
-                console.log(data);
                 if (data == null) {
                     miniAdmin.error('暂无菜单信息')
                 } else {

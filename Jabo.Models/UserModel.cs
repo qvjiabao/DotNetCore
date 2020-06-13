@@ -13,6 +13,8 @@ namespace Jabo.Models
         public string UserName { get; set; }
         public string PassWord { get; set; }
         public string DisplayName { get; set; }
+        public string Phone { get; set; }
+        public string Sex { get; set; }
         public bool? IsDeleted { get; set; }
         public string CreateUserName { get; set; }
         public string CreateDisplayName { get; set; }

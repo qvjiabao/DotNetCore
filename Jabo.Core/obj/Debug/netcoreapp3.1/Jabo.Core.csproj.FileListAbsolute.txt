@@ -138,3 +138,4 @@ D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.pdb
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.genruntimeconfig.cache
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Other\LoginInvalid.cshtml.g.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Index\Login.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\User\UserList.cshtml.g.cs

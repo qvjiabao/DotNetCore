@@ -10,6 +10,16 @@ namespace Jabo.Repository
 {
     public class UserRepository : IUserRepository
     {
+        public IEnumerable<UserModel> GetAllUsers(string where)
+        {
+            using (var connection = DataBase.GetOpenConnection())
+            {
+                var list = connection.GetList<UserModel>("where IsDeleted = 0 " + where);
+
+                return list;
+            }
+        }
+
         public UserModel GetUserByUserNameAndPwd(string userName, string pwd)
         {
             using (var connection = DataBase.GetOpenConnection())

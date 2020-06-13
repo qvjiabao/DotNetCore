@@ -14,5 +14,11 @@ namespace Jabo.Core.ViewModels
         public string UserName { get; set; }
         [ProtoBuf.ProtoMember(3)]
         public string DisplayName { get; set; }
+        [ProtoBuf.ProtoMember(4)]
+        public string Phone { get; set; }
+        [ProtoBuf.ProtoMember(5)]
+        public string Sex { get; set; }
+        [ProtoBuf.ProtoMember(6)]
+        public DateTime? CreateDate { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Jabo.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,5 +13,12 @@ namespace Jabo.IServices
         /// </summary>
         /// <returns></returns>
         UserModel GetUserByUserNameAndPwd(string userName, string pwd);
+
+        /// <summary>
+        /// 获取所有用户
+        /// </summary>
+        /// <param name="displayName"></param>
+        /// <returns></returns>
+        IEnumerable<UserModel> GetAllUsers(string displayName);
     }
 }

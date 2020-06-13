@@ -12,5 +12,11 @@ namespace Jabo.IRepository
         /// </summary>
         /// <returns></returns>
         UserModel GetUserByUserNameAndPwd(string userName, string pwd);
+
+        /// <summary>
+        /// 获取所有用户
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<UserModel> GetAllUsers(string where);
     }
 }
