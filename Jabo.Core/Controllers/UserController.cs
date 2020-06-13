@@ -35,7 +35,7 @@ namespace Jabo.Core.Controllers
 
             var list = all.Skip((page - 1) * limit).Take(limit);
 
-            var convertList = _mapper.Map<IEnumerable<UserModel>, IEnumerable<UserVModel>>(query);
+            var convertList = _mapper.Map<IEnumerable<UserModel>, IEnumerable<UserVModel>>(list);
 
             var tab = new Hashtable();
 
