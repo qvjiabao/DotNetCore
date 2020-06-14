@@ -37,5 +37,24 @@ namespace Jabo.Services
 
             return list;
         }
+
+        /// <summary>
+        /// 删除用户
+        /// </summary>
+        /// <param name="userCode"></param>
+        /// <returns></returns>
+        public bool RemoveUserByCode(IEnumerable<UserModel> list)
+        {
+            if (list.Count() == 0) return false;
+
+            var str = list.Aggregate(string.Empty, (s, n) => s += $",'{n.UserCode}'");
+
+            return _userRepository.RemoveUserByCode(str.Substring(1)) > 0;
+        }
+
+        public UserModel GetUserByUserCode(string userCode)
+        {
+            return _userRepository.GetUserByUserCode(userCode);
+        }
     }
 }

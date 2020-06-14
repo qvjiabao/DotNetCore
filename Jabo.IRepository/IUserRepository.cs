@@ -7,6 +7,7 @@ namespace Jabo.IRepository
 {
     public interface IUserRepository
     {
+
         /// <summary>
         /// 根据账号密码获取用户信息
         /// </summary>
@@ -18,5 +19,19 @@ namespace Jabo.IRepository
         /// </summary>
         /// <returns></returns>
         IEnumerable<UserModel> GetAllUsers(string where);
+
+        /// <summary>
+        /// 删除用户
+        /// </summary>
+        /// <param name="userCode"></param>
+        /// <returns></returns>
+        int RemoveUserByCode(string userCodes);
+
+        /// <summary>
+        /// 根据编码获取用户
+        /// </summary>
+        /// <param name="userCode"></param>
+        /// <returns></returns>
+        UserModel GetUserByUserCode(string userCode);
     }
 }

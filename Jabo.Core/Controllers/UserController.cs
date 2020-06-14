@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Jabo.Core.Filter;
+using Jabo.Core.Result;
 using Jabo.Core.ViewModels;
 using Jabo.IServices;
 using Jabo.Models;
@@ -12,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace Jabo.Core.Controllers
 {
+    [CheckLogin]
     public class UserController : BaseController
     {
         private readonly IUserService _userService;
@@ -27,6 +30,41 @@ namespace Jabo.Core.Controllers
         {
             return View();
         }
+
+        public IActionResult UserView()
+        {
+            return View();
+        }
+        public IActionResult UserSave()
+        {
+            return View();
+        }
+
+        public UserVModel GetUserByCode(string userCode)
+        {
+            var user = _userService.GetUserByUserCode(userCode);
+
+            var vmodel = _mapper.Map<UserVModel>(user);
+
+            return vmodel;
+        }
+
+        public JsonHttpActionResult RemoveUserByCode(IEnumerable<UserModel> list)
+        {
+            var j = new JsonHttpActionResult();
+
+            if (list.Count() == 0)
+            {
+                return j.ErrorMessage("请选择要删除的用户");
+            }
+
+            var success = _userService.RemoveUserByCode(list);
+
+            j.SetData(success);
+
+            return success ? j.SucceedMessage() : j.ErrorMessage();
+        }
+
 
         [HttpGet]
         public Hashtable GetUserList(string displayName, int limit = 0, int page = 1)
