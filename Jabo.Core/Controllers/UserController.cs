@@ -49,6 +49,41 @@ namespace Jabo.Core.Controllers
             return vmodel;
         }
 
+        public JsonHttpActionResult SaveUserInfo(UserModel model)
+        {
+            var j = new JsonHttpActionResult();
+            var success = true;
+            if (string.IsNullOrWhiteSpace(model.UserCode))
+            {
+                //检查用户账号是否存在
+                var checkUserName = _userService.ExistsUserName(model.UserName);
+                if (checkUserName)
+                    return j.ErrorMessage("用户账号已存在");
+                model.CreateDate = DateTime.Now;
+                model.CreateUserName = GetUser.UserName;
+                model.CreateDisplayName = GetUser.DisplayName;
+                model.IsDeleted = false;
+
+            }
+            else
+            {
+                //检查用户账号是否存在
+                var checkUserName = _userService.ExistsUserName(model.UserName, model.UserCode);
+                if (checkUserName)
+                    return j.ErrorMessage("用户账号已存在");
+                model.ModifyDate = DateTime.Now;
+                model.ModifyUserName = GetUser.UserName;
+                model.ModifyDisplayName = GetUser.DisplayName;
+            }
+
+            success = _userService.SaveUser(model);
+
+            j.SetData(success);
+
+            return success ? j.SucceedMessage() : j.ErrorMessage();
+        }
+
+
         public JsonHttpActionResult RemoveUserByCode(IEnumerable<UserModel> list)
         {
             var j = new JsonHttpActionResult();

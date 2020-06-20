@@ -45,7 +45,7 @@
             elem: '#currentTableId',
             url: '/User/GetUserList',
             toolbar: '#toolbarDemo',
-            defaultToolbar: ['filter'],
+            defaultToolbar: [],
             cols: [[
                 { type: "checkbox", width: '5%' },
                 { type: "numbers", width: '5%', title: '序号' },
@@ -54,7 +54,7 @@
                 { field: 'displayName', width: '15%', title: '用户名称', align: 'center' },
                 { field: 'phone', width: '15%', title: '手机号', align: 'center' },
                 { field: 'sex', width: '15%', title: '性别', align: 'center' },
-                { field: 'createDate', width: '15%', title: '创建日期', align: 'center' },
+                { field: 'createDate', width: '15%', title: '创建日期', align: 'center', templet: "<div>{{layui.util.toDateString(d.sbj_start, 'yyyy-MM-dd')}}</div>"  },
                 { title: '操作', width: '15%', toolbar: '#currentTableBar', align: "center" }
             ]],
             limits: [10, 15, 20, 25, 50, 100],
@@ -83,18 +83,13 @@
          */
         table.on('toolbar(currentTableFilter)', function (obj) {
             if (obj.event === 'add') {   // 监听添加操作
-                var content = miniPage.getHrefContent('page/table/add.html');
-                var openWH = miniPage.getOpenWidthHeight();
-
                 var index = layer.open({
                     title: '添加用户',
-                    type: 1,
+                    type: 2,
                     shade: 0.2,
-                    maxmin: true,
                     shadeClose: true,
-                    area: [openWH[0] + 'px', openWH[1] + 'px'],
-                    offset: [openWH[2] + 'px', openWH[3] + 'px'],
-                    content: content,
+                    area: ['800px', '400px'],
+                    content: "/User/UserSave"
                 });
                 $(window).on("resize", function () {
                     layer.full(index);
@@ -128,23 +123,17 @@
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
             if (obj.event === 'edit') {
-                var content = miniPage.getHrefContent('page/table/add.html');
-                var openWH = miniPage.getOpenWidthHeight();
-
                 var index = layer.open({
                     title: '编辑用户',
-                    type: 1,
+                    type: 2,
                     shade: 0.2,
-                    maxmin: true,
                     shadeClose: true,
-                    area: [openWH[0] + 'px', openWH[1] + 'px'],
-                    offset: [openWH[2] + 'px', openWH[3] + 'px'],
-                    content: content,
+                    area: ['800px', '400px'],
+                    content: "/User/UserSave#/userCode=" + data.userCode,
                 });
                 $(window).on("resize", function () {
                     layer.full(index);
                 });
-                return false;
             } else if (obj.event === 'delete') {
                 layer.confirm('您确定删除吗？', function (index) {
                     $.post("/User/RemoveUserByCode", { list: [data] }, function (json) {

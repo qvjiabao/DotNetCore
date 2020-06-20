@@ -9,6 +9,21 @@ namespace Jabo.IServices
     public interface IUserService
     {
         /// <summary>
+        /// 检查用户是否存在
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="userCode"></param>
+        /// <returns></returns>
+        bool ExistsUserName(string userName, string userCode = "");
+
+        /// <summary>
+        /// 保存用户
+        /// </summary>
+        /// <param name="userModel"></param>
+        /// <returns></returns>
+        bool SaveUser(UserModel userModel);
+
+        /// <summary>
         /// 根据编码获取用户
         /// </summary>
         /// <returns></returns>

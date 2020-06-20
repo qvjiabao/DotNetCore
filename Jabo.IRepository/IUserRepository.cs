@@ -28,6 +28,27 @@ namespace Jabo.IRepository
         int RemoveUserByCode(string userCodes);
 
         /// <summary>
+        /// 新增用户
+        /// </summary>
+        /// <param name="userCode"></param>
+        /// <returns></returns>
+        int CreateUser(UserModel user);
+
+        /// <summary>
+        /// 编辑用户
+        /// </summary>
+        /// <param name="userCode"></param>
+        /// <returns></returns>
+        int UpdateUser(UserModel user);
+
+        /// <summary>
+        /// 检查用户名是否存在
+        /// </summary>
+        /// <param name="userCode"></param>
+        /// <returns></returns>
+        bool ExistxUserName(string userName, string userCode = "");
+
+        /// <summary>
         /// 根据编码获取用户
         /// </summary>
         /// <param name="userCode"></param>

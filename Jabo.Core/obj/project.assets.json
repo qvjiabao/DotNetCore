@@ -2370,7 +2370,8 @@
         "dependencies": {
           "Jabo.IRepository": "1.0.0",
           "Jabo.IServices": "1.0.0",
-          "Jabo.Models": "1.0.0"
+          "Jabo.Models": "1.0.0",
+          "Jabo.Tools": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Jabo.Services.dll": {}
