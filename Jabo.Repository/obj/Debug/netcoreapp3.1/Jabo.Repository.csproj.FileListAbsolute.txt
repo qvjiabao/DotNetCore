@@ -14,3 +14,5 @@ D:\git\DotNetCore\Jabo.Repository\obj\Debug\netcoreapp3.1\Jabo.Repository.Assemb
 D:\git\DotNetCore\Jabo.Repository\obj\Debug\netcoreapp3.1\Jabo.Repository.csproj.CopyComplete
 D:\git\DotNetCore\Jabo.Repository\obj\Debug\netcoreapp3.1\Jabo.Repository.dll
 D:\git\DotNetCore\Jabo.Repository\obj\Debug\netcoreapp3.1\Jabo.Repository.pdb
+D:\git\DotNetCore\Jabo.Repository\bin\Debug\netcoreapp3.1\Jabo.Tools.dll
+D:\git\DotNetCore\Jabo.Repository\bin\Debug\netcoreapp3.1\Jabo.Tools.pdb

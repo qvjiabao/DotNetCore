@@ -372,6 +372,9 @@
               },
               "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj": {
                 "projectPath": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj"
+              },
+              "D:\\git\\DotNetCore\\Jabo.Tools\\Jabo.Tools.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.Tools\\Jabo.Tools.csproj"
               }
             }
           }
@@ -506,6 +509,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
             "protobuf-net": {
               "target": "Package",
               "version": "[2.4.6, )"

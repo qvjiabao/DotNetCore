@@ -21,7 +21,7 @@ namespace Jabo.IServices
         /// </summary>
         /// <param name="userModel"></param>
         /// <returns></returns>
-        bool SaveUser(UserModel userModel);
+        bool SaveUser(UserModel userModel, bool IsChangePwd = false);
 
         /// <summary>
         /// 根据编码获取用户

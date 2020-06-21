@@ -7,11 +7,11 @@ using System.Text;
 
 namespace Jabo.Repository
 {
-    public class MenuRepository : IMenuRepository
+    public class MenuRepository : BaseRepository, IMenuRepository
     {
         public IEnumerable<MenuModel> GetAllMenu()
         {
-            using (var connection = Dapper.DataBase.GetOpenConnection())
+            using (var connection = Dapper.DataBase.GetOpenConnection(GetConnectionString))
             {
                 var list = connection.GetList<MenuModel>(" order by sort ");
 

@@ -2,6 +2,7 @@
 using Jabo.Dapper;
 using Jabo.IRepository;
 using Jabo.Models;
+using Jabo.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,11 @@ using System.Text;
 
 namespace Jabo.Repository
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository : BaseRepository, IUserRepository
     {
         public int CreateUser(UserModel user)
         {
-            using (var connection = DataBase.GetOpenConnection())
+            using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
                 var count = connection.Insert<UserModel>(user);
 
@@ -23,7 +24,7 @@ namespace Jabo.Repository
 
         public bool ExistxUserName(string userName, string userCode = "")
         {
-            using (var connection = DataBase.GetOpenConnection())
+            using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
                 if (string.IsNullOrWhiteSpace(userCode))
                 {
@@ -44,7 +45,7 @@ namespace Jabo.Repository
 
         public IEnumerable<UserModel> GetAllUsers(string where)
         {
-            using (var connection = DataBase.GetOpenConnection())
+            using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
                 var list = connection.GetList<UserModel>("where IsDeleted = 0 " + where + " order by CreateDate desc");
 
@@ -54,7 +55,7 @@ namespace Jabo.Repository
 
         public UserModel GetUserByUserCode(string userCode)
         {
-            using (var connection = DataBase.GetOpenConnection())
+            using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
                 var model = connection.GetList<UserModel>("where IsDeleted = 0 and UserCode = @userCode ",
                     new { userCode = userCode }).FirstOrDefault();
@@ -65,7 +66,7 @@ namespace Jabo.Repository
 
         public UserModel GetUserByUserNameAndPwd(string userName, string pwd)
         {
-            using (var connection = DataBase.GetOpenConnection())
+            using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
                 var model = connection.GetList<UserModel>("where IsDeleted = 0 and UserName = @UserName and PassWord = @PassWord",
                     new { UserName = userName, PassWord = pwd }).FirstOrDefault();
@@ -81,7 +82,7 @@ namespace Jabo.Repository
         /// <returns></returns>
         public int RemoveUserByCode(string userCodes)
         {
-            using (var connection = DataBase.GetOpenConnection())
+            using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
                 var count = connection.Execute($" UPDATE YX_Users SET IsDeleted = 1 where userCode in ({userCodes})");
 
@@ -91,7 +92,7 @@ namespace Jabo.Repository
 
         public int UpdateUser(UserModel user)
         {
-            using (var connection = DataBase.GetOpenConnection())
+            using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
                 var count = connection.Update<UserModel>(user);
 

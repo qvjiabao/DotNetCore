@@ -141,3 +141,12 @@ D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.pdb
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.genruntimeconfig.cache
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\User\UserView.cshtml.g.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\User\UserSave.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Home\ChangePwd.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll

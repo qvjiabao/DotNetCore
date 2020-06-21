@@ -57,7 +57,7 @@
                         <a href="javascript:;">欢迎您： @ViewBag.displayName</a>
                         <dl class="layui-nav-child">
                             <dd>
-                                <a href="javascript:;" layuimini-content-href="page/user-password.html" data-title="修改密码" data-icon="fa fa-gears">修改密码</a>
+                                <a href="javascript:;" class="change-pwd" data-title="修改密码" data-icon="fa fa-gears">修改密码</a>
                             </dd>
                             <dd>
                                 <hr>
@@ -122,6 +122,20 @@
 
             $('.login-out').on("click", function () {
                 window.location = '/Index/Loginout';
+            });
+
+            $('.change-pwd').on("click", function () {
+                var index = layer.open({
+                    title: '修改密码',
+                    type: 2,
+                    shade: 0.2,
+                    shadeClose: true,
+                    area: ['800px', '400px'],
+                    content: "/Home/ChangePwd"
+                });
+                $(window).on("resize", function () {
+                    layer.full(index);
+                });
             });
         });</script>
 </body>

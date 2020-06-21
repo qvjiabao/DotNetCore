@@ -35,6 +35,32 @@ namespace Jabo.Core.Controllers
             return View();
         }
 
+        public JsonHttpActionResult ChangePwd(string old_password, string new_password, string again_password)
+        {
+            var j = new JsonHttpActionResult();
+
+            if (new_password != again_password)
+            {
+                return j.ErrorMessage("两次密码输入不一致");
+            }
+
+            var user = _userService.GetUserByUserNameAndPwd(GetUser.UserName, old_password);
+
+            if (user == null)
+            {
+                return j.ErrorMessage("旧密码错误");
+            }
+
+            user.PassWord = new_password;
+
+            var success = _userService.SaveUser(user, true);
+
+            j.SetData(success);
+
+            return success ? j.SucceedMessage() : j.ErrorMessage();
+        }
+
+
         public JsonHttpActionResult VerifyLogin(string username, string password)
         {
             var j = new JsonHttpActionResult();

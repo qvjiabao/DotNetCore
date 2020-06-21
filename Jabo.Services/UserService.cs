@@ -65,7 +65,7 @@ namespace Jabo.Services
             return _userRepository.ExistxUserName(userName, userCode);
         }
 
-        public bool SaveUser(UserModel userModel)
+        public bool SaveUser(UserModel userModel, bool IsChangePwd = false)
         {
             if (string.IsNullOrWhiteSpace(userModel.UserCode))
             {
@@ -82,6 +82,9 @@ namespace Jabo.Services
                 model.ModifyDate = userModel.ModifyDate;
                 model.ModifyDisplayName = userModel.ModifyDisplayName;
                 model.ModifyUserName = userModel.ModifyUserName;
+                if (IsChangePwd)
+                    model.PassWord = EncryptTool.GetMd5By32(userModel.PassWord);
+
                 return _userRepository.UpdateUser(model) > 0;
             }
         }

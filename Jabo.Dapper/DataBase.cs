@@ -935,10 +935,10 @@ namespace Jabo.Dapper
             MySQL,
         }
 
-        public static IDbConnection GetOpenConnection()
+        public static IDbConnection GetOpenConnection(string connectionString)
         {
             IDbConnection connection;
-            connection = new SqlConnection(@"server=.;database=YX_DataBase;uid=sa;pwd=1qaz@WSX");
+            connection = new SqlConnection(connectionString);
             DataBase.SetDialect(_dialect);
             connection.Open();
             return connection;
