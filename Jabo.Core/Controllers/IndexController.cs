@@ -44,7 +44,7 @@ namespace Jabo.Core.Controllers
                 return j.ErrorMessage("两次密码输入不一致");
             }
 
-            var user = _userService.GetUserByUserNameAndPwd(GetUser.UserName, old_password);
+            var user = _userService.GetUserByUserNameAndPwd(UserInfo.UserName, old_password);
 
             if (user == null)
             {

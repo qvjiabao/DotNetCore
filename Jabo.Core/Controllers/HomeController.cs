@@ -36,7 +36,7 @@ namespace Jabo.Core.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.displayName = GetUser.DisplayName;
+            ViewBag.displayName = UserInfo.DisplayName;
 
             return View();
         }

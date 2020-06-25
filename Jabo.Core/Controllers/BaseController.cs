@@ -16,7 +16,7 @@ namespace Jabo.Core.Controllers
         {
         }
 
-        protected UserVModel GetUser
+        protected UserVModel UserInfo
         {
             get
             {

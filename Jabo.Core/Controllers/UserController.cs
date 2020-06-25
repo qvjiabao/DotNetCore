@@ -60,8 +60,8 @@ namespace Jabo.Core.Controllers
                 if (checkUserName)
                     return j.ErrorMessage("用户账号已存在");
                 model.CreateDate = DateTime.Now;
-                model.CreateUserName = GetUser.UserName;
-                model.CreateDisplayName = GetUser.DisplayName;
+                model.CreateUserName = UserInfo.UserName;
+                model.CreateDisplayName = UserInfo.DisplayName;
                 model.IsDeleted = false;
 
             }
@@ -72,8 +72,8 @@ namespace Jabo.Core.Controllers
                 if (checkUserName)
                     return j.ErrorMessage("用户账号已存在");
                 model.ModifyDate = DateTime.Now;
-                model.ModifyUserName = GetUser.UserName;
-                model.ModifyDisplayName = GetUser.DisplayName;
+                model.ModifyUserName = UserInfo.UserName;
+                model.ModifyDisplayName = UserInfo.DisplayName;
             }
 
             success = _userService.SaveUser(model);
@@ -99,7 +99,6 @@ namespace Jabo.Core.Controllers
 
             return success ? j.SucceedMessage() : j.ErrorMessage();
         }
-
 
         [HttpGet]
         public Hashtable GetUserList(string displayName, int limit = 0, int page = 1)

@@ -150,3 +150,6 @@ D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FilePro
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Role\RoleList.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Role\RoleSave.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Role\RoleView.cshtml.g.cs

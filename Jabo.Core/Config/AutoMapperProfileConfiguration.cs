@@ -19,6 +19,7 @@ namespace Jabo.Core.Config
                 .ForMember(dest => dest.child, opts => opts.MapFrom(src => src.Children));
 
             CreateMap<UserModel, UserVModel>();
+            CreateMap<RoleModel, RoleVModel>();
         }
     }
 }
