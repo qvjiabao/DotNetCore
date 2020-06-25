@@ -93,7 +93,9 @@ namespace Jabo.Core.Controllers
                 return j.ErrorMessage("请选择要删除的用户");
             }
 
-            var success = _userService.RemoveUserByCode(list);
+            var user = UserInfo;
+
+            var success = _userService.RemoveUserByCode(list, user.UserName, user.DisplayName);
 
             j.SetData(success);
 

@@ -42,13 +42,13 @@ namespace Jabo.Services
             return _roleRepository.GetRoleByRoleCode(roleCode);
         }
 
-        public bool RemoveRoleByCode(IEnumerable<RoleModel> list)
+        public bool RemoveRoleByCode(IEnumerable<RoleModel> list, string userName, string displayName)
         {
             if (list.Count() == 0) return false;
 
             var str = list.Aggregate(string.Empty, (s, n) => s += $",'{n.RoleCode}'");
 
-            return _roleRepository.RemoveRoleByCode(str.Substring(1)) > 0;
+            return _roleRepository.RemoveRoleByCode(str.Substring(1), userName, displayName) > 0;
         }
 
         public bool SaveRole(RoleModel roleModel)

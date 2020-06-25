@@ -18,7 +18,7 @@ namespace Jabo.IRepository
         /// </summary>
         /// <param name="roleCode"></param>
         /// <returns></returns>
-        int RemoveRoleByCode(string roleCodes);
+        int RemoveRoleByCode(string roleCodes, string userName, string displayName);
 
         /// <summary>
         /// 新增角色

@@ -40,6 +40,6 @@ namespace Jabo.IServices
         /// </summary>
         /// <param name="roleCode"></param>
         /// <returns></returns>
-        bool RemoveRoleByCode(IEnumerable<RoleModel> list);
+        bool RemoveRoleByCode(IEnumerable<RoleModel> list, string userName, string displayName);
     }
 }

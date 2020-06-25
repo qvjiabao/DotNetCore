@@ -80,11 +80,12 @@ namespace Jabo.Repository
         /// </summary>
         /// <param name="userCode"></param>
         /// <returns></returns>
-        public int RemoveUserByCode(string userCodes)
+        public int RemoveUserByCode(string userCodes, string userName, string displayName)
         {
             using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
-                var count = connection.Execute($" UPDATE YX_Users SET IsDeleted = 1 where userCode in ({userCodes})");
+                var count = connection.Execute(@$" UPDATE YX_Users SET IsDeleted = 1,ModifyUserName = @modifyUserName,ModifyDisplayName = @modifyDisplayName
+                    ,ModifyDate = @modifyDate where userCode in ({userCodes})", new { modifyUserName = userName, modifyDisplayName = displayName, modifyDate = DateTime.Now });
 
                 return count;
             }

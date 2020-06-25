@@ -25,7 +25,7 @@ namespace Jabo.IRepository
         /// </summary>
         /// <param name="userCode"></param>
         /// <returns></returns>
-        int RemoveUserByCode(string userCodes);
+        int RemoveUserByCode(string userCodes, string userName, string displayName);
 
         /// <summary>
         /// 新增用户

@@ -91,7 +91,9 @@ namespace Jabo.Core.Controllers
                 return j.ErrorMessage("请选择要删除的角色");
             }
 
-            var success = _roleService.RemoveRoleByCode(list);
+            var user = UserInfo;
+
+            var success = _roleService.RemoveRoleByCode(list, user.UserName, user.DisplayName);
 
             j.SetData(success);
 

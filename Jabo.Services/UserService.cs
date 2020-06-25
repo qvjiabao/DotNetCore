@@ -46,13 +46,13 @@ namespace Jabo.Services
         /// </summary>
         /// <param name="userCode"></param>
         /// <returns></returns>
-        public bool RemoveUserByCode(IEnumerable<UserModel> list)
+        public bool RemoveUserByCode(IEnumerable<UserModel> list, string userName, string displayName)
         {
             if (list.Count() == 0) return false;
 
             var str = list.Aggregate(string.Empty, (s, n) => s += $",'{n.UserCode}'");
 
-            return _userRepository.RemoveUserByCode(str.Substring(1)) > 0;
+            return _userRepository.RemoveUserByCode(str.Substring(1), userName, displayName) > 0;
         }
 
         public UserModel GetUserByUserCode(string userCode)

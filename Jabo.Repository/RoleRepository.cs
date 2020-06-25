@@ -63,11 +63,12 @@ namespace Jabo.Repository
             }
         }
 
-        public int RemoveRoleByCode(string roleCodes)
+        public int RemoveRoleByCode(string roleCodes, string userName, string displayName)
         {
             using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
-                var count = connection.Execute($" UPDATE YX_Roles SET IsDeleted = 1 where RoleCode in ({roleCodes})");
+                var count = connection.Execute(@$" UPDATE YX_Roles SET IsDeleted = 1,ModifyUserName = @modifyUserName,ModifyDisplayName = @modifyDisplayName
+                    ,ModifyDate = @modifyDate where RoleCode in ({roleCodes})", new { modifyUserName = userName, modifyDisplayName = displayName, modifyDate = DateTime.Now });
 
                 return count;
             }

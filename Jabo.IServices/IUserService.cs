@@ -47,6 +47,6 @@ namespace Jabo.IServices
         /// </summary>
         /// <param name="userCode"></param>
         /// <returns></returns>
-        bool RemoveUserByCode(IEnumerable<UserModel> list);
+        bool RemoveUserByCode(IEnumerable<UserModel> list, string userName, string displayName);
     }
 }
