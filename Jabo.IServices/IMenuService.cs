@@ -7,6 +7,8 @@ namespace Jabo.IServices
 {
     public interface IMenuService
     {
-        IEnumerable<MenuModel> GetAllMenu();
+        IEnumerable<MenuModel> GetAllMenu(string roleCode);
+
+        List<Dictionary<string, object>> GetRoleMenu(string roleCode);
     }
 }

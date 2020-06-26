@@ -37,6 +37,14 @@
                 </div>
             </div>
             <div class="layui-form-item">
+                <label class="layui-form-label required">角色名称</label>
+                <div class="layui-input-block">
+                    <select lay-verify="required" disabled class="roleCode" name="roleCode">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
                 <label class="layui-form-label">性别</label>
                 <div class="layui-input-block">
                     <input type="radio" name="sex" disabled value="男" title="男" checked="">
@@ -68,12 +76,22 @@
              */
             form.render();
 
-            $.post("/User/GetUserByCode", { userCode: router.search.userCode }, function (json) {            //表单初始赋值
+            $.get("/Role/GetRoleList", {}, function (json) {
+                if (json.Result) {
+                    JSON.parse(json.DataValue).forEach(function (item, index, arr) {
+                        $(".roleCode").append("<option value='" + item.roleCode + "'>" + item.roleName + "</option>");
+                    });
+                    form.render();
+                }
+            });
+
+            $.get("/User/GetUserByCode", { userCode: router.search.userCode }, function (json) {            //表单初始赋值
                 form.val('example', {
                     "userName": json.userName
                     , "phone": json.phone
                     , "sex": json.sex
                     , "displayName": json.displayName
+                    , "roleCode": json.roleCode
                 });
             });
             var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引

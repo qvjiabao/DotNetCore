@@ -23,6 +23,13 @@ namespace Jabo.IServices
         bool SaveRole(RoleModel roleModel);
 
         /// <summary>
+        /// 保存角色菜单关系
+        /// </summary>
+        /// <param name="roleModel"></param>
+        /// <returns></returns>
+        bool SaveRoleMenu(IEnumerable<MenuModel> list, string roleCode, string userName, string displayName);
+
+        /// <summary>
         /// 根据编码获取角色
         /// </summary>
         /// <returns></returns>

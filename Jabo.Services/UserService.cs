@@ -79,6 +79,7 @@ namespace Jabo.Services
                 model.DisplayName = userModel.DisplayName;
                 model.Sex = userModel.Sex;
                 model.Phone = userModel.Phone;
+                model.RoleCode = userModel.RoleCode;
                 model.ModifyDate = userModel.ModifyDate;
                 model.ModifyDisplayName = userModel.ModifyDisplayName;
                 model.ModifyUserName = userModel.ModifyUserName;

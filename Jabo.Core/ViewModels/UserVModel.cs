@@ -20,5 +20,7 @@ namespace Jabo.Core.ViewModels
         public string Sex { get; set; }
         [ProtoBuf.ProtoMember(6)]
         public DateTime? CreateDate { get; set; }
+        [ProtoBuf.ProtoMember(7)]
+        public string RoleCode { get; set; }
     }
 }

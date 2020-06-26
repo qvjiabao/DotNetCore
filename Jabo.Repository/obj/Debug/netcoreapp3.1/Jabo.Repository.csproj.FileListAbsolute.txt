@@ -4,9 +4,11 @@ D:\git\DotNetCore\Jabo.Repository\bin\Debug\netcoreapp3.1\Jabo.Repository.pdb
 D:\git\DotNetCore\Jabo.Repository\bin\Debug\netcoreapp3.1\Jabo.Dapper.dll
 D:\git\DotNetCore\Jabo.Repository\bin\Debug\netcoreapp3.1\Jabo.IRepository.dll
 D:\git\DotNetCore\Jabo.Repository\bin\Debug\netcoreapp3.1\Jabo.Models.dll
+D:\git\DotNetCore\Jabo.Repository\bin\Debug\netcoreapp3.1\Jabo.Tools.dll
 D:\git\DotNetCore\Jabo.Repository\bin\Debug\netcoreapp3.1\Jabo.Dapper.pdb
 D:\git\DotNetCore\Jabo.Repository\bin\Debug\netcoreapp3.1\Jabo.IRepository.pdb
 D:\git\DotNetCore\Jabo.Repository\bin\Debug\netcoreapp3.1\Jabo.Models.pdb
+D:\git\DotNetCore\Jabo.Repository\bin\Debug\netcoreapp3.1\Jabo.Tools.pdb
 D:\git\DotNetCore\Jabo.Repository\obj\Debug\netcoreapp3.1\Jabo.Repository.csprojAssemblyReference.cache
 D:\git\DotNetCore\Jabo.Repository\obj\Debug\netcoreapp3.1\Jabo.Repository.csproj.CoreCompileInputs.cache
 D:\git\DotNetCore\Jabo.Repository\obj\Debug\netcoreapp3.1\Jabo.Repository.AssemblyInfoInputs.cache
@@ -14,5 +16,3 @@ D:\git\DotNetCore\Jabo.Repository\obj\Debug\netcoreapp3.1\Jabo.Repository.Assemb
 D:\git\DotNetCore\Jabo.Repository\obj\Debug\netcoreapp3.1\Jabo.Repository.csproj.CopyComplete
 D:\git\DotNetCore\Jabo.Repository\obj\Debug\netcoreapp3.1\Jabo.Repository.dll
 D:\git\DotNetCore\Jabo.Repository\obj\Debug\netcoreapp3.1\Jabo.Repository.pdb
-D:\git\DotNetCore\Jabo.Repository\bin\Debug\netcoreapp3.1\Jabo.Tools.dll
-D:\git\DotNetCore\Jabo.Repository\bin\Debug\netcoreapp3.1\Jabo.Tools.pdb

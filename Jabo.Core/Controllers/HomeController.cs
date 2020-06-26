@@ -50,13 +50,22 @@ namespace Jabo.Core.Controllers
             return View();
         }
 
+        [HttpGet]
         public IEnumerable<MenuVModel> GetAllMenu()
         {
-            var menuList = _menuService.GetAllMenu();
+            var roleCode = UserInfo.RoleCode;
+
+            var menuList = _menuService.GetAllMenu(roleCode);
 
             var list = _mapper.Map<IEnumerable<MenuModel>, IEnumerable<MenuVModel>>(menuList);
 
             return list;
+        }
+
+        [HttpGet]
+        public List<Dictionary<string, object>> GetMenuTree(string roleCode)
+        {
+            return _menuService.GetRoleMenu(roleCode);
         }
     }
 }

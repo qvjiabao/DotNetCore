@@ -1,4 +1,5 @@
-﻿using Jabo.IRepository;
+﻿using Jabo.Dapper;
+using Jabo.IRepository;
 using Jabo.IServices;
 using Jabo.Models;
 using System;
@@ -12,10 +13,12 @@ namespace Jabo.Services
     {
 
         private IRoleRepository _roleRepository;
+        private IMenuRepository _menuRepository;
 
-        public RoleService(IRoleRepository roleRepository)
+        public RoleService(IRoleRepository roleRepository, IMenuRepository menuRepository)
         {
             _roleRepository = roleRepository;
+            _menuRepository = menuRepository;
         }
 
         public bool ExistsRoleName(string roleName, string roleCode = "")
@@ -70,6 +73,46 @@ namespace Jabo.Services
 
                 return _roleRepository.UpdateRole(model) > 0;
             }
+        }
+
+        public bool SaveRoleMenu(IEnumerable<MenuModel> rolelist, string roleCode, string userName, string displayName)
+        {
+            var success = true;
+
+            try
+            {
+                _menuRepository.RemoveRoleMenu(roleCode); //删除所有关系
+
+                foreach (var item in rolelist)
+                {
+                    var model = new RoleMenuModel();
+                    model.MenuCode = item.MenuGuid;
+                    model.RoleCode = roleCode;
+                    model.CreateDate = DateTime.Now;
+                    model.CreateUserName = userName;
+                    model.CreateDisplayName = displayName;
+
+                    _menuRepository.CreateRoleMenu(model);  //新增关系
+
+                    foreach (var child in item.Children)
+                    {
+                        model = new RoleMenuModel();
+                        model.MenuCode = child.MenuGuid;
+                        model.RoleCode = roleCode;
+                        model.CreateDate = DateTime.Now;
+                        model.CreateUserName = userName;
+                        model.CreateDisplayName = displayName;
+
+                        _menuRepository.CreateRoleMenu(model); //新增关系
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                success = false;
+            }
+
+            return success;
         }
     }
 }

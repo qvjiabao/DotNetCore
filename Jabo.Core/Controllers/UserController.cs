@@ -40,6 +40,7 @@ namespace Jabo.Core.Controllers
             return View();
         }
 
+        [HttpGet]
         public UserVModel GetUserByCode(string userCode)
         {
             var user = _userService.GetUserByUserCode(userCode);
@@ -49,6 +50,7 @@ namespace Jabo.Core.Controllers
             return vmodel;
         }
 
+        [HttpPost]
         public JsonHttpActionResult SaveUserInfo(UserModel model)
         {
             var j = new JsonHttpActionResult();
@@ -83,7 +85,7 @@ namespace Jabo.Core.Controllers
             return success ? j.SucceedMessage() : j.ErrorMessage();
         }
 
-
+        [HttpPost]
         public JsonHttpActionResult RemoveUserByCode(IEnumerable<UserModel> list)
         {
             var j = new JsonHttpActionResult();

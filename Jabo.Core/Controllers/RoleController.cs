@@ -38,7 +38,12 @@ namespace Jabo.Core.Controllers
         {
             return View();
         }
+        public IActionResult RoleMenuList()
+        {
+            return View();
+        }
 
+        [HttpGet]
         public RoleVModel GetRoleByCode(string roleCode)
         {
             var user = _roleService.GetRoleByRoleCode(roleCode);
@@ -47,7 +52,23 @@ namespace Jabo.Core.Controllers
 
             return vmodel;
         }
+        [HttpPost]
+        public JsonHttpActionResult SaveRoleMenu(IEnumerable<MenuTreeVModel> list, string roleCode)
+        {
+            var j = new JsonHttpActionResult();
 
+            var convertList = _mapper.Map<IEnumerable<MenuModel>>(list);
+
+            var user = UserInfo;
+
+            var success = _roleService.SaveRoleMenu(convertList, roleCode, user.UserName, user.DisplayName);
+
+            j.SetData(success);
+
+            return success ? j.SucceedMessage() : j.ErrorMessage();
+        }
+
+        [HttpPost]
         public JsonHttpActionResult SaveRoleInfo(RoleModel model)
         {
             var j = new JsonHttpActionResult();
@@ -82,6 +103,7 @@ namespace Jabo.Core.Controllers
             return success ? j.SucceedMessage() : j.ErrorMessage();
         }
 
+        [HttpPost]
         public JsonHttpActionResult RemoveRoleByCode(IEnumerable<RoleModel> list)
         {
             var j = new JsonHttpActionResult();
@@ -108,7 +130,7 @@ namespace Jabo.Core.Controllers
         /// <param name="page"></param>
         /// <returns></returns>
         [HttpGet]
-        public Hashtable GetUserPage(string roleName, int limit = 0, int page = 1)
+        public Hashtable GetRolePage(string roleName, int limit = 0, int page = 1)
         {
             var all = _roleService.GetAllRoles(roleName);
 
@@ -125,6 +147,25 @@ namespace Jabo.Core.Controllers
             tab["code"] = "0";
 
             return tab;
+        }
+
+        /// <summary>
+        /// 获取角色列表
+        /// </summary>
+        /// <param name="displayName"></param>
+        /// <param name="limit"></param>
+        /// <param name="page"></param>
+        /// <returns></returns>
+        [HttpGet, HttpPost]
+        public JsonHttpActionResult GetRoleList()
+        {
+            var list = _roleService.GetAllRoles(string.Empty);
+
+            var convertList = _mapper.Map<IEnumerable<RoleModel>, IEnumerable<RoleVModel>>(list);
+
+            var j = new JsonHttpActionResult();
+
+            return j.SetData(convertList).SucceedMessage();
         }
     }
 }

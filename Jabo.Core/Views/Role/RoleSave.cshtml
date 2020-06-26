@@ -61,7 +61,7 @@
 
             if (router.search.roleCode != undefined && router.search.roleCode !== "") {
 
-                $.post("/Role/GetRoleByCode", { roleCode: router.search.roleCode }, function (json) {            //表单初始赋值
+                $.get("/Role/GetRoleByCode", { roleCode: router.search.roleCode }, function (json) {            //表单初始赋值
                     form.val('example', {
                         "roleCode": json.roleCode
                         , "roleName": json.roleName

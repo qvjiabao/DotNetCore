@@ -6,9 +6,9 @@ D:\git\DotNetCore\Jabo.Tools\bin\Debug\netcoreapp3.1\Jabo.Models.dll
 D:\git\DotNetCore\Jabo.Tools\bin\Debug\netcoreapp3.1\Jabo.Models.pdb
 D:\git\DotNetCore\Jabo.Tools\bin\Debug\netcoreapp3.1\Jabo.Dapper.pdb
 D:\git\DotNetCore\Jabo.Tools\obj\Debug\netcoreapp3.1\Jabo.Tools.csprojAssemblyReference.cache
+D:\git\DotNetCore\Jabo.Tools\obj\Debug\netcoreapp3.1\Jabo.Tools.csproj.CoreCompileInputs.cache
 D:\git\DotNetCore\Jabo.Tools\obj\Debug\netcoreapp3.1\Jabo.Tools.AssemblyInfoInputs.cache
 D:\git\DotNetCore\Jabo.Tools\obj\Debug\netcoreapp3.1\Jabo.Tools.AssemblyInfo.cs
 D:\git\DotNetCore\Jabo.Tools\obj\Debug\netcoreapp3.1\Jabo.Tools.csproj.CopyComplete
 D:\git\DotNetCore\Jabo.Tools\obj\Debug\netcoreapp3.1\Jabo.Tools.dll
 D:\git\DotNetCore\Jabo.Tools\obj\Debug\netcoreapp3.1\Jabo.Tools.pdb
-D:\git\DotNetCore\Jabo.Tools\obj\Debug\netcoreapp3.1\Jabo.Tools.csproj.CoreCompileInputs.cache
