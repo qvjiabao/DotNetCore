@@ -26,6 +26,7 @@ namespace Jabo.Core.Config
 
             CreateMap<UserModel, UserVModel>();
             CreateMap<RoleModel, RoleVModel>();
+            CreateMap<OrderZWYSModel, OrderZWYSVModel>();
         }
     }
 }

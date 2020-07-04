@@ -2037,7 +2037,7 @@ a {
     float: left;
     display: block;
     padding: 9px 15px;
-    width: 80px;
+    width: 100px;
     font-weight: 400;
     line-height: 20px;
     text-align: right
@@ -2057,7 +2057,7 @@ a {
 }
 
 .layui-input-block {
-    margin-left: 110px;
+    margin-left: 130px;
     min-height: 36px
 }
 

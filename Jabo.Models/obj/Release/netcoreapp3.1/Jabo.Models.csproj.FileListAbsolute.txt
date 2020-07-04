@@ -1,0 +1,12 @@
+D:\git\DotNetCore\Jabo.Models\bin\Release\netcoreapp3.1\Jabo.Models.deps.json
+D:\git\DotNetCore\Jabo.Models\bin\Release\netcoreapp3.1\Jabo.Models.dll
+D:\git\DotNetCore\Jabo.Models\bin\Release\netcoreapp3.1\Jabo.Models.pdb
+D:\git\DotNetCore\Jabo.Models\bin\Release\netcoreapp3.1\Jabo.Dapper.dll
+D:\git\DotNetCore\Jabo.Models\bin\Release\netcoreapp3.1\Jabo.Dapper.pdb
+D:\git\DotNetCore\Jabo.Models\obj\Release\netcoreapp3.1\Jabo.Models.csprojAssemblyReference.cache
+D:\git\DotNetCore\Jabo.Models\obj\Release\netcoreapp3.1\Jabo.Models.csproj.CoreCompileInputs.cache
+D:\git\DotNetCore\Jabo.Models\obj\Release\netcoreapp3.1\Jabo.Models.AssemblyInfoInputs.cache
+D:\git\DotNetCore\Jabo.Models\obj\Release\netcoreapp3.1\Jabo.Models.AssemblyInfo.cs
+D:\git\DotNetCore\Jabo.Models\obj\Release\netcoreapp3.1\Jabo.Models.csproj.CopyComplete
+D:\git\DotNetCore\Jabo.Models\obj\Release\netcoreapp3.1\Jabo.Models.dll
+D:\git\DotNetCore\Jabo.Models\obj\Release\netcoreapp3.1\Jabo.Models.pdb

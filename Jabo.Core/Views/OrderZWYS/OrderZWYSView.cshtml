@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>燕翔嘉业货运管理系统</title>
+    <meta name="keywords" content="燕翔嘉业货运管理系统">
+    <meta name="description" content="燕翔嘉业货运管理系统">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="/lib/font-awesome-4.7.0/css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" href="/css/layuimini.css?v=2.0.1" media="all">
+    <link rel="stylesheet" href="/css/themes/default.css" media="all">
+    <link rel="stylesheet" href="/css/public.css" media="all">
+    <style id="layuimini-bg-color">
+    </style>
+</head>
+<body class="layui-layout-body layuimini-all">
+    <div class="layuimini-main">
+        <div class="layui-form layuimini-form" lay-filter="example">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">订单号</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="orderNo" disabled class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">仓易宝单号</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="cYBNo" disabled class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">提货日期</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="pickupDate" disabled class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">专营店号</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="franchiseStore" disabled class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">收件人</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="recipient" disabled class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">电话</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="phone" disabled class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">门店星级</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="storeStar" disabled class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">城市等级</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="cityLevel" disabled class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">件数</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="pieces" disabled class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-block">
+                    <label class="layui-form-label">省份</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="roleName" disabled value="" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-block">
+                    <label class="layui-form-label">收货地址</label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="请输入内容" disabled name="address" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">签收人</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="signatory" disabled class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">签收日期</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="signDate" disabled class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-block">
+                    <label class="layui-form-label">备注</label>
+                    <div class="layui-input-block">
+                        <textarea disabled name="remark" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-block">
+                    <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-primary" id="btnClose" lay-filter="btnClose">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/lib/jquery-3.4.1/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script src="/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+    <script src="/js/lay-config.js?v=2.0.0" charset="utf-8"></script>
+    <script>
+        layui.use(['form', 'layer'], function () {
+            var form = layui.form;
+
+            /**
+             * 初始化表单，要加上，不然刷新部分组件可能会不加载
+             */
+            form.render();
+
+            var router = layui.router();
+
+            if (router.search.orderNo != undefined && router.search.orderNo !== "") {
+
+                $.get("/OrderZWYS/GetOrderZWYSByOrderNo", { orderNo: router.search.orderNo }, function (json) {            //表单初始赋值
+                    form.val('example', {
+                        "orderNo": json.orderNo
+                        , "cYBNo": json.cYBNo
+                        , "franchiseStore": json.franchiseStore
+                        , "recipient": json.recipient
+                        , "phone": json.phone
+                        , "storeStar": json.storeStar
+                        , "cityLevel": json.cityLevel
+                        , "pieces": json.pieces
+                        , "address": json.address
+                        , "signatory": json.signatory
+                        , "remark": json.remark
+                        , "pickupDate": json.pickupDate.substr(0, 10)
+                        , "signDate": json.signDate.substr(0, 10)
+                    });
+                });
+            }
+
+            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+
+            layui.$('#btnClose').on('click', function () {
+                parent.layer.close(index); //再执行关闭
+            });
+        });</script>
+</body>
+</html>
