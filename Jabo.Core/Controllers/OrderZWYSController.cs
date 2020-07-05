@@ -10,7 +10,9 @@ using Jabo.Core.Result;
 using Jabo.Core.ViewModels;
 using Jabo.IServices;
 using Jabo.Models;
+using Jabo.Tools;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
@@ -23,9 +25,11 @@ namespace Jabo.Core.Controllers
     {
         private readonly IOrderZWYSService _orderZWYSService;
         private readonly IMapper _mapper;
+        private readonly IHostEnvironment _hostEnvironment;
 
-        public OrderZWYSController(IMapper mapper, IOrderZWYSService orderZWYSService)
+        public OrderZWYSController(IMapper mapper, IOrderZWYSService orderZWYSService, IHostEnvironment hostEnvironment)
         {
+            _hostEnvironment = hostEnvironment;
             _orderZWYSService = orderZWYSService;
             _mapper = mapper;
         }
@@ -54,63 +58,17 @@ namespace Jabo.Core.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public IActionResult Export(string franchiseStore, string orderNo, string cYBNo, string pickupDate, string recipient, string signatory, string signDate)
+        public FileResult Export(string franchiseStore, string orderNo, string cYBNo, string pickupDate, string recipient, string signatory, string signDate)
         {
             var list = _orderZWYSService.GetAllOrderZWYSs(franchiseStore, orderNo, cYBNo, pickupDate, recipient, signatory, signDate);
 
-            using (var package = new ExcelPackage())
+            var path = _hostEnvironment.ContentRootPath + "/TempFiles/zwys_model.xlsx";
+
+            var file = new FileInfo(path);
+
+            using (var package = new ExcelPackage(file))
             {
-                OfficeOpenXml.ExcelWorksheet sheet = package.Workbook.Worksheets.Add("订单信息");
-
-                sheet.Row(1).Height = 22;//设置行高
-
-                sheet.Column(1).Width = 8;//设置列宽
-                sheet.Column(2).Width = 15;//设置列宽
-                sheet.Column(3).Width = 20;//设置列宽
-                sheet.Column(4).Width = 25;//设置列宽
-                sheet.Column(5).Width = 30;//设置列宽
-                sheet.Column(6).Width = 10;//设置列宽
-                sheet.Column(7).Width = 10;//设置列宽
-                sheet.Column(8).Width = 10;//设置列宽
-                sheet.Column(9).Width = 10;//设置列宽
-                sheet.Column(10).Width = 10;//设置列宽
-                sheet.Column(11).Width = 10;//设置列宽
-                sheet.Column(12).Width = 15;//设置列宽
-                sheet.Column(13).Width = 100;//设置列宽
-                sheet.Column(14).Width = 10;//设置列宽
-                sheet.Column(15).Width = 10;//设置列宽
-                sheet.Column(16).Width = 10;//设置列宽
-                sheet.Column(17).Width = 50;//设置列宽
-                sheet.Column(18).Width = 8;//设置列宽
-
-                #region write header
-                sheet.Cells[1, 1].Value = "序号";
-                sheet.Cells[1, 2].Value = "提货日期";
-                sheet.Cells[1, 3].Value = "订单号";
-                sheet.Cells[1, 4].Value = "仓易宝单号";
-                sheet.Cells[1, 5].Value = "专营店号";
-                sheet.Cells[1, 6].Value = "门店星级";
-                sheet.Cells[1, 7].Value = "收件人";
-                sheet.Cells[1, 8].Value = "省份";
-                sheet.Cells[1, 9].Value = "城市";
-                sheet.Cells[1, 10].Value = "区县";
-                sheet.Cells[1, 11].Value = "城市等级";
-                sheet.Cells[1, 12].Value = "电话";
-                sheet.Cells[1, 13].Value = "收货地址";
-                sheet.Cells[1, 14].Value = "件数";
-                sheet.Cells[1, 15].Value = "签收人";
-                sheet.Cells[1, 16].Value = "签收日期";
-                sheet.Cells[1, 17].Value = "备注";
-                sheet.Cells[1, 18].Value = "结算";
-
-                using (ExcelRange range = sheet.Cells[1, 1, 1, 18])
-                {
-                    range.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;//水平居中
-                    range.Style.VerticalAlignment = ExcelVerticalAlignment.Center;//垂直居中
-                    range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-                    range.Style.Fill.BackgroundColor.SetColor(Color.Cyan);
-                }
-                #endregion
+                OfficeOpenXml.ExcelWorksheet sheet = package.Workbook.Worksheets[0];
 
                 #region write content
                 int pos = 2;
@@ -149,9 +107,9 @@ namespace Jabo.Core.Controllers
                 }
                 #endregion
 
-                package.Save();
+                var fileName = "植物医生" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xlsx";
 
-                return File(package.GetAsByteArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "植物医生" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xlsx");
+                return File(package.GetAsByteArray(), AppConfigurtaion.Configuration["FileContentType"], fileName);
             }
         }
 

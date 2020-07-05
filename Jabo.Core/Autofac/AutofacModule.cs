@@ -1,6 +1,8 @@
 ﻿using Autofac;
 using AutoMapper;
 using Jabo.Core.Config;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Hosting.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +36,7 @@ namespace Jabo.Core.Autofac
             });
             var mapper = config.CreateMapper();
             builder.RegisterInstance(mapper).As<IMapper>().SingleInstance();
+
         }
     }
 }
