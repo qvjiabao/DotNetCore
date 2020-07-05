@@ -33,7 +33,14 @@ namespace Jabo.IServices
         /// </summary>
         /// <param name="displayName"></param>
         /// <returns></returns>
-        IEnumerable<OrderZWYSModel> GetAllOrderZWYSs(string orderNo, string cYBNo, string pickupDate, string recipient, string signatory, string signDate);
+        IEnumerable<OrderZWYSModel> GetAllOrderZWYSs(string franchiseStore, string orderNo, string cYBNo, string pickupDate, string recipient, string signatory, string signDate);
+
+        /// <summary>
+        /// 获取所有专营店号
+        /// </summary>
+        /// <param name="displayName"></param>
+        /// <returns></returns>
+        IEnumerable<OrderZWYSModel> GetOrderZWYSByFranchiseStore(string franchiseStore);
 
         /// <summary>
         /// 删除植物医生订单
@@ -41,5 +48,13 @@ namespace Jabo.IServices
         /// <param name="roleCode"></param>
         /// <returns></returns>
         bool RemoveOrderZWYSByOrderNo(IEnumerable<OrderZWYSModel> list, string userName, string displayName);
+
+        /// <summary>
+        /// 结算订单
+        /// </summary>
+        /// <param name="roleCode"></param>
+        /// <returns></returns>
+        bool SettleState(IEnumerable<OrderZWYSModel> list, string userName, string displayName);
+
     }
 }

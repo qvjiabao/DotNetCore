@@ -4,7 +4,7 @@
         <fieldset class="table-search-fieldset">
             <legend>搜索信息</legend>
             <div style="margin: 10px 10px 10px 10px">
-                <form class="layui-form" action="">
+                <form class="layui-form" lay-filter="form1" action="">
                     <div class="layui-form-item">
                         <div class="layui-inline">
                             <label class="layui-form-label">订单号</label>
@@ -41,9 +41,15 @@
                             <div class="layui-input-inline">
                                 <input type="text" name="signDate" class="layui-input" id="signDate" placeholder=" - ">
                             </div>
-                            <button type="submit" class="layui-btn layui-btn-primary" lay-submit lay-filter="data-search-btn"><i class="layui-icon"></i> 搜 索</button>
                         </div>
                         <div class="layui-inline">
+                            <label class="layui-form-label">专营店号</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="franchiseStore" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <button type="submit" class="layui-btn layui-btn-primary" lay-submit lay-filter="data-search-btn"><i class="layui-icon"></i> 搜 索</button>
                         </div>
                     </div>
                 </form>
@@ -51,8 +57,10 @@
         </fieldset>
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
-                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加 </button>
-                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"> 删除 </button>
+                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add">添加</button>
+                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete">删除</button>
+                <button class="layui-btn layui-btn-sm" lay-event="settle">结算</button>
+                <button class="layui-btn layui-btn-sm layui-btn-warm" lay-event="exports">导出</button>
             </div>
         </script>
         <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
@@ -86,14 +94,15 @@
             elem: '#currentTableId',
             url: '/OrderZWYS/GetOrderZWYSPage',
             toolbar: '#toolbarDemo',
-            defaultToolbar: ['exports'],
+            defaultToolbar: [],
             cols: [[
                 { type: "checkbox", width: '5%', fixed: 'left' },
                 { type: "numbers", width: '5%', title: '序号', fixed: 'left' },
-                { field: 'orderNo', width: '15%', title: '订单号', align: 'center' },
+                { field: 'orderNo', width: '15%', title: '订单号', align: 'center', fixed: 'left' },
                 { field: 'cYBNo', width: '18%', title: '仓易宝单号', align: 'center' },
                 { field: 'franchiseStore', width: '18%', title: '专营店号', align: 'center' },
                 { field: 'recipient', width: '8%', title: '收件人', align: 'center' },
+                { field: 'pieces', width: '8%', title: '件数', align: 'center' },
                 { field: 'pickupDate', width: '10%', title: '提货日期', align: 'center', templet: "<div>{{layui.util.toDateString(d.pickupDate, 'yyyy-MM-dd')}}</div>" },
                 { field: 'signatory', width: '8%', title: '签收人', align: 'center' },
                 { field: 'signDate', width: '10%', title: '签收日期', align: 'center', templet: "<div>{{layui.util.toDateString(d.signDate, 'yyyy-MM-dd')}}</div>" },
@@ -108,7 +117,7 @@
                 var re = res.data;
                 if (re.length > 0) {
                     $.each(re, function (ii, dd) {
-                        if (!dd.settleState) {
+                        if (dd.settleState) {
                             $($(".layui-table-body.layui-table-main tr")[ii]).css("color", "#FF0000");
                             $($("div .layui-table-fixed.layui-table-fixed-l .layui-table-body tr")[ii]).css("color", "#FF0000");
                         }
@@ -142,8 +151,8 @@
                     type: 2,
                     shade: 0.2,
                     shadeClose: true,
-                    area: ['800px', '400px'],
-                    content: "/OrderZWYS/UserSave"
+                    area: ['1100px', '700px'],
+                    content: "/OrderZWYS/OrderZWYSSave"
                 });
                 $(window).on("resize", function () {
                     layer.full(index);
@@ -166,6 +175,27 @@
                     });
                     layer.close(index);
                 });
+            } else if (obj.event === 'settle') {  // 监听结算操作
+                var checkStatus = table.checkStatus('currentTableId')
+                    , data = checkStatus.data;
+
+                if (data.length === 0) {
+                    layer.alert('请选择要结算的订单');
+                    return
+                }
+                layer.confirm('您确定结算吗？', function (index) {
+                    $.post("/OrderZWYS/SettleState", { list: data }, function (json) {
+                        if (json.Result) {
+                            table.reload('currentTableId');
+                        } else {
+                            layer.msg(json.Message);
+                        }
+                    });
+                    layer.close(index);
+                });
+            } else if (obj.event === 'exports') {
+                var data1 = form.val('form1');
+                window.open('/OrderZWYS/Export?' + $.param(data1));
             }
         });
 
@@ -182,8 +212,8 @@
                     type: 2,
                     shade: 0.2,
                     shadeClose: true,
-                    area: ['800px', '400px'],
-                    content: "/OrderZWYS/UserSave#/userCode=" + data.userCode,
+                    area: ['1100px', '700px'],
+                    content: "/OrderZWYS/OrderZWYSSave#/orderNo=" + data.orderNo,
                 });
                 $(window).on("resize", function () {
                     layer.full(index);

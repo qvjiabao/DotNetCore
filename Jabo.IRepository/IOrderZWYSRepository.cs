@@ -21,6 +21,21 @@ namespace Jabo.IRepository
         int RemoveOrderZWYSByOrderNo(string orderNo, string userName, string displayName);
 
         /// <summary>
+        /// 结算订单
+        /// </summary>
+        /// <param name="roleCode"></param>
+        /// <returns></returns>
+        int SettleState(string orderNo, string userName, string displayName);
+
+        /// <summary>
+        /// 获取字段集合
+        /// </summary>
+        /// <param name="where"></param>
+        /// <param name="fieldName"></param>
+        /// <returns></returns>
+        IEnumerable<OrderZWYSModel> GetOrderZWYSByFranchiseStore(string where, string fieldName);
+
+        /// <summary>
         /// 新增植物医生订单
         /// </summary>
         /// <param name="roleCode"></param>

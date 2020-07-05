@@ -21,7 +21,7 @@ namespace Jabo.Models
         /// <summary>
         /// 提货日期
         /// </summary>
-        public DateTime PickupDate { get; set; }
+        public DateTime? PickupDate { get; set; }
         /// <summary>
         /// 专营店号
         /// </summary>

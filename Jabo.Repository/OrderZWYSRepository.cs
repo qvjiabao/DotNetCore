@@ -42,6 +42,22 @@ namespace Jabo.Repository
             }
         }
 
+        /// <summary>
+        /// 获取字段集合
+        /// </summary>
+        /// <param name="where"></param>
+        /// <param name="fieldName"></param>
+        /// <returns></returns>
+        public IEnumerable<OrderZWYSModel> GetOrderZWYSByFranchiseStore(string where, string fieldName)
+        {
+            using (var connection = DataBase.GetOpenConnection(GetConnectionString))
+            {
+                var list = connection.Query<OrderZWYSModel>(" select distinct " + fieldName + " from YX_OrderZWYS  where IsDeleted = 0  " + where);
+
+                return list;
+            }
+        }
+
         public IEnumerable<OrderZWYSModel> GetAllOrderZWYSs(string where)
         {
             using (var connection = DataBase.GetOpenConnection(GetConnectionString))
@@ -79,6 +95,17 @@ namespace Jabo.Repository
             using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
                 var count = connection.Update<OrderZWYSModel>(role);
+
+                return count;
+            }
+        }
+
+        public int SettleState(string orderNo, string userName, string displayName)
+        {
+            using (var connection = DataBase.GetOpenConnection(GetConnectionString))
+            {
+                var count = connection.Execute(@$" UPDATE YX_OrderZWYS SET SettleState = 1,ModifyUserName = @modifyUserName,ModifyDisplayName = @modifyDisplayName
+                    ,ModifyDate = @modifyDate where OrderNo in ({orderNo})", new { modifyUserName = userName, modifyDisplayName = displayName, modifyDate = DateTime.Now });
 
                 return count;
             }

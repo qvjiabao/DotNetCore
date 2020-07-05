@@ -7,6 +7,7 @@ namespace Jabo.Core.ViewModels
 {
     public class OrderZWYSVModel
     {
+        public int orderId { get; set; }
         public string orderNo { get; set; }
         public string cYBNo { get; set; }
         public DateTime? pickupDate { get; set; }

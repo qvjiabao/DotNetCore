@@ -155,3 +155,9 @@ D:\git\DotNetCore\Jabo.Core\obj\Release\netcoreapp3.1\staticwebassets\Jabo.Core.
 D:\git\DotNetCore\Jabo.Core\obj\Release\netcoreapp3.1\Jabo.Core.dll
 D:\git\DotNetCore\Jabo.Core\obj\Release\netcoreapp3.1\Jabo.Core.pdb
 D:\git\DotNetCore\Jabo.Core\obj\Release\netcoreapp3.1\Jabo.Core.genruntimeconfig.cache
+D:\git\DotNetCore\Jabo.Core\obj\Release\netcoreapp3.1\Razor\Views\OrderZWYS\OrderZWYSSave.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Release\netcoreapp3.1\Razor\Views\OrderZWYS\OrderZWYSView.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\bin\Release\netcoreapp3.1\EPPlus.dll
+D:\git\DotNetCore\Jabo.Core\bin\Release\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+D:\git\DotNetCore\Jabo.Core\bin\Release\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+D:\git\DotNetCore\Jabo.Core\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll

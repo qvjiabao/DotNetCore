@@ -84,11 +84,26 @@
                     </div>
                 </div>
             </div>
-            <div class="layui-form-item">
-                <div class="layui-block">
-                    <label class="layui-form-label">省份</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="roleName" disabled value="" class="layui-input">
+            <div class="layui-form-item" id="area-picker">
+                <div class="layui-inline">
+                    <label class="layui-form-label">省市区</label>
+                    <div class="layui-input-inline">
+                        <select name="provinceName" disabled class="province-selector" lay-verify="required" lay-filter="province-1">
+                            <option value="">请选择省</option>
+                        </select>
+                        <input type="hidden" name="provinceCode">
+                    </div>
+                    <div class="layui-input-inline">
+                        <select name="cityName" disabled class="city-selector" lay-verify="required" lay-filter="city-1">
+                            <option value="">请选择市</option>
+                        </select>
+                        <input type="hidden" name="cityCode">
+                    </div>
+                    <div class="layui-input-inline">
+                        <select name="areaName" disabled class="county-selector" lay-verify="required" lay-filter="county-1">
+                            <option value="">请选择区</option>
+                        </select>
+                        <input type="hidden" name="areaCode">
                     </div>
                 </div>
             </div>
@@ -135,8 +150,9 @@
     <script src="/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
     <script src="/js/lay-config.js?v=2.0.0" charset="utf-8"></script>
     <script>
-        layui.use(['form', 'layer'], function () {
-            var form = layui.form;
+        layui.use(['form', 'layer', 'layarea'], function () {
+            var form = layui.form,
+                layarea = layui.layarea;
 
             /**
              * 初始化表单，要加上，不然刷新部分组件可能会不加载
@@ -162,6 +178,15 @@
                         , "remark": json.remark
                         , "pickupDate": json.pickupDate.substr(0, 10)
                         , "signDate": json.signDate.substr(0, 10)
+                    });
+
+                    layarea.render({
+                        elem: '#area-picker',
+                        data: {
+                            province: json.provinceName,
+                            city: json.cityName,
+                            county: json.areaName
+                        },
                     });
                 });
             }

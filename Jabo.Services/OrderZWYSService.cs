@@ -22,9 +22,14 @@ namespace Jabo.Services
             return _orderZWYSRepository.ExistsOrderNo(orderNo, orderId);
         }
 
-        public IEnumerable<OrderZWYSModel> GetAllOrderZWYSs(string orderNo, string cYBNo, string pickupDate, string recipient, string signatory, string signDate)
+        public IEnumerable<OrderZWYSModel> GetAllOrderZWYSs(string franchiseStore, string orderNo, string cYBNo, string pickupDate, string recipient, string signatory, string signDate)
         {
             var sql = new StringBuilder();
+
+            if (!string.IsNullOrWhiteSpace(franchiseStore))
+            {
+                sql.Append($" and  FranchiseStore like '%{franchiseStore}%' ");
+            }
 
             if (!string.IsNullOrWhiteSpace(orderNo))
             {
@@ -57,6 +62,20 @@ namespace Jabo.Services
             }
 
             var list = _orderZWYSRepository.GetAllOrderZWYSs(sql.ToString());
+
+            return list;
+        }
+
+        public IEnumerable<OrderZWYSModel> GetOrderZWYSByFranchiseStore(string franchiseStore)
+        {
+            var sql = new StringBuilder();
+
+            if (!string.IsNullOrWhiteSpace(franchiseStore))
+            {
+                sql.Append($" and  FranchiseStore like '%{franchiseStore}%' ");
+            }
+
+            var list = _orderZWYSRepository.GetOrderZWYSByFranchiseStore(sql.ToString(), "FranchiseStore");
 
             return list;
         }
@@ -103,12 +122,22 @@ namespace Jabo.Services
                 model.CityName = order.CityName;
                 model.AreaCode = order.AreaCode;
                 model.AreaName = order.AreaName;
-                model.ModifyDate = model.ModifyDate;
-                model.ModifyDisplayName = model.ModifyDisplayName;
-                model.ModifyUserName = model.ModifyUserName;
+                model.Remark = order.Remark;
+                model.ModifyDate = order.ModifyDate;
+                model.ModifyDisplayName = order.ModifyDisplayName;
+                model.ModifyUserName = order.ModifyUserName;
 
-                return _orderZWYSRepository.UpdateOrderZWYS(order) > 0;
+                return _orderZWYSRepository.UpdateOrderZWYS(model) > 0;
             }
+        }
+
+        public bool SettleState(IEnumerable<OrderZWYSModel> list, string userName, string displayName)
+        {
+            if (list.Count() == 0) return false;
+
+            var str = list.Aggregate(string.Empty, (s, n) => s += $",'{n.OrderNo}'");
+
+            return _orderZWYSRepository.SettleState(str.Substring(1), userName, displayName) > 0;
         }
     }
 }
