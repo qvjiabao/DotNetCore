@@ -76,11 +76,9 @@
         var reloadTab = function (typeCode, typeName) {
             //执行搜索重载
             table.reload('currentTableId', {
-                page: {
-                    curr: 1
-                }
-                , where: { dicTypeCode: typeCode }
-                , cols: [[
+                page: { curr: 1 },
+                where: { dicTypeCode: typeCode },
+                cols: [[
                     { field: 'dicName', width: '85%', title: typeName, align: 'center' },
                     { title: '操作', width: '15%', toolbar: '#currentTableBar', align: "center" }
                 ]]
