@@ -130,7 +130,7 @@ namespace Jabo.Core.Controllers
         /// <param name="page"></param>
         /// <returns></returns>
         [HttpGet]
-        public Hashtable GetRolePage(string roleName, int limit = 0, int page = 1)
+        public Hashtable GetRolePage(string roleName, int limit = 10, int page = 1)
         {
             var all = _roleService.GetAllRoles(roleName);
 

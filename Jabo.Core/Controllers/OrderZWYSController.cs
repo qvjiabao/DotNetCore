@@ -165,7 +165,7 @@ namespace Jabo.Core.Controllers
         /// <param name="page"></param>
         /// <returns></returns>
         [HttpGet]
-        public Hashtable GetOrderZWYSByFranchiseStore(string franchiseStore, int limit = 0, int page = 1)
+        public Hashtable GetOrderZWYSByFranchiseStore(string franchiseStore, int limit = 10, int page = 1)
         {
             var all = _orderZWYSService.GetOrderZWYSByFranchiseStore(franchiseStore);
 

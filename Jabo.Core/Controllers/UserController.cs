@@ -105,7 +105,7 @@ namespace Jabo.Core.Controllers
         }
 
         [HttpGet]
-        public Hashtable GetUserList(string displayName, int limit = 0, int page = 1)
+        public Hashtable GetUserList(string displayName, int limit = 10, int page = 1)
         {
             var all = _userService.GetAllUsers(displayName);
 

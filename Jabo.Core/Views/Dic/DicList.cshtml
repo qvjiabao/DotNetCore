@@ -1,0 +1,105 @@
+﻿<style type="text/css">
+    .layui-table-click {
+        background-color: #1E9FFF !important;
+        color: #ffffff !important;
+    }
+</style>
+<div class="layuimini-container layuimini-page-anim">
+    <div class="layuimini-main">
+        <div class="layui-form layuimini-form" lay-filter="example">
+            <div class="layui-row">
+                <div class="layui-col-xs3">
+                    <div class="layui-card">
+                        <div class="layui-card-header">
+                            类别名称
+                        </div>
+                        <div class="layui-card-body">
+                            <div id="tree" class="demo-tree-more"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-xs9">
+                    <div class="layui-card">
+                        <div class="layui-card-header">
+                            <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加 </button>
+                        </div>
+                        <div class="layui-card-body">
+                            <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
+                            <script type="text/html" id="currentTableBar">
+                                <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="edit">编辑</a>
+                                <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="delete">删除</a>
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['form', 'table', 'element', 'tree'], function () {
+        var $ = layui.jquery,
+            form = layui.form,
+            table = layui.table,
+            tree = layui.tree,
+            roleCode = '';
+
+        table.render({
+            elem: '#currentTableId',
+            url: '/Dic/GetDicListByTypeCode',
+            cols: [[
+                { field: 'dicName', width: '85%', title: '数据名称', align: 'center' },
+                { title: '操作', width: '15%', toolbar: '#currentTableBar', align: "center" }
+            ]],
+            skin: 'line',
+            limits: [10, 15, 20, 25, 50, 100],
+            limit: 10,
+            page: true
+        });
+
+        let typeCode = "ProjectName";
+        let typeName = "";
+
+        $.get("/Dic/GetDicTypeList", null, function (data) {
+            tree.render({
+                elem: '#tree',
+                data: data,
+                howLine: false,  //是否开启连接线
+                click: function (obj) {
+                    typeCode = obj.data.id;
+                    typeName = obj.data.title;
+                    reloadTab(typeCode, typeName);
+                }
+            });
+        });
+
+        var reloadTab = function (typeCode, typeName) {
+            //执行搜索重载
+            table.reload('currentTableId', {
+                page: {
+                    curr: 1
+                }
+                , where: { dicTypeCode: typeCode }
+                , cols: [[
+                    { field: 'dicName', width: '85%', title: typeName, align: 'center' },
+                    { title: '操作', width: '15%', toolbar: '#currentTableBar', align: "center" }
+                ]]
+
+            }, 'data');
+        };
+
+        form.on('submit(btnSave)', function () {
+            if (roleCode === '') {
+                layer.msg("请选择角色");
+                return;
+            }
+
+            var checkedData = tree.getChecked('demoId1'); //获取选中节点的数据
+
+            $.post("/Role/SaveRoleMenu", { list: checkedData, roleCode: roleCode }, function (json) {
+                layer.msg(json.Message, { shift: -1, time: 1000 });
+            });
+        });
+
+    });</script>

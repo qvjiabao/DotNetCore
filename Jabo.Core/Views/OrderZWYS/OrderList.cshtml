@@ -195,7 +195,9 @@
                 });
             } else if (obj.event === 'exports') {
                 var data1 = form.val('form1');
-                window.open('/OrderZWYS/Export?' + $.param(data1));
+                var url = '/OrderZWYS/Export?' + $.param(data1);
+                console.log(url);
+                window.open(url);
             }
         });
 

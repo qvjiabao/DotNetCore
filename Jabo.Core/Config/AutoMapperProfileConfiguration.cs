@@ -27,6 +27,11 @@ namespace Jabo.Core.Config
             CreateMap<UserModel, UserVModel>();
             CreateMap<RoleModel, RoleVModel>();
             CreateMap<OrderZWYSModel, OrderZWYSVModel>();
+
+            CreateMap<DicTypeModel, DicTypeVModel>()
+                .ForMember(dest => dest.id, opts => opts.MapFrom(src => src.DicTypeCode))
+                .ForMember(dest => dest.title, opts => opts.MapFrom(src => src.DicTypeName));
+            CreateMap<DicModel, DicVModel>();
         }
     }
 }

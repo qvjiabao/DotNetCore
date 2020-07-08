@@ -6,4 +6,3 @@ D:\git\DotNetCore\Jabo.Dapper\obj\Debug\netcoreapp3.1\Jabo.Dapper.AssemblyInfoIn
 D:\git\DotNetCore\Jabo.Dapper\obj\Debug\netcoreapp3.1\Jabo.Dapper.AssemblyInfo.cs
 D:\git\DotNetCore\Jabo.Dapper\obj\Debug\netcoreapp3.1\Jabo.Dapper.dll
 D:\git\DotNetCore\Jabo.Dapper\obj\Debug\netcoreapp3.1\Jabo.Dapper.pdb
-D:\git\DotNetCore\Jabo.Dapper\obj\Debug\netcoreapp3.1\Jabo.Dapper.csprojAssemblyReference.cache
