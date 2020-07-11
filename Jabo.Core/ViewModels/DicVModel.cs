@@ -11,5 +11,6 @@ namespace Jabo.Core.ViewModels
         public string dicCode { get; set; }
         public string dicName { get; set; }
         public string dicTypeCode { get; set; }
+        public int sort { get; set; }
     }
 }

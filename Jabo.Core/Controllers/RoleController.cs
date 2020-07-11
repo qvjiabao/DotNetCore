@@ -38,6 +38,7 @@ namespace Jabo.Core.Controllers
         {
             return View();
         }
+
         public IActionResult RoleMenuList()
         {
             return View();
@@ -52,6 +53,7 @@ namespace Jabo.Core.Controllers
 
             return vmodel;
         }
+
         [HttpPost]
         public JsonHttpActionResult SaveRoleMenu(IEnumerable<MenuTreeVModel> list, string roleCode)
         {

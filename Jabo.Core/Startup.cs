@@ -38,6 +38,7 @@ namespace Jabo.Core
             // You must have the call to `UseServiceProviderFactory(new AutofacServiceProviderFactory())`
             // when building the host or this won't be called.
             builder.RegisterModule(new AutofacModule());
+            //builder.RegisterModule(new AutoMapperModule());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -7,6 +7,22 @@ namespace Jabo.IRepository
 {
     public interface IDicRepository
     {
+
+        /// <summary>
+        /// 根据编码获取字典
+        /// </summary>
+        /// <returns></returns>
+        DicModel GetDicByCode(string dicCode);
+
+        /// <summary>
+        /// 检查数据是否存在
+        /// </summary>
+        /// <param name="dicName"></param>
+        /// <param name="dicTypeCode"></param>
+        /// <param name="dicCode"></param>
+        /// <returns></returns>
+        bool ExistsDicName(string dicName, string dicTypeCode, string dicCode = "");
+
         /// <summary>
         /// 获取所有字典类型
         /// </summary>
@@ -20,24 +36,24 @@ namespace Jabo.IRepository
         IEnumerable<DicModel> GetDicListByTypeCode(string typeCode);
 
         /// <summary>
-        /// 删除字典类型
+        /// 删除字典
         /// </summary>
-        /// <param name="dicTypeCode"></param>
+        /// <param name="dicCode"></param>
         /// <returns></returns>
-        int RemoveDicType(string dicTypeCode, string userName, string displayName);
+        int RemoveDic(string dicCode, string userName, string displayName);
 
         /// <summary>
-        /// 编辑字典类型
+        /// 编辑字典
         /// </summary>
         /// <param name="roleCode"></param>
         /// <returns></returns>
-        int UpdateDicType(DicTypeModel dicType);
+        int UpdateDic(DicModel dic);
 
         /// <summary>
-        /// 新增字典类型
+        /// 新增字典
         /// </summary>
         /// <param name="roleCode"></param>
         /// <returns></returns>
-        int CreateDicType(DicTypeModel dicType);
+        int CreateDic(DicModel dic);
     }
 }

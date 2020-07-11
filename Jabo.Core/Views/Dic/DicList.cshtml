@@ -21,7 +21,7 @@
                 <div class="layui-col-xs9">
                     <div class="layui-card">
                         <div class="layui-card-header">
-                            <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加 </button>
+                            <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add" id="btnAdd"> 添加 </button>
                         </div>
                         <div class="layui-card-body">
                             <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
@@ -39,11 +39,14 @@
 
 <script>
     layui.use(['form', 'table', 'element', 'tree'], function () {
+
         var $ = layui.jquery,
             form = layui.form,
             table = layui.table,
             tree = layui.tree,
             roleCode = '';
+
+        $("#btnAdd").hide();
 
         table.render({
             elem: '#currentTableId',
@@ -58,17 +61,19 @@
             page: true
         });
 
-        let typeCode = "ProjectName";
+        let typeCode = "";  //字典类型编码
+        let typeName = "";  //字典类型名称
 
         $.get("/Dic/GetDicTypeList", null, function (data) {
             tree.render({
                 elem: '#tree',
                 data: data,
-                howLine: false,  //是否开启连接线
+                showLine: false,  //是否开启连接线
                 click: function (obj) {
                     typeCode = obj.data.id;
                     typeName = obj.data.title;
                     reloadTab(typeCode, typeName);
+                    $("#btnAdd").show();
                 }
             });
         });
@@ -86,17 +91,57 @@
             }, 'data');
         };
 
-        form.on('submit(btnSave)', function () {
-            if (roleCode === '') {
-                layer.msg("请选择角色");
+        $(document).on('click', '#btnAdd', function () {
+            if (typeCode === "" || typeName === "") {
+                layer.msg("请选择类别");
                 return;
             }
 
-            var checkedData = tree.getChecked('demoId1'); //获取选中节点的数据
-
-            $.post("/Role/SaveRoleMenu", { list: checkedData, roleCode: roleCode }, function (json) {
-                layer.msg(json.Message, { shift: -1, time: 1000 });
+            var index = layer.open({
+                title: '添加' + typeName,
+                type: 2,
+                shade: 0.2,
+                shadeClose: true,
+                area: ['600px', '220px'],
+                content: "/Dic/DicSave/#/typeCode=" + typeCode + "/typeName=" + typeName,
             });
+            $(window).on("resize", function () {
+                layer.full(index);
+            });
+        });
+
+        table.on('tool(currentTableFilter)', function (obj) {
+            var data = obj.data;
+            console.log(data);
+            if (obj.event === 'edit') {
+                if (typeCode === "" || typeName === "") {
+                    layer.msg("请选择类别");
+                    return;
+                }
+
+                var index = layer.open({
+                    title: '编辑' + typeName,
+                    type: 2,
+                    shade: 0.2,
+                    shadeClose: true,
+                    area: ['600px', '220px'],
+                    content: "/Dic/DicSave/#/dicCode=" + data.dicCode + "/typeCode=" + typeCode + "/typeName=" + typeName,
+                });
+                $(window).on("resize", function () {
+                    layer.full(index);
+                });
+            } else if (obj.event === 'delete') {
+                layer.confirm('您确定删除吗？', function (index) {
+                    $.post("/Dic/RemoveDicByCode", { list: [data] }, function (json) {
+                        if (json.Result) {
+                            table.reload('currentTableId');
+                        } else {
+                            layer.msg(json.Message);
+                        }
+                    }, "json");
+                    layer.close(index);
+                });
+            }
         });
 
     });</script>

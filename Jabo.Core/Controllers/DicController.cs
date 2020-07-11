@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Jabo.Core.Filter;
+using Jabo.Core.Result;
 using Jabo.Core.ViewModels;
 using Jabo.IServices;
 using Jabo.Models;
@@ -29,6 +30,57 @@ namespace Jabo.Core.Controllers
             return View();
         }
 
+        public IActionResult DicSave()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public JsonHttpActionResult SaveDicInfo(DicModel model)
+        {
+            var j = new JsonHttpActionResult();
+            var success = true;
+            if (string.IsNullOrWhiteSpace(model.DicCode))
+            {
+                //检查数据是否存在
+                var checkUserName = _dicService.ExistsDicName(model.DicName, model.DicTypeCode);
+                if (checkUserName)
+                    return j.ErrorMessage("数据已存在");
+                model.CreateDate = DateTime.Now;
+                model.CreateUserName = UserInfo.UserName;
+                model.CreateDisplayName = UserInfo.DisplayName;
+                model.IsDeleted = false;
+
+            }
+            else
+            {
+                //检查数据是否存在
+                var checkUserName = _dicService.ExistsDicName(model.DicName, model.DicTypeCode, model.DicCode);
+                if (checkUserName)
+                    return j.ErrorMessage("数据已存在");
+                model.ModifyDate = DateTime.Now;
+                model.ModifyUserName = UserInfo.UserName;
+                model.ModifyDisplayName = UserInfo.DisplayName;
+            }
+
+            success = _dicService.SaveDic(model);
+
+            j.SetData(success);
+
+            return success ? j.SucceedMessage() : j.ErrorMessage();
+        }
+
+        [HttpGet]
+        public DicVModel GetDicByCode(string dicCode)
+        {
+            var user = _dicService.GetDicByCode(dicCode);
+
+            var vmodel = _mapper.Map<DicVModel>(user);
+
+            return vmodel;
+        }
+
         [HttpGet]
         public IEnumerable<DicTypeVModel> GetDicTypeList()
         {
@@ -37,6 +89,25 @@ namespace Jabo.Core.Controllers
             var list = _mapper.Map<IEnumerable<DicTypeModel>, IEnumerable<DicTypeVModel>>(dicList);
 
             return list;
+        }
+
+        [HttpPost]
+        public JsonHttpActionResult RemoveDicByCode(IEnumerable<DicModel> list)
+        {
+            var j = new JsonHttpActionResult();
+
+            if (list.Count() == 0)
+            {
+                return j.ErrorMessage("请选择要删除的数据");
+            }
+
+            var user = UserInfo;
+
+            var success = _dicService.RemoveDicByCode(list, user.UserName, user.DisplayName);
+
+            j.SetData(success);
+
+            return success ? j.SucceedMessage() : j.ErrorMessage();
         }
 
         [HttpGet]

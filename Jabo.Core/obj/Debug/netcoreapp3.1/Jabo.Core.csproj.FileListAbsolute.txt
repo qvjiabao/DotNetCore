@@ -162,3 +162,4 @@ D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.MvcApplicationPart
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Dic\DicList.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\Dic\DicSave.cshtml.g.cs
