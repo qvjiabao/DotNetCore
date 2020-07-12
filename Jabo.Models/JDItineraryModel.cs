@@ -10,6 +10,7 @@ namespace Jabo.Models
     {
         [Key]
         public int ItineraryId { get; set; }
+        public string JDItineraryCode { get; set; }
         public string Departure { get; set; }
         public string Terminal { get; set; }
         public int? Mileage { get; set; }

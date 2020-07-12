@@ -10,7 +10,8 @@ namespace Jabo.Models
     {
         [Key]
         public int RelationId { get; set; }
-        public int? ItineraryId { get; set; }
+        public string RelationCode { get; set; }
+        public string JDItineraryCode { get; set; }
         public string CarTypeCode { get; set; }
         public string CarType { get; set; }
         public decimal Cost { get; set; }

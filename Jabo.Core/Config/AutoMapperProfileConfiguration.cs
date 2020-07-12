@@ -32,6 +32,9 @@ namespace Jabo.Core.Config
                 .ForMember(dest => dest.id, opts => opts.MapFrom(src => src.DicTypeCode))
                 .ForMember(dest => dest.title, opts => opts.MapFrom(src => src.DicTypeName));
             CreateMap<DicModel, DicVModel>();
+
+            CreateMap<JDItineraryModel, JDItineraryVModel>();
+            CreateMap<JDItineraryCostModel, JDItineraryCostVModel>();
         }
     }
 }

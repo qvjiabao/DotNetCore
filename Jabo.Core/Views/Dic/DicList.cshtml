@@ -1,10 +1,4 @@
-﻿<style type="text/css">
-    .layui-table-click {
-        background-color: #1E9FFF !important;
-        color: #ffffff !important;
-    }
-</style>
-<div class="layuimini-container layuimini-page-anim">
+﻿<div class="layuimini-container layuimini-page-anim">
     <div class="layuimini-main">
         <div class="layui-form layuimini-form" lay-filter="example">
             <div class="layui-row">
@@ -43,39 +37,23 @@
         var $ = layui.jquery,
             form = layui.form,
             table = layui.table,
-            tree = layui.tree,
-            roleCode = '';
+            tree = layui.tree;
 
-        $("#btnAdd").hide();
+        let typeCode = "ProjectName";  //字典类型编码
+        let typeName = "项目名称";  //字典类型名称
 
         table.render({
             elem: '#currentTableId',
-            url: '/Dic/GetDicListByTypeCode',
+            url: '/Dic/GetDicPageByTypeCode',
             cols: [[
-                { field: 'dicName', width: '85%', title: '数据名称', align: 'center' },
+                { field: 'dicName', width: '85%', title: typeName, align: 'center' },
                 { title: '操作', width: '15%', toolbar: '#currentTableBar', align: "center" }
             ]],
             skin: 'line',
             limits: [10, 15, 20, 25, 50, 100],
             limit: 10,
-            page: true
-        });
-
-        let typeCode = "";  //字典类型编码
-        let typeName = "";  //字典类型名称
-
-        $.get("/Dic/GetDicTypeList", null, function (data) {
-            tree.render({
-                elem: '#tree',
-                data: data,
-                showLine: false,  //是否开启连接线
-                click: function (obj) {
-                    typeCode = obj.data.id;
-                    typeName = obj.data.title;
-                    reloadTab(typeCode, typeName);
-                    $("#btnAdd").show();
-                }
-            });
+            page: true,
+            where: { dicTypeCode: typeCode }
         });
 
         var reloadTab = function (typeCode, typeName) {
@@ -91,7 +69,20 @@
             }, 'data');
         };
 
-        $(document).on('click', '#btnAdd', function () {
+        $.get("/Dic/GetDicTypeList", null, function (data) {
+            tree.render({
+                elem: '#tree',
+                data: data,
+                showLine: false,  //是否开启连接线
+                click: function (obj) {
+                    typeCode = obj.data.id;
+                    typeName = obj.data.title;
+                    reloadTab(typeCode, typeName);
+                }
+            });
+        });
+
+        $("#btnAdd").unbind("click").click(function (e) {
             if (typeCode === "" || typeName === "") {
                 layer.msg("请选择类别");
                 return;

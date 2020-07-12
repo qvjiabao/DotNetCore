@@ -26,7 +26,7 @@ namespace Jabo.Core
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddSession();
+            services.AddSession(options => { options.IdleTimeout = TimeSpan.FromMinutes(30); });
         }
 
         public void ConfigureContainer(ContainerBuilder builder)

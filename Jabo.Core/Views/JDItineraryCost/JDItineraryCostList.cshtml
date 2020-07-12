@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>燕翔嘉业货运管理系统</title>
+    <meta name="keywords" content="燕翔嘉业货运管理系统">
+    <meta name="description" content="燕翔嘉业货运管理系统">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="/lib/font-awesome-4.7.0/css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" href="/css/layuimini.css?v=2.0.1" media="all">
+    <link rel="stylesheet" href="/css/themes/default.css" media="all">
+    <link rel="stylesheet" href="/css/public.css" media="all">
+    <style id="layuimini-bg-color">
+    </style>
+</head>
+<body class="layui-layout-body layuimini-all">
+    <div class="layuimini-container layuimini-page-anim">
+        <div class="layuimini-main">
+            <script type="text/html" id="toolbarDemo">
+                <div class="layui-btn-container">
+                    <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add">添加</button>
+                    <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete">删除</button>
+                </div>
+            </script>
+            <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
+            <script type="text/html" id="currentTableBar">
+                <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="edit">编辑</a>
+                <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="delete">删除</a>
+            </script>
+        </div>
+    </div>
+    <script src="/lib/jquery-3.4.1/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script src="/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+    <script src="/js/lay-config.js?v=2.0.0" charset="utf-8"></script>
+    <script>
+
+    layui.use(['form', 'table', 'element'], function () {
+        var $ = layui.jquery,
+            form = layui.form,
+            table = layui.table,
+            router = layui.router();
+
+        table.render({
+            elem: '#currentTableId',
+            url: '/JDItineraryCost/GetJDItineraryCostList?jDItineraryCode=' + router.search.jDItineraryCode,
+            toolbar: '#toolbarDemo',
+            defaultToolbar: [],
+            cols: [[
+                { type: "checkbox", width: '5%' },
+                { type: "numbers", width: '5%', title: '序号' },
+                { field: 'carType', width: '30%', title: '货车车型', align: 'center'},
+                { field: 'cost', width: '30%', title: '金额', align: 'center' },
+                { field: 'createDate', width: '15%', title: '创建日期', align: 'center', templet: "<div>{{layui.util.toDateString(d.createDate, 'yyyy-MM-dd')}}</div>"  },
+                { title: '操作', width: '15%', toolbar: '#currentTableBar', align: "center"}
+            ]],
+            limits: [10, 15, 20, 25, 50, 100],
+            limit: 10,
+            page: true
+        });
+
+        /**
+         * toolbar事件监听
+         */
+        table.on('toolbar(currentTableFilter)', function (obj) {
+            if (obj.event === 'add') {   // 监听添加操作
+                var index = layer.open({
+                    title: '添加金额',
+                    type: 2,
+                    shade: 0.2,
+                    shadeClose: true,
+                    area: ['500px', '500px'],
+                    content: "/JDItineraryCost/JDItineraryCostSave#/jDItineraryCode=" + router.search.jDItineraryCode
+                });
+                $(window).on("resize", function () {
+                    layer.full(index);
+                });
+            } else if (obj.event === 'delete') {  // 监听删除操作
+                var checkStatus = table.checkStatus('currentTableId')
+                    , data = checkStatus.data;
+
+                if (data.length === 0) {
+                    layer.alert('请选择要删除的行程');
+                    return
+                }
+                layer.confirm('您确定删除吗？', function (index) {
+                    $.post("/JDItineraryCost/RemoveJDItineraryCostByCode", { list: data }, function (json) {
+                        if (json.Result) {
+                            table.reload('currentTableId');
+                        } else {
+                            layer.msg(json.Message);
+                        }
+                    });
+                    layer.close(index);
+                });
+            }
+        });
+
+        //监听表格复选框选择
+        table.on('checkbox(currentTableFilter)', function (obj) {
+            //console.log(obj)
+        });
+
+        table.on('tool(currentTableFilter)', function (obj) {
+            var data = obj.data;
+            if (obj.event === 'edit') {
+                var index = layer.open({
+                    title: '编辑金额',
+                    type: 2,
+                    shade: 0.2,
+                    shadeClose: true,
+                    area: ['500px', '500px'],
+                    content: "/JDItineraryCost/JDItineraryCostSave#/relationCode=" + data.relationCode+"/jDItineraryCode=" + data.jDItineraryCode,
+                });
+                $(window).on("resize", function () {
+                    layer.full(index);
+                });
+            } else if (obj.event === 'delete') {
+                layer.confirm('您确定删除吗？', function (index) {
+                    $.post("/JDItineraryCost/RemoveJDItineraryCostByCode", { list: [data] }, function (json) {
+                        if (json.Result) {
+                            table.reload('currentTableId');
+                        } else {
+                            layer.msg(json.Message);
+                        }
+                    }, "json");
+                    layer.close(index);
+                });
+            } 
+        });
+
+    });
+    </script>
+</body>
+</html>

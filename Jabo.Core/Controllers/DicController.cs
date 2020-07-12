@@ -35,7 +35,6 @@ namespace Jabo.Core.Controllers
             return View();
         }
 
-
         [HttpPost]
         public JsonHttpActionResult SaveDicInfo(DicModel model)
         {
@@ -69,6 +68,18 @@ namespace Jabo.Core.Controllers
             j.SetData(success);
 
             return success ? j.SucceedMessage() : j.ErrorMessage();
+        }
+
+        [HttpGet]
+        public JsonHttpActionResult GetDicListByTypeCode(string dicTypeCode)
+        {
+            var dicList = _dicService.GetDicListByTypeCode(dicTypeCode);
+
+            var list = _mapper.Map<IEnumerable<DicModel>, IEnumerable<DicVModel>>(dicList);
+
+            var j = new JsonHttpActionResult();
+
+            return j.SetData(list).SucceedMessage();
         }
 
         [HttpGet]
@@ -111,7 +122,7 @@ namespace Jabo.Core.Controllers
         }
 
         [HttpGet]
-        public Hashtable GetDicListByTypeCode(string dicTypeCode, int limit = 10, int page = 1)
+        public Hashtable GetDicPageByTypeCode(string dicTypeCode, int limit = 10, int page = 1)
         {
             var all = _dicService.GetDicListByTypeCode(dicTypeCode);
 
