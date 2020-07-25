@@ -120,7 +120,7 @@ layui.define(["element", "jquery"], function (exports) {
                     element.init();
                 },
                 error: function (xhr, textstatus, thrown) {
-                    return layer.msg('Status:' + xhr.status + '，' + xhr.statusText + '，请稍后再试！');
+                    location.href = '/Other/LoginInvalid';
                 }
             });
         },
@@ -295,14 +295,14 @@ layui.define(["element", "jquery"], function (exports) {
              * 打开新窗口
              */
             $('body').on('click', '[layuimini-href]', function () {
-                var loading = layer.load(0, {shade: false, time: 2 * 1000});
+                var loading = layer.load(0, { shade: false, time: 2 * 1000 });
                 var href = $(this).attr('layuimini-href'),
                     target = $(this).attr('target');
-                if(!href) return  ;
-                var me = this ;
-                var el = $("[layuimini-href='"+href+"']",".layuimini-menu-left") ;
+                if (!href) return;
+                var me = this;
+                var el = $("[layuimini-href='" + href + "']", ".layuimini-menu-left");
                 layer.close(window.openTips);
-                if(el.length){
+                if (el.length) {
                     $(el).closest(".layui-nav-tree").find(".layui-this").removeClass("layui-this");
                     $(el).parent().addClass("layui-this");
                 }
@@ -320,15 +320,15 @@ layui.define(["element", "jquery"], function (exports) {
              * 在子页面上打开新窗口
              */
             $('body').on('click', '[layuimini-content-href]', function () {
-                var loading = parent.layer.load(0, {shade: false, time: 2 * 1000});
+                var loading = parent.layer.load(0, { shade: false, time: 2 * 1000 });
                 var href = $(this).attr('layuimini-content-href'),
                     title = $(this).attr('data-title'),
                     target = $(this).attr('target');
-                if(!href) return  ;
-                var me = this ;
-                var el = $("[layuimini-href='"+href+"']",".layuimini-menu-left") ;
+                if (!href) return;
+                var me = this;
+                var el = $("[layuimini-href='" + href + "']", ".layuimini-menu-left");
                 layer.close(window.openTips);
-                if(el.length){
+                if (el.length) {
                     $(el).closest(".layui-nav-tree").find(".layui-this").removeClass("layui-this");
                     $(el).parent().addClass("layui-this");
                 }

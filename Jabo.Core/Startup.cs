@@ -25,8 +25,14 @@ namespace Jabo.Core
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication("CookieAuthentication")
+                    .AddCookie("CookieAuthentication", config =>
+                    {
+                        config.Cookie.Name = "userLogin";
+                        config.LoginPath = "/Index/Login";
+                    });
+
             services.AddControllersWithViews();
-            services.AddSession(options => { options.IdleTimeout = TimeSpan.FromMinutes(30); });
         }
 
         public void ConfigureContainer(ContainerBuilder builder)
@@ -57,11 +63,11 @@ namespace Jabo.Core
 
             app.UseStatusCodePagesWithReExecute("/Other/Error{0}"); //“Ï≥£“≥√Ê
 
-            app.UseSession();
-
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

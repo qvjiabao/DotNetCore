@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using Jabo.Core.Filter;
 using Jabo.Core.Result;
 using Jabo.Core.ViewModels;
 using Jabo.IServices;
 using Jabo.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Jabo.Core.Controllers
 {
-    [CheckLogin]
+    [Authorize]
     public class UserController : BaseController
     {
         private readonly IUserService _userService;

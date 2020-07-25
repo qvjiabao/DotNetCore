@@ -22,6 +22,13 @@ namespace Jabo.Services
             return _jDItinerayRepository.ExistxJDItinerary(departure, terminal, itineraryCode);
         }
 
+        public IEnumerable<JDItineraryModel> GetAllJDItinerarys()
+        {
+            var list = _jDItinerayRepository.GetAllJDItinerarys(string.Empty);
+
+            return list;
+        }
+
         public IEnumerable<JDItineraryModel> GetAllJDItinerarys(string departure, string terminal)
         {
             var sql = string.Empty;
@@ -34,6 +41,20 @@ namespace Jabo.Services
             if (!string.IsNullOrWhiteSpace(terminal))
             {
                 sql = $" and  Terminal like '%{terminal}%' ";
+            }
+
+            var list = _jDItinerayRepository.GetAllJDItinerarys(sql);
+
+            return list;
+        }
+
+        public IEnumerable<JDItineraryModel> GetTerminalByDeparture(string departure)
+        {
+            var sql = string.Empty;
+
+            if (!string.IsNullOrWhiteSpace(departure))
+            {
+                sql = $" and  Departure = '{departure}' ";
             }
 
             var list = _jDItinerayRepository.GetAllJDItinerarys(sql);

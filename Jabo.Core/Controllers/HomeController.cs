@@ -14,12 +14,12 @@ using AutoMapper;
 using Jabo.Models;
 using Jabo.Tools;
 using Jabo.Core.Result;
-using Jabo.Core.Filter;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Jabo.Core.Controllers
 {
 
-    [CheckLogin]
+    [Authorize]
     public class HomeController : BaseController
     {
 

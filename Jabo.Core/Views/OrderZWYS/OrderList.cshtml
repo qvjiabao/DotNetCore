@@ -113,7 +113,6 @@
             limit: 10,
             page: true,
             done: function (res, curr, count) {
-                //判断某一列是图片的话，给下划线
                 var re = res.data;
                 if (re.length > 0) {
                     $.each(re, function (ii, dd) {

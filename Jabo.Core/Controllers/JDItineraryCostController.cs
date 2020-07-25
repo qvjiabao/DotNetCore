@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using Jabo.Core.Filter;
 using Jabo.Core.Result;
 using Jabo.Core.ViewModels;
 using Jabo.IServices;
 using Jabo.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Jabo.Core.Controllers
 {
-    [CheckLogin]
+    [Authorize]
     public class JDItineraryCostController : BaseController
     {
         private readonly IJDItineraryCostService _jDItinerayService;
@@ -33,6 +33,21 @@ namespace Jabo.Core.Controllers
         public IActionResult JDItineraryCostSave()
         {
             return View();
+        }
+
+        [HttpGet]
+        public JsonHttpActionResult GetJDItineraryCosts(string jDItineraryCode)
+        {
+            var j = new JsonHttpActionResult();
+
+            if (string.IsNullOrEmpty(jDItineraryCode)) return j.SetData(new List<JDItineraryCostVModel>()).SucceedMessage();
+
+            var all = _jDItinerayService.GetAllJDItineraryCosts(jDItineraryCode);
+
+            var convertList = _mapper.Map<IEnumerable<JDItineraryCostModel>, IEnumerable<JDItineraryCostVModel>>(all);
+
+            return j.SetData(convertList).SucceedMessage();
+
         }
 
         [HttpGet]

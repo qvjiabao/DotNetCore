@@ -33,6 +33,19 @@ namespace Jabo.IServices
         /// <summary>
         /// 获取所有行程
         /// </summary>
+        /// <returns></returns>
+        IEnumerable<JDItineraryModel> GetAllJDItinerarys();
+
+        /// <summary>
+        /// 根据行程获取目的地
+        /// </summary>
+        /// <param name="departure"></param>
+        /// <returns></returns>
+        IEnumerable<JDItineraryModel> GetTerminalByDeparture(string departure);
+
+        /// <summary>
+        /// 获取所有行程
+        /// </summary>
         /// <param name="displayName"></param>
         /// <returns></returns>
         IEnumerable<JDItineraryModel> GetAllJDItinerarys(string departure, string terminal);

@@ -12,11 +12,11 @@ namespace Jabo.Repository
 {
     public class UserRepository : BaseRepository, IUserRepository
     {
-        public int CreateUser(UserModel user)
+        public int CreateModel(UserModel t)
         {
             using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
-                var count = connection.Insert<UserModel>(user);
+                var count = connection.Insert<UserModel>(t);
 
                 return (int)count;
             }
@@ -43,7 +43,18 @@ namespace Jabo.Repository
             }
         }
 
-        public IEnumerable<UserModel> GetAllUsers(string where)
+        public UserModel GetModelByCode(string code)
+        {
+            using (var connection = DataBase.GetOpenConnection(GetConnectionString))
+            {
+                var model = connection.GetList<UserModel>("where IsDeleted = 0 and UserCode = @userCode ",
+                    new { userCode = code }).FirstOrDefault();
+
+                return model;
+            }
+        }
+
+        public IEnumerable<UserModel> GetModels(string where)
         {
             using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
@@ -53,16 +64,6 @@ namespace Jabo.Repository
             }
         }
 
-        public UserModel GetUserByUserCode(string userCode)
-        {
-            using (var connection = DataBase.GetOpenConnection(GetConnectionString))
-            {
-                var model = connection.GetList<UserModel>("where IsDeleted = 0 and UserCode = @userCode ",
-                    new { userCode = userCode }).FirstOrDefault();
-
-                return model;
-            }
-        }
 
         public UserModel GetUserByUserNameAndPwd(string userName, string pwd)
         {
@@ -75,27 +76,22 @@ namespace Jabo.Repository
             }
         }
 
-        /// <summary>
-        /// 删除用户
-        /// </summary>
-        /// <param name="userCode"></param>
-        /// <returns></returns>
-        public int RemoveUserByCode(string userCodes, string userName, string displayName)
+        public int RemoveModelByCode(string codes, string userName, string displayName)
         {
             using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
                 var count = connection.Execute(@$" UPDATE YX_Users SET IsDeleted = 1,ModifyUserName = @modifyUserName,ModifyDisplayName = @modifyDisplayName
-                    ,ModifyDate = @modifyDate where userCode in ({userCodes})", new { modifyUserName = userName, modifyDisplayName = displayName, modifyDate = DateTime.Now });
+                    ,ModifyDate = @modifyDate where userCode in ({codes})", new { modifyUserName = userName, modifyDisplayName = displayName, modifyDate = DateTime.Now });
 
                 return count;
             }
         }
 
-        public int UpdateUser(UserModel user)
+        public int UpdateModel(UserModel t)
         {
             using (var connection = DataBase.GetOpenConnection(GetConnectionString))
             {
-                var count = connection.Update<UserModel>(user);
+                var count = connection.Update<UserModel>(t);
 
                 return count;
             }

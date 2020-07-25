@@ -147,6 +147,9 @@ D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\JDItineraryCost\
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\JDItinerary\JDItineraryList.cshtml.g.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\JDItinerary\JDItinerarySave.cshtml.g.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\JDItinerary\JDItineraryView.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\OrderJD\OrderJDSave.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\OrderJD\OrderJDView.cshtml.g.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\OrderJD\OrderList.cshtml.g.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\OrderZWYS\OrderList.cshtml.g.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\OrderZWYS\OrderZWYSSave.cshtml.g.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\OrderZWYS\OrderZWYSView.cshtml.g.cs

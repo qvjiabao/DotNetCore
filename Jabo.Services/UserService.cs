@@ -36,7 +36,7 @@ namespace Jabo.Services
                 sql = $" and  DisplayName like '%{displayName}%' ";
             }
 
-            var list = _userRepository.GetAllUsers(sql);
+            var list = _userRepository.GetModels(sql);
 
             return list;
         }
@@ -52,12 +52,12 @@ namespace Jabo.Services
 
             var str = list.Aggregate(string.Empty, (s, n) => s += $",'{n.UserCode}'");
 
-            return _userRepository.RemoveUserByCode(str.Substring(1), userName, displayName) > 0;
+            return _userRepository.RemoveModelByCode(str.Substring(1), userName, displayName) > 0;
         }
 
         public UserModel GetUserByUserCode(string userCode)
         {
-            return _userRepository.GetUserByUserCode(userCode);
+            return _userRepository.GetModelByCode(userCode);
         }
 
         public bool ExistsUserName(string userName, string userCode = "")
@@ -71,11 +71,11 @@ namespace Jabo.Services
             {
                 userModel.UserCode = Guid.NewGuid().ToString();
                 userModel.PassWord = EncryptTool.GetMd5By32("123456");
-                return _userRepository.CreateUser(userModel) > 0;
+                return _userRepository.CreateModel(userModel) > 0;
             }
             else
             {
-                var model = _userRepository.GetUserByUserCode(userModel.UserCode);
+                var model = _userRepository.GetModelByCode(userModel.UserCode);
                 model.DisplayName = userModel.DisplayName;
                 model.Sex = userModel.Sex;
                 model.Phone = userModel.Phone;
@@ -86,7 +86,7 @@ namespace Jabo.Services
                 if (IsChangePwd)
                     model.PassWord = EncryptTool.GetMd5By32(userModel.PassWord);
 
-                return _userRepository.UpdateUser(model) > 0;
+                return _userRepository.UpdateModel(model) > 0;
             }
         }
     }

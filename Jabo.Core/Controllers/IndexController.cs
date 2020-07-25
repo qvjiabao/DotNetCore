@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoMapper;
 using Jabo.Core.Result;
 using Jabo.Core.ViewModels;
 using Jabo.IServices;
 using Jabo.Tools;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Jabo.Core.Controllers
@@ -25,8 +27,6 @@ namespace Jabo.Core.Controllers
 
         public IActionResult Loginout()
         {
-            HttpContext.Session.Clear();
-
             return new RedirectResult("/Other/LoginInvalid");
         }
 
@@ -71,9 +71,19 @@ namespace Jabo.Core.Controllers
 
             if (success)
             {
-                var vModel = _mapper.Map<UserVModel>(user);
+                var userClaims = new List<Claim>()
+                {
+                    new Claim(ClaimTypes.Name, user.UserName),
+                    new Claim(ClaimTypes.Role, user.RoleCode),
+                    new Claim("DisplayName",user.DisplayName)
+                };
 
-                HttpContext.Session.Set("userInfo", ProtoBufHelper.Serialize(vModel));
+                var grandmaIdentity = new ClaimsIdentity(userClaims, "User Identity");
+
+                var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity });
+
+                HttpContext.SignInAsync(userPrincipal);
+
             }
 
             j.SetData(success);

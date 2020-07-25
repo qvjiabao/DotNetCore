@@ -35,6 +35,7 @@ namespace Jabo.Core.Config
 
             CreateMap<JDItineraryModel, JDItineraryVModel>();
             CreateMap<JDItineraryCostModel, JDItineraryCostVModel>();
+            CreateMap<OrderJDModel, OrderJDVModel>();
         }
     }
 }

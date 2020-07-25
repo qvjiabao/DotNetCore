@@ -11,6 +11,7 @@ using Jabo.Core.ViewModels;
 using Jabo.IServices;
 using Jabo.Models;
 using Jabo.Tools;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 using OfficeOpenXml;
@@ -21,6 +22,7 @@ namespace Jabo.Core.Controllers
     /// <summary>
     /// 植物医生订单
     /// </summary>
+    [Authorize]
     public class OrderZWYSController : BaseController
     {
         private readonly IOrderZWYSService _orderZWYSService;

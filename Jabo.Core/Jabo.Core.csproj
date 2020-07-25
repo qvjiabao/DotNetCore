@@ -24,4 +24,8 @@
     <ProjectReference Include="..\Jabo.Services\Jabo.Services.csproj" />
     <ProjectReference Include="..\Jabo.Tools\Jabo.Tools.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Filter\" />
+  </ItemGroup>
 </Project>

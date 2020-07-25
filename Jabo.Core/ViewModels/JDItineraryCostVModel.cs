@@ -12,7 +12,7 @@ namespace Jabo.Core.ViewModels
         public string jDItineraryCode { get; set; }
         public string carTypeCode { get; set; }
         public string carType { get; set; }
-        public decimal Cost { get; set; }
+        public decimal cost { get; set; }
         public DateTime? createDate { get; set; }
     }
 }

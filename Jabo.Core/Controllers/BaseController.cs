@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Jabo.Core.ViewModels;
 using Jabo.Tools;
@@ -20,18 +21,12 @@ namespace Jabo.Core.Controllers
         {
             get
             {
-                if (HttpContext.Session.Keys.Contains("userInfo"))
+                return new UserVModel()
                 {
-                    var bytes = HttpContext.Session.Get("userInfo");
-
-                    var obj = ProtoBufHelper.DeSerialize<UserVModel>(bytes);
-
-                    return obj;
-                }
-                else
-                {
-                    return null;
-                }
+                    DisplayName = User.Claims.FirstOrDefault(s => s.Type == "DisplayName").Value,
+                    UserName = User.Claims.FirstOrDefault(s => s.Type == ClaimTypes.Name).Value,
+                    RoleCode = User.Claims.FirstOrDefault(s => s.Type == ClaimTypes.Role).Value
+                };
             }
         }
     }
