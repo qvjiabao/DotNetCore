@@ -171,3 +171,4 @@ D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\staticwebassets\Jabo.Core.St
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.dll
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.pdb
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.genruntimeconfig.cache
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Razor\Views\OrderJD\OrderJDOilTopupList.cshtml.g.cs

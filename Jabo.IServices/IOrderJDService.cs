@@ -36,6 +36,13 @@ namespace Jabo.IServices
         IEnumerable<OrderJDModel> GetAllOrderJDs(string projectCode, string orderNo, string carNo, string sealNo, string departure, string terminal, string orderDate);
 
         /// <summary>
+        /// 获取充值记录
+        /// </summary>
+        /// <param name="displayName"></param>
+        /// <returns></returns>
+        IEnumerable<OrderJDModel> GetOilCardTopupLog(string carNo);
+
+        /// <summary>
         /// 删除京东订单
         /// </summary>
         /// <param name="roleCode"></param>

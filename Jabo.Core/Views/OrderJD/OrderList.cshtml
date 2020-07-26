@@ -76,6 +76,18 @@
 </div>
 
 <script>
+    
+    function clickCarNo(carNO) {
+        layer.open({
+            title: '车牌号 【' + carNO + '】',
+            type: 2,
+            shade: 0.2,
+            shadeClose: true,
+            area: ['600px', '650px'],
+            content: "/OrderJD/OrderJDOilTopupList#/carNO=" + carNO
+        });
+    }
+
     layui.use(['form', 'table', 'miniPage', 'element','laydate'], function () {
         var $ = layui.jquery,
             form = layui.form,
@@ -109,7 +121,10 @@
                 { field: 'cost', width: '10%', title: '结款运费', align: 'center', fixed: 'left' },
                 { field: 'orderNo', width: '12%', title: '单号', align: 'center' },
                 { field: 'sealNo', width: '12%', title: '封签号', align: 'center' },
-                { field: 'carNo', width: '8%', title: '车牌号', align: 'center' },
+                {
+                    field: 'carNo', width: '15%', title: '车牌号', align: 'center'
+                    , templet: '<div><a href="javascript:void(0);" onclick="clickCarNo(\'{{d.carNo}}\');" class="layui-table-link">{{d.carNo}}</a></div>'
+                },
                 { field: 'driver', width: '10%', title: '司机', align: 'center' },
                 { field: 'departure', width: '10%', title: '始发站', align: 'center' },
                 { field: 'terminal', width: '10%', title: '目的地', align: 'center' },
@@ -238,7 +253,7 @@
                     type: 2,
                     shade: 0.2,
                     shadeClose: true,
-                    area: ['1100px', '700px'],
+                    area: ['1100px', '760px'],
                     content: "/OrderJD/OrderJDView#/orderNo=" + data.orderNo,
                 });
                 $(window).on("resize", function () {

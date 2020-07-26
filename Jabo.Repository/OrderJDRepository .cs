@@ -52,7 +52,7 @@ namespace Jabo.Repository
                 var sql = @"select A.*,B.DicName AS ProjectName,C.DicName AS CarTypeName from YX_OrderJD A 
                     inner join YX_Dic B on A.ProjectCode = B.DicCode
                     inner join YX_Dic C on A.CarTypeCode = C.DicCode
-                    where A.IsDeleted = 0 " + where + " Order By A.OrderDate desc";
+                    where A.IsDeleted = 0 " + where + " Order By A.OrderDate desc,A.CreateDate desc";
 
                 var list = connection.Query<OrderJDModel>(sql);
 

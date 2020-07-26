@@ -64,6 +64,17 @@ namespace Jabo.Services
             return list;
         }
 
+        public IEnumerable<OrderJDModel> GetOilCardTopupLog(string carNo)
+        {
+            var sql = new StringBuilder();
+
+            sql.Append($" and  A.CarNo = '{carNo}' and OilCardTopup > 0 ");
+
+            var list = _orderJDRepository.GetAllOrderJDs(sql.ToString());
+
+            return list;
+        }
+
         public OrderJDModel GetOrderJDByOrderNo(string orderNo)
         {
             return _orderJDRepository.GetOrderJDByOrderNo(orderNo);
