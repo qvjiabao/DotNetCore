@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Jabo.Core.Controllers
 {
-    [Authorize]
+     
     public class JDItineraryCostController : BaseController
     {
         private readonly IJDItineraryCostService _jDItinerayService;

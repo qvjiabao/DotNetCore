@@ -22,7 +22,7 @@ namespace Jabo.Core.Controllers
     /// <summary>
     /// 植物医生订单
     /// </summary>
-    [Authorize]
+     
     public class OrderZWYSController : BaseController
     {
         private readonly IOrderZWYSService _orderZWYSService;

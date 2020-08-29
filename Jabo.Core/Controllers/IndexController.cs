@@ -7,6 +7,7 @@ using AutoMapper;
 using Jabo.Core.Result;
 using Jabo.Core.ViewModels;
 using Jabo.IServices;
+using Jabo.Log;
 using Jabo.Tools;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
@@ -59,7 +60,6 @@ namespace Jabo.Core.Controllers
 
             return success ? j.SucceedMessage() : j.ErrorMessage();
         }
-
 
         public JsonHttpActionResult VerifyLogin(string username, string password)
         {

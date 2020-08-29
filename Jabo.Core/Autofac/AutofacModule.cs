@@ -1,6 +1,10 @@
 ﻿using Autofac;
 using AutoMapper;
 using Jabo.Core.Config;
+using Jabo.MongoDB.Model;
+using Jabo.MongoDB.Model.AppSettings;
+using Jabo.MongoDB.Repository;
+using Jabo.Tools;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Hosting.Internal;
 using System;
@@ -36,6 +40,14 @@ namespace Jabo.Core.Autofac
             });
             var mapper = config.CreateMapper();
             builder.RegisterInstance(mapper).As<IMapper>().SingleInstance();
+
+            builder.RegisterType<LogRepository>().As<IRepository<LogEventData>>();
+
+
+            builder.RegisterType<Jabo.Services.DicService>().As<Jabo.IServices.IDicService>();
+
+            //builder.Register(c => AppConfigurtaion.Configuration["MongoDBSettings:ConnectionStrings"]).As<DBSettings>();
+            //builder.Register(c => AppConfigurtaion.Configuration["MongoDBSettings:AppSettings"]).As<AppSettings>();
 
         }
     }

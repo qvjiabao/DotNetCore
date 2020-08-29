@@ -5,11 +5,13 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Jabo.Core.ViewModels;
 using Jabo.Tools;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Jabo.Core.Controllers
 {
+    [Authorize]
     public class BaseController : Controller
     {
 

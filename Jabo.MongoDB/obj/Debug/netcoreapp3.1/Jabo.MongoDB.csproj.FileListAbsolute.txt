@@ -1,0 +1,9 @@
+D:\git\DotNetCore\Jabo.MongoDB\bin\Debug\netcoreapp3.1\Jabo.MongoDB.deps.json
+D:\git\DotNetCore\Jabo.MongoDB\bin\Debug\netcoreapp3.1\Jabo.MongoDB.dll
+D:\git\DotNetCore\Jabo.MongoDB\bin\Debug\netcoreapp3.1\Jabo.MongoDB.pdb
+D:\git\DotNetCore\Jabo.MongoDB\obj\Debug\netcoreapp3.1\Jabo.MongoDB.csproj.CoreCompileInputs.cache
+D:\git\DotNetCore\Jabo.MongoDB\obj\Debug\netcoreapp3.1\Jabo.MongoDB.AssemblyInfoInputs.cache
+D:\git\DotNetCore\Jabo.MongoDB\obj\Debug\netcoreapp3.1\Jabo.MongoDB.AssemblyInfo.cs
+D:\git\DotNetCore\Jabo.MongoDB\obj\Debug\netcoreapp3.1\Jabo.MongoDB.dll
+D:\git\DotNetCore\Jabo.MongoDB\obj\Debug\netcoreapp3.1\Jabo.MongoDB.pdb
+D:\git\DotNetCore\Jabo.MongoDB\obj\Debug\netcoreapp3.1\Jabo.MongoDB.csprojAssemblyReference.cache

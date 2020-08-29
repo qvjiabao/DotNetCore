@@ -36,8 +36,14 @@
               "D:\\git\\DotNetCore\\Jabo.IServices\\Jabo.IServices.csproj": {
                 "projectPath": "D:\\git\\DotNetCore\\Jabo.IServices\\Jabo.IServices.csproj"
               },
+              "D:\\git\\DotNetCore\\Jabo.Log\\Jabo.Log.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.Log\\Jabo.Log.csproj"
+              },
               "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj": {
                 "projectPath": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj"
+              },
+              "D:\\git\\DotNetCore\\Jabo.MongoDB\\Jabo.MongoDB.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.MongoDB\\Jabo.MongoDB.csproj"
               },
               "D:\\git\\DotNetCore\\Jabo.Repository\\Jabo.Repository.csproj": {
                 "projectPath": "D:\\git\\DotNetCore\\Jabo.Repository\\Jabo.Repository.csproj"
@@ -86,11 +92,15 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[3.1.4, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
+            },
+            "WebApiContrib.Core.Formatter.MessagePack": {
+              "target": "Package",
+              "version": "[2.1.0, )"
             }
           },
           "imports": [
@@ -289,6 +299,72 @@
         }
       }
     },
+    "D:\\git\\DotNetCore\\Jabo.Log\\Jabo.Log.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\DotNetCore\\Jabo.Log\\Jabo.Log.csproj",
+        "projectName": "Jabo.Log",
+        "projectPath": "D:\\git\\DotNetCore\\Jabo.Log\\Jabo.Log.csproj",
+        "packagesPath": "C:\\Users\\Jabo\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\DotNetCore\\Jabo.Log\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MessagePack": {
+              "target": "Package",
+              "version": "[1.9.11, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Sketch7.MessagePack.MediaTypeFormatter": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -326,6 +402,76 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\git\\DotNetCore\\Jabo.MongoDB\\Jabo.MongoDB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\DotNetCore\\Jabo.MongoDB\\Jabo.MongoDB.csproj",
+        "projectName": "Jabo.MongoDB",
+        "projectPath": "D:\\git\\DotNetCore\\Jabo.MongoDB\\Jabo.MongoDB.csproj",
+        "packagesPath": "C:\\Users\\Jabo\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\DotNetCore\\Jabo.MongoDB\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.10.4, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -506,6 +652,9 @@
             "projectReferences": {
               "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj": {
                 "projectPath": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj"
+              },
+              "D:\\git\\DotNetCore\\Jabo.MongoDB\\Jabo.MongoDB.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\Jabo.MongoDB\\Jabo.MongoDB.csproj"
               }
             }
           }
@@ -526,6 +675,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[3.1.6, )"
             },
             "protobuf-net": {
               "target": "Package",

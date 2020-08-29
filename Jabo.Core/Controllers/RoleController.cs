@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Jabo.Core.Controllers
 {
-    [Authorize]
+     
     public class RoleController : BaseController
     {
         private readonly IRoleService _roleService;

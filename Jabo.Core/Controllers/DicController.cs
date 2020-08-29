@@ -8,12 +8,13 @@ using Jabo.Core.Result;
 using Jabo.Core.ViewModels;
 using Jabo.IServices;
 using Jabo.Models;
+using Jabo.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Jabo.Core.Controllers
 {
-    [Authorize]
+    
     public class DicController : BaseController
     {
         private readonly IDicService _dicService;

@@ -3,8 +3,11 @@ using Jabo.Core.Result;
 using Jabo.Core.ViewModels;
 using Jabo.IServices;
 using Jabo.Models;
+using Jabo.MongoDB.Model.AppSettings;
+using Jabo.Tools;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace Jabo.Core.Controllers
 {
-    [Authorize]
+     
     public class UserController : BaseController
     {
         private readonly IUserService _userService;

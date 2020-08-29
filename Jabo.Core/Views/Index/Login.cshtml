@@ -175,7 +175,7 @@
                     if (json.Result) {
                         window.location = '/Home/Index';
                     } else {
-                        layer.msg('用户名或密码错误');
+                        layer.msg(json.Message);
                         return false;
                     }
                 }, "json");

@@ -3,7 +3,9 @@ D:\git\DotNetCore\Jabo.Tools\bin\Debug\netcoreapp3.1\Jabo.Tools.dll
 D:\git\DotNetCore\Jabo.Tools\bin\Debug\netcoreapp3.1\Jabo.Tools.pdb
 D:\git\DotNetCore\Jabo.Tools\bin\Debug\netcoreapp3.1\Jabo.Dapper.dll
 D:\git\DotNetCore\Jabo.Tools\bin\Debug\netcoreapp3.1\Jabo.Models.dll
+D:\git\DotNetCore\Jabo.Tools\bin\Debug\netcoreapp3.1\Jabo.MongoDB.dll
 D:\git\DotNetCore\Jabo.Tools\bin\Debug\netcoreapp3.1\Jabo.Models.pdb
+D:\git\DotNetCore\Jabo.Tools\bin\Debug\netcoreapp3.1\Jabo.MongoDB.pdb
 D:\git\DotNetCore\Jabo.Tools\bin\Debug\netcoreapp3.1\Jabo.Dapper.pdb
 D:\git\DotNetCore\Jabo.Tools\obj\Debug\netcoreapp3.1\Jabo.Tools.csprojAssemblyReference.cache
 D:\git\DotNetCore\Jabo.Tools\obj\Debug\netcoreapp3.1\Jabo.Tools.csproj.CoreCompileInputs.cache

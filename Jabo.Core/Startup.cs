@@ -4,12 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
 using Jabo.Core.Autofac;
+using Jabo.Core.Extension;
+using Jabo.Core.Middleware;
+using Jabo.MongoDB.Model.AppSettings;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
+using WebApiContrib.Core.Formatter.MessagePack;
 
 namespace Jabo.Core
 {
@@ -25,14 +31,18 @@ namespace Jabo.Core
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication("CookieAuthentication")
-                    .AddCookie("CookieAuthentication", config =>
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, config =>
                     {
                         config.Cookie.Name = "userLogin";
+                        config.Cookie.HttpOnly = true;//设置存储用户登录信息（用户Token信息）的Cookie，无法通过客户端浏览器脚本(如JavaScript等)访问到
                         config.LoginPath = "/Index/Login";
                     });
 
-            services.AddControllersWithViews();
+            services.Configure<DBSettings>(Configuration.GetSection("MongoDBSettings:ConnectionStrings"));//数据库连接信息
+            services.Configure<AppSettings>(Configuration.GetSection("MongoDBSettings:AppSettings"));//其他配置信息      
+            services.AddLoggerService("Jabo.Core");
+            services.AddMvc(); 
         }
 
         public void ConfigureContainer(ContainerBuilder builder)
@@ -48,7 +58,7 @@ namespace Jabo.Core
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IOptions<DBSettings> settings)
         {
             if (env.IsDevelopment())
             {
@@ -61,16 +71,12 @@ namespace Jabo.Core
                 app.UseHsts();
             }
 
+            app.ConfigureExceptionHandler(settings); //全局处理异常
             app.UseStatusCodePagesWithReExecute("/Other/Error{0}"); //异常页面
-
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthentication();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

@@ -23,7 +23,7 @@ namespace Jabo.Core.Controllers
     /// <summary>
     /// 京东订单
     /// </summary>
-    [Authorize]
+     
     public class OrderJDController : BaseController
     {
         private readonly IOrderJDService _orderJDService;

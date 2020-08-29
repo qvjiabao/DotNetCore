@@ -15,27 +15,31 @@ using Jabo.Models;
 using Jabo.Tools;
 using Jabo.Core.Result;
 using Microsoft.AspNetCore.Authorization;
+using Jabo.Log;
 
 namespace Jabo.Core.Controllers
 {
 
-    [Authorize]
     public class HomeController : BaseController
     {
 
         private readonly IMenuService _menuService;
         private readonly IMapper _mapper;
         private readonly IUserService _userService;
+        private readonly Logger _logger;
 
-        public HomeController(IMapper mapper, IMenuService menuService, IUserService userService)
+        public HomeController(IMapper mapper, IMenuService menuService, IUserService userService, Logger logger)
         {
             _menuService = menuService;
             _mapper = mapper;
             _userService = userService;
+            _logger = logger;
         }
 
         public IActionResult Index()
         {
+            _logger.Error("3325345");
+
             ViewBag.displayName = UserInfo.DisplayName;
 
             return View();

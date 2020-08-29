@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Jabo.Core.Controllers
 {
-    [Authorize]
+     
     public class OtherController : BaseController
     {
         public IActionResult Error404()
