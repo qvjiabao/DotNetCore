@@ -68,7 +68,7 @@
 
             form.on('submit(btnSave)', function (data) {
                 data = data.field;
-                $.post("/Index/ChangePwd", data, function (json) {
+                $.post("/Home/SavePwd", data, function (json) {
                     if (json.Result) {
                         layer.msg(json.Message, { shift: -1, time: 1000 }, function () {
                             parent.window.location = '/Index/Loginout';

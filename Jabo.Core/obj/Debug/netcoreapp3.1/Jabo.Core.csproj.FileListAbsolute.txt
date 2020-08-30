@@ -146,6 +146,9 @@ D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.Repository.pdb
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.Services.pdb
 D:\git\DotNetCore\Jabo.Core\bin\Debug\netcoreapp3.1\Jabo.Tools.pdb
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.csprojAssemblyReference.cache
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.csproj.CoreCompileInputs.cache
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.MvcApplicationPartsAssemblyInfo.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.MvcApplicationPartsAssemblyInfo.cache
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.RazorAssemblyInfo.cache
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.RazorAssemblyInfo.cs
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.AssemblyInfoInputs.cache
@@ -189,6 +192,3 @@ D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\staticwebassets\Jabo.Core.St
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.dll
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.pdb
 D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.genruntimeconfig.cache
-D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.csproj.CoreCompileInputs.cache
-D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.MvcApplicationPartsAssemblyInfo.cs
-D:\git\DotNetCore\Jabo.Core\obj\Debug\netcoreapp3.1\Jabo.Core.MvcApplicationPartsAssemblyInfo.cache

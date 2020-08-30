@@ -16,6 +16,7 @@ namespace Jabo.Models
         public string Target { get; set; }
         public string Icon { get; set; }
         public string ParentGuid { get; set; }
+        public int? Sort { get; set; }
         public bool? IsDeleted { get; set; }
         public string CreateUserName { get; set; }
         public string CreateDisplayName { get; set; }

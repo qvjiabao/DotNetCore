@@ -24,11 +24,11 @@ namespace Jabo.Services
         {
             var list = _menuRepository.GetRoleMenu(roleCode);
 
-            var first = list.Where(s => s.ParentGuid == "0");
+            var first = list.Where(s => s.ParentGuid == "0").OrderBy(s => s.Sort);
 
             foreach (var item in first)
             {
-                item.Children = list.Where(s => s.ParentGuid == item.MenuGuid);
+                item.Children = list.Where(s => s.ParentGuid == item.MenuGuid).OrderBy(s => s.Sort);
             }
             return first;
         }
