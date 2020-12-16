@@ -6,3 +6,4 @@ D:\git\DotNetCore\QJB.Dapper\obj\Debug\netstandard2.0\QJB.Dapper.AssemblyInfo.cs
 D:\git\DotNetCore\QJB.Dapper\obj\Debug\netstandard2.0\QJB.Dapper.csproj.CoreCompileInputs.cache
 D:\git\DotNetCore\QJB.Dapper\obj\Debug\netstandard2.0\QJB.Dapper.dll
 D:\git\DotNetCore\QJB.Dapper\obj\Debug\netstandard2.0\QJB.Dapper.pdb
+D:\git\DotNetCore\QJB.Dapper\obj\Debug\netstandard2.0\QJB.Dapper.csprojAssemblyReference.cache

@@ -26,24 +26,24 @@ namespace QJB.Server.Controllers
             _mapper = mapper;
         }
 
-        public IActionResult RoleView()
-        {
-            return View();
-        }
-        public IActionResult RoleSave()
-        {
-            return View();
-        }
+        //public IActionResult RoleView()
+        //{
+        //    return View();
+        //}
+        //public IActionResult RoleSave()
+        //{
+        //    return View();
+        //}
 
-        public IActionResult RoleList()
-        {
-            return View();
-        }
+        //public IActionResult RoleList()
+        //{
+        //    return View();
+        //}
 
-        public IActionResult RoleMenuList()
-        {
-            return View();
-        }
+        //public IActionResult RoleMenuList()
+        //{
+        //    return View();
+        //}
 
         [HttpGet]
         public RoleVModel GetRoleByCode(string roleCode)

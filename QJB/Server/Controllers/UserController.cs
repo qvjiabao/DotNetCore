@@ -27,19 +27,19 @@ namespace QJB.Server.Controllers
             _mapper = mapper;
         }
 
-        public IActionResult UserList()
-        {
-            return View();
-        }
+        //public IActionResult UserList()
+        //{
+        //    return View();
+        //}
 
-        public IActionResult UserView()
-        {
-            return View();
-        }
-        public IActionResult UserSave()
-        {
-            return View();
-        }
+        //public IActionResult UserView()
+        //{
+        //    return View();
+        //}
+        //public IActionResult UserSave()
+        //{
+        //    return View();
+        //}
 
         [HttpGet]
         public UserVModel GetUserByCode(string userCode)

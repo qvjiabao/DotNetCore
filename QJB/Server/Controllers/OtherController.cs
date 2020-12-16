@@ -12,19 +12,19 @@ namespace QJB.Server.Controllers
 
     public class OtherController : BaseController
     {
-        public IActionResult Error404()
-        {
-            return View();
-        }
-        public IActionResult LoginInvalid()
-        {
-            //注销登录
-            Task.Run(async () =>
-            {
-                await HttpContext.SignOutAsync();
-            }).Wait();
+        //public IActionResult Error404()
+        //{
+        //    return View();
+        //}
+        //public IActionResult LoginInvalid()
+        //{
+        //    //注销登录
+        //    Task.Run(async () =>
+        //    {
+        //        await HttpContext.SignOutAsync();
+        //    }).Wait();
 
-            return View();
-        }
+        //    return View();
+        //}
     }
 }

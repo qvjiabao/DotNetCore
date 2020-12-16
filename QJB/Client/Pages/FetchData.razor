@@ -6,12 +6,12 @@
 
 <p>This component demonstrates fetching data from the server.</p>
 
-@*@if (forecasts == null)
+@if (forecasts == null)
     {
         <p><em>Loading...</em></p>
     }
     else
-    {*@
+    {
 <table class="table">
     <thead>
         <tr>
@@ -22,25 +22,25 @@
         </tr>
     </thead>
     <tbody>
-        @*@foreach (var forecast in forecasts)
+        @foreach (var forecast in forecasts)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>@forecast.dicId</td>
+                    <td>@forecast.dicName</td>
+                    <td>@forecast.dicCode</td>
+                    <td>@forecast.dicTypeCode</td>
                 </tr>
-            }*@
+            }
     </tbody>
 </table>
-@*}*@
+}
 
 @code {
-    //private WeatherForecast[] forecasts;
+    private DicVModel[] forecasts;
 
     protected override async Task OnInitializedAsync()
     {
-        //forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+        forecasts = await Http.GetFromJsonAsync<DicVModel[]>("Dic");
     }
 
 }

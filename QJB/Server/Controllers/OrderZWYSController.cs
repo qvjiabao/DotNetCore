@@ -37,24 +37,24 @@ namespace QJB.Server.Controllers
             _mapper = mapper;
         }
 
-        public IActionResult OrderZWYSView()
-        {
-            return View();
-        }
-        public IActionResult OrderZWYSSave()
-        {
-            return View();
-        }
+        //public IActionResult OrderZWYSView()
+        //{
+        //    return View();
+        //}
+        //public IActionResult OrderZWYSSave()
+        //{
+        //    return View();
+        //}
 
-        public IActionResult OrderList()
-        {
-            return View();
-        }
+        //public IActionResult OrderList()
+        //{
+        //    return View();
+        //}
 
-        public IActionResult OrderZWYSMenuList()
-        {
-            return View();
-        }
+        //public IActionResult OrderZWYSMenuList()
+        //{
+        //    return View();
+        //}
 
         /// <summary>
         /// excel导出功能

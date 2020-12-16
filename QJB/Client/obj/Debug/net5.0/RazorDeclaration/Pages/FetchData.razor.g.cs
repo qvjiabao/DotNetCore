@@ -100,11 +100,11 @@ using QJB.Shared;
 #nullable restore
 #line 38 "D:\git\DotNetCore\QJB\Client\Pages\FetchData.razor"
        
-    //private WeatherForecast[] forecasts;
+    private DicVModel[] forecasts;
 
     protected override async Task OnInitializedAsync()
     {
-        //forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+        forecasts = await Http.GetFromJsonAsync<DicVModel[]>("Dic");
     }
 
 

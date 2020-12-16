@@ -26,15 +26,15 @@ namespace QJB.Server.Controllers
             _mapper = mapper;
         }
 
-        public IActionResult JDItineraryCostList()
-        {
-            return View();
-        }
+        //public IActionResult JDItineraryCostList()
+        //{
+        //    return View();
+        //}
 
-        public IActionResult JDItineraryCostSave()
-        {
-            return View();
-        }
+        //public IActionResult JDItineraryCostSave()
+        //{
+        //    return View();
+        //}
 
         [HttpGet]
         public JsonHttpActionResult GetJDItineraryCosts(string jDItineraryCode)

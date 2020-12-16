@@ -38,22 +38,22 @@ namespace QJB.Server.Controllers
             _mapper = mapper;
         }
 
-        public IActionResult OrderJDView()
-        {
-            return View();
-        }
-        public IActionResult OrderJDSave()
-        {
-            return View();
-        }
-        public IActionResult OrderList()
-        {
-            return View();
-        }
-        public IActionResult OrderJDOilTopupList()
-        {
-            return View();
-        }
+        //public IActionResult OrderJDView()
+        //{
+        //    return View();
+        //}
+        //public IActionResult OrderJDSave()
+        //{
+        //    return View();
+        //}
+        //public IActionResult OrderList()
+        //{
+        //    return View();
+        //}
+        //public IActionResult OrderJDOilTopupList()
+        //{
+        //    return View();
+        //}
 
         /// <summary>
         /// excel导出功能

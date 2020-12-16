@@ -11,7 +11,9 @@ using QJB.Shared;
 namespace QJB.Server.Controllers
 {
 
-    public class BaseController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class BaseController : ControllerBase
     {
 
         public BaseController()
@@ -24,9 +26,9 @@ namespace QJB.Server.Controllers
             {
                 return new UserVModel()
                 {
-                    DisplayName = User.Claims.FirstOrDefault(s => s.Type == "DisplayName").Value,
-                    UserName = User.Claims.FirstOrDefault(s => s.Type == ClaimTypes.Name).Value,
-                    RoleCode = User.Claims.FirstOrDefault(s => s.Type == ClaimTypes.Role).Value
+                    //DisplayName = User.Claims.FirstOrDefault(s => s.Type == "DisplayName").Value,
+                    //UserName = User.Claims.FirstOrDefault(s => s.Type == ClaimTypes.Name).Value,
+                    //RoleCode = User.Claims.FirstOrDefault(s => s.Type == ClaimTypes.Role).Value
                 };
             }
         }

@@ -35,21 +35,21 @@ namespace QJB.Server.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
-        {
-            ViewBag.displayName = UserInfo.DisplayName;
+        //public IActionResult Index()
+        //{
+        //    ViewBag.displayName = UserInfo.DisplayName;
 
-            return View();
-        }
-        public IActionResult Welcome()
-        {
-            return View();
-        }
+        //    return View();
+        //}
+        //public IActionResult Welcome()
+        //{
+        //    return View();
+        //}
 
-        public IActionResult ChangePwd()
-        {
-            return View();
-        }
+        //public IActionResult ChangePwd()
+        //{
+        //    return View();
+        //}
 
         [HttpGet]
         public IEnumerable<MenuVModel> GetAllMenu()

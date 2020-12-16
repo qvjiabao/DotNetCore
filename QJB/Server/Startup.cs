@@ -4,7 +4,12 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using AutoMapper;
 using System.Linq;
+using QJB.Server.Profile;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using QJB.Server.Autofac;
 
 namespace QJB.Server
 {
@@ -21,9 +26,9 @@ namespace QJB.Server
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddAutoMapper(typeof(AutoMapperProfile));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -14,6 +14,19 @@
           "lib/net5.0/Autofac.dll": {}
         }
       },
+      "Autofac.Extensions.DependencyInjection/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll": {}
+        }
+      },
       "AutoMapper/10.1.1": {
         "type": "package",
         "dependencies": {
@@ -25,6 +38,20 @@
         },
         "runtime": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.0": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "[10.1.0, 11.0.0)",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.0",
+          "Microsoft.Extensions.Options": "3.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Dapper/2.0.78": {
@@ -2087,6 +2114,51 @@
           "bin/placeholder/QJB.Dapper.dll": {}
         }
       },
+      "QJB.ImplRepository/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "QJB.Dapper": "1.0.0",
+          "QJB.IRepository": "1.0.0",
+          "QJB.Models": "1.0.0",
+          "QJB.Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/QJB.ImplRepository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QJB.ImplRepository.dll": {}
+        }
+      },
+      "QJB.ImplServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "QJB.IRepository": "1.0.0",
+          "QJB.IServices": "1.0.0",
+          "QJB.Models": "1.0.0",
+          "QJB.Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/QJB.ImplServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QJB.ImplServices.dll": {}
+        }
+      },
+      "QJB.IRepository/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "QJB.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/QJB.IRepository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QJB.IRepository.dll": {}
+        }
+      },
       "QJB.IServices/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -2193,6 +2265,24 @@
         "lib/netstandard2.1/Autofac.xml"
       ]
     },
+    "Autofac.Extensions.DependencyInjection/7.1.0": {
+      "sha512": "nm6rZREZ9tjdKXu9cmT69zHkZODagjCPlRRCOhiS1VqFFis9LQnMl18L4OYr8yfCW1WAQkFDD2CNaK/kF5Eqeg==",
+      "type": "package",
+      "path": "autofac.extensions.dependencyinjection/7.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
+        "autofac.extensions.dependencyinjection.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.pdb",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.pdb",
+        "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.xml"
+      ]
+    },
     "AutoMapper/10.1.1": {
       "sha512": "uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
       "type": "package",
@@ -2207,6 +2297,19 @@
         "lib/net461/AutoMapper.xml",
         "lib/netstandard2.0/AutoMapper.dll",
         "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.0": {
+      "sha512": "dQyGCAYcHbGuimVvCMu4Ea2S1oYOlgO9XfVdClmY5wgygJMZoS57emPzH0qNfknmtzMm4QbDO9i237W5IDjU1A==",
+      "type": "package",
+      "path": "automapper.extensions.microsoft.dependencyinjection/8.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
     "Dapper/2.0.78": {
@@ -7327,6 +7430,21 @@
       "path": "../../QJB.Dapper/QJB.Dapper.csproj",
       "msbuildProject": "../../QJB.Dapper/QJB.Dapper.csproj"
     },
+    "QJB.ImplRepository/1.0.0": {
+      "type": "project",
+      "path": "../../QJB.ImplRepository/QJB.ImplRepository.csproj",
+      "msbuildProject": "../../QJB.ImplRepository/QJB.ImplRepository.csproj"
+    },
+    "QJB.ImplServices/1.0.0": {
+      "type": "project",
+      "path": "../../QJB.ImplServices/QJB.ImplServices.csproj",
+      "msbuildProject": "../../QJB.ImplServices/QJB.ImplServices.csproj"
+    },
+    "QJB.IRepository/1.0.0": {
+      "type": "project",
+      "path": "../../QJB.IRepository/QJB.IRepository.csproj",
+      "msbuildProject": "../../QJB.IRepository/QJB.IRepository.csproj"
+    },
     "QJB.IServices/1.0.0": {
       "type": "project",
       "path": "../../QJB.IServices/QJB.IServices.csproj",
@@ -7361,14 +7479,19 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "AutoMapper >= 10.1.1",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.0",
       "Autofac >= 6.1.0",
+      "Autofac.Extensions.DependencyInjection >= 7.1.0",
       "EPPlus >= 5.2.0",
       "Microsoft.AspNetCore.Components.WebAssembly.Server >= 5.0.1",
       "MongoDB.Bson >= 2.11.5",
       "MongoDB.Driver >= 2.11.5",
       "Newtonsoft.Json >= 12.0.3",
       "QJB.Client >= 1.0.0",
+      "QJB.IRepository >= 1.0.0",
       "QJB.IServices >= 1.0.0",
+      "QJB.ImplRepository >= 1.0.0",
+      "QJB.ImplServices >= 1.0.0",
       "QJB.LogExtend >= 1.0.0",
       "QJB.MongoDB >= 1.0.0",
       "QJB.Shared >= 1.0.0",
@@ -7402,6 +7525,15 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\git\\DotNetCore\\QJB.ImplRepository\\QJB.ImplRepository.csproj": {
+              "projectPath": "D:\\git\\DotNetCore\\QJB.ImplRepository\\QJB.ImplRepository.csproj"
+            },
+            "D:\\git\\DotNetCore\\QJB.ImplServices\\QJB.ImplServices.csproj": {
+              "projectPath": "D:\\git\\DotNetCore\\QJB.ImplServices\\QJB.ImplServices.csproj"
+            },
+            "D:\\git\\DotNetCore\\QJB.IRepository\\QJB.IRepository.csproj": {
+              "projectPath": "D:\\git\\DotNetCore\\QJB.IRepository\\QJB.IRepository.csproj"
+            },
             "D:\\git\\DotNetCore\\QJB.IServices\\QJB.IServices.csproj": {
               "projectPath": "D:\\git\\DotNetCore\\QJB.IServices\\QJB.IServices.csproj"
             },
@@ -7437,9 +7569,17 @@
             "target": "Package",
             "version": "[10.1.1, )"
           },
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "[8.1.0, )"
+          },
           "Autofac": {
             "target": "Package",
             "version": "[6.1.0, )"
+          },
+          "Autofac.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[7.1.0, )"
           },
           "EPPlus": {
             "target": "Package",

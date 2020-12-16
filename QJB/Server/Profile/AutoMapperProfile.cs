@@ -1,18 +1,16 @@
-﻿using AutoMapper;
-using QJB.Models;
+﻿using QJB.Models;
 using QJB.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace QJB.Server.Config
+namespace QJB.Server.Profile
 {
-    public class AutoMapperProfileConfiguration : Profile
+    public class AutoMapperProfile : AutoMapper.Profile
     {
-        public AutoMapperProfileConfiguration() : this("MyProfile") { }
 
-        protected AutoMapperProfileConfiguration(string profileName) : base(profileName)
+        public AutoMapperProfile()
         {
             CreateMap<MenuModel, MenuVModel>()
                 .ForMember(dest => dest.href, opt => opt.MapFrom(src => src.Url))

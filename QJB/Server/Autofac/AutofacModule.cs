@@ -4,7 +4,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Hosting.Internal;
 using QJB.MongoDB.Model;
 using QJB.MongoDB.Repository;
-using QJB.Server.Config;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +15,10 @@ namespace QJB.Server.Autofac
     {
         protected override void Load(ContainerBuilder builder)
         {
-            var IServices = System.Reflection.Assembly.Load("Jabo.IServices");
-            var Services = System.Reflection.Assembly.Load("Jabo.Services");
-            var IRepository = System.Reflection.Assembly.Load("Jabo.IRepository");
-            var Repository = System.Reflection.Assembly.Load("Jabo.Repository");
+            var IServices = System.Reflection.Assembly.Load("QJB.IServices");
+            var Services = System.Reflection.Assembly.Load("QJB.ImplServices");
+            var IRepository = System.Reflection.Assembly.Load("QJB.IRepository");
+            var Repository = System.Reflection.Assembly.Load("QJB.ImplRepository");
 
             //根据名称约定（服务层的接口和实现均以Service结尾），实现服务接口和服务实现的依赖
             builder.RegisterAssemblyTypes(IServices, Services)
@@ -31,13 +30,6 @@ namespace QJB.Server.Autofac
               .Where(t => t.Name.EndsWith("Repository"))
               .AsImplementedInterfaces();
 
-            //autoMapper
-            var config = new AutoMapper.MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile(new AutoMapperProfileConfiguration());
-            });
-            var mapper = config.CreateMapper();
-            builder.RegisterInstance(mapper).As<IMapper>().SingleInstance();
 
             builder.RegisterType<LogRepository>().As<IRepository<LogEventData>>();
 

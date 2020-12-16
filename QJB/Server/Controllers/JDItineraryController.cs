@@ -26,19 +26,19 @@ namespace QJB.Server.Controllers
             _mapper = mapper;
         }
 
-        public IActionResult JDItineraryList()
-        {
-            return View();
-        }
+        //public IActionResult JDItineraryList()
+        //{
+        //    return View();
+        //}
 
-        public IActionResult JDItineraryView()
-        {
-            return View();
-        }
-        public IActionResult JDItinerarySave()
-        {
-            return View();
-        }
+        //public IActionResult JDItineraryView()
+        //{
+        //    return View();
+        //}
+        //public IActionResult JDItinerarySave()
+        //{
+        //    return View();
+        //}
 
         [HttpGet]
         public IEnumerable<string> GetDeparture()

@@ -26,14 +26,19 @@
       "QJB.Server/1.0.0": {
         "dependencies": {
           "AutoMapper": "10.1.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.0",
           "Autofac": "6.1.0",
+          "Autofac.Extensions.DependencyInjection": "7.1.0",
           "EPPlus": "5.2.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "5.0.1",
           "MongoDB.Bson": "2.11.5",
           "MongoDB.Driver": "2.11.5",
           "Newtonsoft.Json": "12.0.3",
           "QJB.Client": "1.0.0",
+          "QJB.IRepository": "1.0.0",
           "QJB.IServices": "1.0.0",
+          "QJB.ImplRepository": "1.0.0",
+          "QJB.ImplServices": "1.0.0",
           "QJB.LogExtend": "1.0.0",
           "QJB.MongoDB": "1.0.0",
           "QJB.Shared": "1.0.0",
@@ -335,6 +340,21 @@
           "lib/net5.0/Autofac.dll": {}
         }
       },
+      "Autofac.Extensions.DependencyInjection/7.1.0": {
+        "dependencies": {
+          "Autofac": "6.1.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll": {}
+        }
+      },
       "AutoMapper/10.1.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -348,6 +368,22 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.0": {
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Options": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Dapper/2.0.78": {
@@ -1627,6 +1663,45 @@
         },
         "compile": {
           "QJB.Dapper.dll": {}
+        }
+      },
+      "QJB.ImplRepository/1.0.0": {
+        "dependencies": {
+          "QJB.Dapper": "1.0.0",
+          "QJB.IRepository": "1.0.0",
+          "QJB.Models": "1.0.0",
+          "QJB.Tools": "1.0.0"
+        },
+        "runtime": {
+          "QJB.ImplRepository.dll": {}
+        },
+        "compile": {
+          "QJB.ImplRepository.dll": {}
+        }
+      },
+      "QJB.ImplServices/1.0.0": {
+        "dependencies": {
+          "QJB.IRepository": "1.0.0",
+          "QJB.IServices": "1.0.0",
+          "QJB.Models": "1.0.0",
+          "QJB.Tools": "1.0.0"
+        },
+        "runtime": {
+          "QJB.ImplServices.dll": {}
+        },
+        "compile": {
+          "QJB.ImplServices.dll": {}
+        }
+      },
+      "QJB.IRepository/1.0.0": {
+        "dependencies": {
+          "QJB.Models": "1.0.0"
+        },
+        "runtime": {
+          "QJB.IRepository.dll": {}
+        },
+        "compile": {
+          "QJB.IRepository.dll": {}
         }
       },
       "QJB.IServices/1.0.0": {
@@ -3364,12 +3439,26 @@
       "path": "autofac/6.1.0",
       "hashPath": "autofac.6.1.0.nupkg.sha512"
     },
+    "Autofac.Extensions.DependencyInjection/7.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nm6rZREZ9tjdKXu9cmT69zHkZODagjCPlRRCOhiS1VqFFis9LQnMl18L4OYr8yfCW1WAQkFDD2CNaK/kF5Eqeg==",
+      "path": "autofac.extensions.dependencyinjection/7.1.0",
+      "hashPath": "autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512"
+    },
     "AutoMapper/10.1.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
       "path": "automapper/10.1.1",
       "hashPath": "automapper.10.1.1.nupkg.sha512"
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dQyGCAYcHbGuimVvCMu4Ea2S1oYOlgO9XfVdClmY5wgygJMZoS57emPzH0qNfknmtzMm4QbDO9i237W5IDjU1A==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/8.1.0",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512"
     },
     "Dapper/2.0.78": {
       "type": "package",
@@ -4315,6 +4404,21 @@
       "sha512": ""
     },
     "QJB.Dapper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QJB.ImplRepository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QJB.ImplServices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QJB.IRepository/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

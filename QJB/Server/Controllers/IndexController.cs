@@ -11,7 +11,7 @@ using QJB.Server.Result;
 
 namespace QJB.Server.Controllers
 {
-    public class IndexController : Controller
+    public class IndexController : ControllerBase
     {
 
         private readonly IMapper _mapper;
@@ -28,10 +28,10 @@ namespace QJB.Server.Controllers
             return new RedirectResult("/Other/LoginInvalid");
         }
 
-        public IActionResult Login()
-        {
-            return View();
-        }
+        //public IActionResult Login()
+        //{
+        //    return View();
+        //}
 
         public JsonHttpActionResult VerifyLogin(string username, string password)
         {

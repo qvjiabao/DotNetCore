@@ -13,7 +13,9 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.1.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
     <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
     <PackageReference Include="EPPlus" Version="5.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.1" />
     <PackageReference Include="MongoDB.Bson" Version="2.11.5" />
@@ -22,6 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\QJB.ImplRepository\QJB.ImplRepository.csproj" />
+    <ProjectReference Include="..\..\QJB.ImplServices\QJB.ImplServices.csproj" />
+    <ProjectReference Include="..\..\QJB.IRepository\QJB.IRepository.csproj" />
     <ProjectReference Include="..\..\QJB.IServices\QJB.IServices.csproj" />
     <ProjectReference Include="..\..\QJB.LogExtend\QJB.LogExtend.csproj" />
     <ProjectReference Include="..\..\QJB.MongoDB\QJB.MongoDB.csproj" />

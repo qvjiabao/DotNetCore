@@ -11,7 +11,7 @@ using QJB.MongoDB.Repository;
 
 namespace QJB.Server.Controllers
 {
-    public class LogController : Controller
+    public class LogController : ControllerBase
     {
         private readonly LogRepository _logRepository;
         IOptions<AppSettings> _appsettings;
