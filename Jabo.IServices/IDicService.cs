@@ -1,9 +1,9 @@
-﻿using Jabo.Models;
+﻿using QJB.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Jabo.IServices
+namespace QJB.IServices
 {
     public interface IDicService
     {

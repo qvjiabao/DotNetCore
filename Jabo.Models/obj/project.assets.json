@@ -572,9 +572,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj",
-      "projectName": "Jabo.Models",
-      "projectPath": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models.csproj",
+      "projectUniqueName": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models1.csproj",
+      "projectName": "Jabo.Models11",
+      "projectPath": "D:\\git\\DotNetCore\\Jabo.Models\\Jabo.Models1.csproj",
       "packagesPath": "C:\\Users\\Jabo\\.nuget\\packages\\",
       "outputPath": "D:\\git\\DotNetCore\\Jabo.Models\\obj\\",
       "projectStyle": "PackageReference",
@@ -591,6 +591,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "D:\\git\\DotNetCore\\Jabo.Dapper\\Jabo.Dapper.csproj": {
               "projectPath": "D:\\git\\DotNetCore\\Jabo.Dapper\\Jabo.Dapper.csproj"
@@ -606,6 +607,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -616,12 +618,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.10, 3.1.10]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

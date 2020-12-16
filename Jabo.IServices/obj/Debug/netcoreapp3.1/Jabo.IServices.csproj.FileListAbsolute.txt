@@ -1,14 +1,3 @@
-D:\git\DotNetCore\Jabo.IServices\bin\Debug\netcoreapp3.1\Jabo.IServices.deps.json
-D:\git\DotNetCore\Jabo.IServices\bin\Debug\netcoreapp3.1\Jabo.IServices.dll
-D:\git\DotNetCore\Jabo.IServices\bin\Debug\netcoreapp3.1\Jabo.IServices.pdb
-D:\git\DotNetCore\Jabo.IServices\bin\Debug\netcoreapp3.1\Jabo.Dapper.dll
-D:\git\DotNetCore\Jabo.IServices\bin\Debug\netcoreapp3.1\Jabo.Models.dll
-D:\git\DotNetCore\Jabo.IServices\bin\Debug\netcoreapp3.1\Jabo.Models.pdb
-D:\git\DotNetCore\Jabo.IServices\bin\Debug\netcoreapp3.1\Jabo.Dapper.pdb
-D:\git\DotNetCore\Jabo.IServices\obj\Debug\netcoreapp3.1\Jabo.IServices.csprojAssemblyReference.cache
-D:\git\DotNetCore\Jabo.IServices\obj\Debug\netcoreapp3.1\Jabo.IServices.csproj.CoreCompileInputs.cache
 D:\git\DotNetCore\Jabo.IServices\obj\Debug\netcoreapp3.1\Jabo.IServices.AssemblyInfoInputs.cache
 D:\git\DotNetCore\Jabo.IServices\obj\Debug\netcoreapp3.1\Jabo.IServices.AssemblyInfo.cs
-D:\git\DotNetCore\Jabo.IServices\obj\Debug\netcoreapp3.1\Jabo.IServices.csproj.CopyComplete
-D:\git\DotNetCore\Jabo.IServices\obj\Debug\netcoreapp3.1\Jabo.IServices.dll
-D:\git\DotNetCore\Jabo.IServices\obj\Debug\netcoreapp3.1\Jabo.IServices.pdb
+D:\git\DotNetCore\Jabo.IServices\obj\Debug\netcoreapp3.1\Jabo.IServices.csproj.CoreCompileInputs.cache

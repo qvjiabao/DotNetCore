@@ -9,10 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Jabo.IRepository\Jabo.IRepository.csproj" />
     <ProjectReference Include="..\Jabo.IServices\Jabo.IServices.csproj" />
-    <ProjectReference Include="..\Jabo.Models\Jabo.Models.csproj" />
-    <ProjectReference Include="..\Jabo.Tools\Jabo.Tools.csproj" />
   </ItemGroup>
 
 </Project>

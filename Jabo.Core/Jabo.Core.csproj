@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,14 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Jabo.Dapper\Jabo.Dapper.csproj" />
-    <ProjectReference Include="..\Jabo.IRepository\Jabo.IRepository.csproj" />
     <ProjectReference Include="..\Jabo.IServices\Jabo.IServices.csproj" />
     <ProjectReference Include="..\Jabo.Log\Jabo.Log.csproj" />
-    <ProjectReference Include="..\Jabo.Models\Jabo.Models.csproj" />
     <ProjectReference Include="..\Jabo.MongoDB\Jabo.MongoDB.csproj" />
-    <ProjectReference Include="..\Jabo.Repository\Jabo.Repository.csproj" />
     <ProjectReference Include="..\Jabo.Services\Jabo.Services.csproj" />
-    <ProjectReference Include="..\Jabo.Tools\Jabo.Tools.csproj" />
+    <ProjectReference Include="..\Jabo.Tools1\Jabo.Tools.csproj" />
   </ItemGroup>
 </Project>

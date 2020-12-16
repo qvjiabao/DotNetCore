@@ -1,0 +1,4 @@
+D:\git\DotNetCore\Jabo.Dapper\obj\Debug\netstandard2.0\Jabo.Dapper.csprojAssemblyReference.cache
+D:\git\DotNetCore\Jabo.Dapper\obj\Debug\netstandard2.0\Jabo.Dapper.AssemblyInfoInputs.cache
+D:\git\DotNetCore\Jabo.Dapper\obj\Debug\netstandard2.0\Jabo.Dapper.AssemblyInfo.cs
+D:\git\DotNetCore\Jabo.Dapper\obj\Debug\netstandard2.0\Jabo.Dapper.csproj.CoreCompileInputs.cache

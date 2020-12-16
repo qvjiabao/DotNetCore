@@ -1,13 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="StackExchange.Redis" Version="2.1.30" />
+    <PackageReference Include="StackExchange.Redis" Version="2.2.4" />
   </ItemGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\Jabo.Tools\Jabo.Tools.csproj" />
+    <ProjectReference Include="..\Jabo.Tools1\Jabo.Tools.csproj" />
   </ItemGroup>
+
 </Project>

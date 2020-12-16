@@ -2,8 +2,8 @@ D:\git\DotNetCore\Jabo.Log\bin\Debug\netcoreapp3.1\Jabo.Log.deps.json
 D:\git\DotNetCore\Jabo.Log\bin\Debug\netcoreapp3.1\Jabo.Log.dll
 D:\git\DotNetCore\Jabo.Log\bin\Debug\netcoreapp3.1\Jabo.Log.pdb
 D:\git\DotNetCore\Jabo.Log\obj\Debug\netcoreapp3.1\Jabo.Log.csprojAssemblyReference.cache
-D:\git\DotNetCore\Jabo.Log\obj\Debug\netcoreapp3.1\Jabo.Log.csproj.CoreCompileInputs.cache
 D:\git\DotNetCore\Jabo.Log\obj\Debug\netcoreapp3.1\Jabo.Log.AssemblyInfoInputs.cache
 D:\git\DotNetCore\Jabo.Log\obj\Debug\netcoreapp3.1\Jabo.Log.AssemblyInfo.cs
+D:\git\DotNetCore\Jabo.Log\obj\Debug\netcoreapp3.1\Jabo.Log.csproj.CoreCompileInputs.cache
 D:\git\DotNetCore\Jabo.Log\obj\Debug\netcoreapp3.1\Jabo.Log.dll
 D:\git\DotNetCore\Jabo.Log\obj\Debug\netcoreapp3.1\Jabo.Log.pdb

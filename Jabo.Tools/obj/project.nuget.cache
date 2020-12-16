@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bhu486oeXl5qhL2+9BYt+zj+tHQCDX8FmDpRu/hBVYRuptXM0NSrvWYjKSYRIVx2dSVUmX82Oa/D/AfdAahNcw==",
+  "dgSpecHash": "5HjajxIQ1l8KrxTyg4PKQSfBMBPGMgc6lUIUHelSPdYnZRvJ8lyN4EA36r/5uoDT7SFVZw2ixrPFNatovn8xrA==",
   "success": true,
-  "projectFilePath": "D:\\git\\DotNetCore\\Jabo.Tools\\Jabo.Tools.csproj",
+  "projectFilePath": "D:\\git\\DotNetCore\\Jabo.Tools\\Jabo.Tools2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jabo\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
@@ -128,7 +128,8 @@
     "C:\\Users\\Jabo\\.nuget\\packages\\system.threading.threadpool\\4.3.0\\system.threading.threadpool.4.3.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\Jabo\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

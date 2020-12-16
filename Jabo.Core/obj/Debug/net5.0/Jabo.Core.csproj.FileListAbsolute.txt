@@ -1,0 +1,8 @@
+D:\git\DotNetCore\Jabo.Core\obj\Debug\net5.0\Jabo.Core.csprojAssemblyReference.cache
+D:\git\DotNetCore\Jabo.Core\obj\Debug\net5.0\Jabo.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\git\DotNetCore\Jabo.Core\obj\Debug\net5.0\Jabo.Core.AssemblyInfoInputs.cache
+D:\git\DotNetCore\Jabo.Core\obj\Debug\net5.0\Jabo.Core.AssemblyInfo.cs
+D:\git\DotNetCore\Jabo.Core\obj\Debug\net5.0\Jabo.Core.csproj.CoreCompileInputs.cache
+D:\git\DotNetCore\Jabo.Core\obj\Debug\net5.0\Jabo.Core.MvcApplicationPartsAssemblyInfo.cache
+D:\git\DotNetCore\Jabo.Core\obj\Debug\net5.0\Jabo.Core.RazorAssemblyInfo.cache
+D:\git\DotNetCore\Jabo.Core\obj\Debug\net5.0\Jabo.Core.RazorAssemblyInfo.cs

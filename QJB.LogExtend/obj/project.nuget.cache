@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "95KujFiCgePwuGwwFsaWP0q7htnwlMkn24o0TSGHYZFsfNj5BEdmFY/9GzqpJtuBoMIFv7aJ86F44oH1whPjXQ==",
+  "success": true,
+  "projectFilePath": "D:\\git\\DotNetCore\\QJB.LogExtend\\QJB.LogExtend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

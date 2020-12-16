@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qH2a00j8gv2b9lJFT6TknTCLkkHjEwXu3koIMSY/RtYSHnUwvi6xJXZ0ALClYzct3iuRyQ4pSm9wPXe8ZERz7Q==",
+  "dgSpecHash": "IumYj8SPlTm8peb+q/oldDD4sZdrPSvqAx/sGZe9UV5KgqfuA1rhioulSQ5EK9A0qHt6KqPGOhlFXWXN/8rbtA==",
   "success": true,
   "projectFilePath": "D:\\git\\DotNetCore\\Jabo.Log\\Jabo.Log.csproj",
   "expectedPackageFiles": [
@@ -92,7 +92,8 @@
     "C:\\Users\\Jabo\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Jabo\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\Jabo\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }
