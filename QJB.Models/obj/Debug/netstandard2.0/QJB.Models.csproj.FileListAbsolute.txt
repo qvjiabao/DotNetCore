@@ -1,0 +1,12 @@
+D:\git\DotNetCore\QJB.Models\bin\Debug\netstandard2.0\QJB.Models.deps.json
+D:\git\DotNetCore\QJB.Models\bin\Debug\netstandard2.0\QJB.Models.dll
+D:\git\DotNetCore\QJB.Models\bin\Debug\netstandard2.0\QJB.Models.pdb
+D:\git\DotNetCore\QJB.Models\bin\Debug\netstandard2.0\QJB.Dapper.dll
+D:\git\DotNetCore\QJB.Models\bin\Debug\netstandard2.0\QJB.Dapper.pdb
+D:\git\DotNetCore\QJB.Models\obj\Debug\netstandard2.0\QJB.Models.csprojAssemblyReference.cache
+D:\git\DotNetCore\QJB.Models\obj\Debug\netstandard2.0\QJB.Models.AssemblyInfoInputs.cache
+D:\git\DotNetCore\QJB.Models\obj\Debug\netstandard2.0\QJB.Models.AssemblyInfo.cs
+D:\git\DotNetCore\QJB.Models\obj\Debug\netstandard2.0\QJB.Models.csproj.CoreCompileInputs.cache
+D:\git\DotNetCore\QJB.Models\obj\Debug\netstandard2.0\QJB.Models.csproj.CopyComplete
+D:\git\DotNetCore\QJB.Models\obj\Debug\netstandard2.0\QJB.Models.dll
+D:\git\DotNetCore\QJB.Models\obj\Debug\netstandard2.0\QJB.Models.pdb

@@ -1,4 +1,0 @@
-D:\git\DotNetCore\Jabo.IRepository\obj\Debug\netstandard2.0\Jabo.IRepository.csprojAssemblyReference.cache
-D:\git\DotNetCore\Jabo.IRepository\obj\Debug\netstandard2.0\Jabo.IRepository.AssemblyInfoInputs.cache
-D:\git\DotNetCore\Jabo.IRepository\obj\Debug\netstandard2.0\Jabo.IRepository.AssemblyInfo.cs
-D:\git\DotNetCore\Jabo.IRepository\obj\Debug\netstandard2.0\Jabo.IRepository.csproj.CoreCompileInputs.cache

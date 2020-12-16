@@ -1,0 +1,8 @@
+D:\git\DotNetCore\QJB.LogExtend\bin\Debug\netstandard2.0\QJB.LogExtend.deps.json
+D:\git\DotNetCore\QJB.LogExtend\bin\Debug\netstandard2.0\QJB.LogExtend.dll
+D:\git\DotNetCore\QJB.LogExtend\bin\Debug\netstandard2.0\QJB.LogExtend.pdb
+D:\git\DotNetCore\QJB.LogExtend\obj\Debug\netstandard2.0\QJB.LogExtend.AssemblyInfoInputs.cache
+D:\git\DotNetCore\QJB.LogExtend\obj\Debug\netstandard2.0\QJB.LogExtend.AssemblyInfo.cs
+D:\git\DotNetCore\QJB.LogExtend\obj\Debug\netstandard2.0\QJB.LogExtend.csproj.CoreCompileInputs.cache
+D:\git\DotNetCore\QJB.LogExtend\obj\Debug\netstandard2.0\QJB.LogExtend.dll
+D:\git\DotNetCore\QJB.LogExtend\obj\Debug\netstandard2.0\QJB.LogExtend.pdb

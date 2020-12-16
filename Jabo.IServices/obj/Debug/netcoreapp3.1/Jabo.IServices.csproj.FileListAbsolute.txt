@@ -1,3 +1,0 @@
-D:\git\DotNetCore\Jabo.IServices\obj\Debug\netcoreapp3.1\Jabo.IServices.AssemblyInfoInputs.cache
-D:\git\DotNetCore\Jabo.IServices\obj\Debug\netcoreapp3.1\Jabo.IServices.AssemblyInfo.cs
-D:\git\DotNetCore\Jabo.IServices\obj\Debug\netcoreapp3.1\Jabo.IServices.csproj.CoreCompileInputs.cache

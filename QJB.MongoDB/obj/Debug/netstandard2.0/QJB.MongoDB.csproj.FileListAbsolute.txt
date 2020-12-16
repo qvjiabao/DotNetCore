@@ -1,0 +1,12 @@
+D:\git\DotNetCore\QJB.MongoDB\bin\Debug\netstandard2.0\QJB.MongoDB.deps.json
+D:\git\DotNetCore\QJB.MongoDB\bin\Debug\netstandard2.0\QJB.MongoDB.dll
+D:\git\DotNetCore\QJB.MongoDB\bin\Debug\netstandard2.0\QJB.MongoDB.pdb
+D:\git\DotNetCore\QJB.MongoDB\bin\Debug\netstandard2.0\QJB.LogExtend.dll
+D:\git\DotNetCore\QJB.MongoDB\bin\Debug\netstandard2.0\QJB.LogExtend.pdb
+D:\git\DotNetCore\QJB.MongoDB\obj\Debug\netstandard2.0\QJB.MongoDB.csprojAssemblyReference.cache
+D:\git\DotNetCore\QJB.MongoDB\obj\Debug\netstandard2.0\QJB.MongoDB.AssemblyInfoInputs.cache
+D:\git\DotNetCore\QJB.MongoDB\obj\Debug\netstandard2.0\QJB.MongoDB.AssemblyInfo.cs
+D:\git\DotNetCore\QJB.MongoDB\obj\Debug\netstandard2.0\QJB.MongoDB.csproj.CoreCompileInputs.cache
+D:\git\DotNetCore\QJB.MongoDB\obj\Debug\netstandard2.0\QJB.MongoDB.csproj.CopyComplete
+D:\git\DotNetCore\QJB.MongoDB\obj\Debug\netstandard2.0\QJB.MongoDB.dll
+D:\git\DotNetCore\QJB.MongoDB\obj\Debug\netstandard2.0\QJB.MongoDB.pdb
