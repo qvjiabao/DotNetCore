@@ -34,7 +34,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QJB.LogExtend", "QJB.LogExt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QJB.MongoDB", "QJB.MongoDB\QJB.MongoDB.csproj", "{496590A0-50B5-4FF6-8662-E90C27543471}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QJB.ImplServices", "QJB.ImplServices\QJB.ImplServices.csproj", "{4FA48F5E-EA0F-41C7-8A60-DB09247E03E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QJB.ImplServices", "QJB.ImplServices\QJB.ImplServices.csproj", "{4FA48F5E-EA0F-41C7-8A60-DB09247E03E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,23 +1,26 @@
 ﻿@inherits LayoutComponentBase
 
 <Layout Style="height:100%;">
-    <Header Class="site-layout-sub-header-background" Style="padding: 0;">    <div class="logo" /></Header>
+    <Sider>
+        <div class="logo">
+        </div>
+        <NavMenu />
+    </Sider>
     <Layout>
-        <Sider>
-            <NavMenu />
-        </Sider>
+        <Header Class="site-layout-sub-header-background" Style="padding: 0;">
+        </Header>
         <Content Style=" margin: 24px 16px 0;">
             <Breadcrumb Style="margin: 16px 0;">
                 <BreadcrumbItem>Home</BreadcrumbItem>
                 <BreadcrumbItem>List</BreadcrumbItem>
                 <BreadcrumbItem>App</BreadcrumbItem>
             </Breadcrumb>
-            <div class="site-layout-background" style="padding: 24px; min-height: 360px">
+            <div class="site-layout-background">
                 @Body
             </div>
         </Content>
+        <Footer Style="text-align: center;">Ant Design ©2018 Created by Ant UED</Footer>
     </Layout>
-    <Footer Style="text-align: center;">Ant Design ©2018 Created by Ant UED</Footer>
 </Layout>
 
 <style>
@@ -33,5 +36,8 @@
 
     .site-layout-background {
         background: #fff;
+        padding: 24px;
+        min-height: 360px;
+        height: calc(100vh - 204px);
     }
 </style>

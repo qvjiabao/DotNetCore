@@ -5,7 +5,7 @@
 
             @foreach (var subItem in item.Children)
             {
-                <MenuItem Key="@subItem.MenuGuid">@subItem.Title</MenuItem>
+                <MenuItem RouterMatch="NavLinkMatch.All" RouterLink="@subItem.Url" Key="@subItem.MenuGuid">@subItem.Title</MenuItem>
             }
         </SubMenu>
     }

@@ -2,3 +2,8 @@
 #app {
     height: 100%;
 }
+
+.logo {
+    height: 64px;
+    background-color: #ffffff;
+}
