@@ -25,14 +25,12 @@ namespace QJB.Server.Controllers
         private readonly IMenuService _menuService;
         private readonly IMapper _mapper;
         private readonly IUserService _userService;
-        private readonly Logger _logger;
 
-        public HomeController(IMapper mapper, IMenuService menuService, IUserService userService, Logger logger)
+        public HomeController(IMapper mapper, IMenuService menuService, IUserService userService)
         {
             _menuService = menuService;
             _mapper = mapper;
             _userService = userService;
-            _logger = logger;
         }
 
         //public IActionResult Index()
@@ -54,9 +52,9 @@ namespace QJB.Server.Controllers
         [HttpGet]
         public IEnumerable<MenuVModel> GetAllMenu()
         {
-            var roleCode = UserInfo.RoleCode;
+            //var roleCode = UserInfo.RoleCode;
 
-            var menuList = _menuService.GetAllMenu(roleCode);
+            var menuList = _menuService.GetAllMenu("6d541933-5e7e-4a01-9456-5eb4cda3182c");
 
             var list = _mapper.Map<IEnumerable<MenuModel>, IEnumerable<MenuVModel>>(menuList);
 

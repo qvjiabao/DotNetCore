@@ -83,6 +83,13 @@ using QJB.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "D:\git\DotNetCore\QJB\Client\_Imports.razor"
+using AntDesign;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "D:\git\DotNetCore\QJB\Client\Pages\FetchData.razor"
 using QJB.Shared;
 

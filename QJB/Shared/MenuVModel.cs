@@ -7,10 +7,10 @@ namespace QJB.Shared
 {
     public class MenuVModel
     {
-        public string title { get; set; }
-        public string href { get; set; }
-        public string target { get; set; }
-        public string icon { get; set; }
-        public IEnumerable<MenuVModel> child { get; set; }
+        public string Title { get; set; }
+        public string Url { get; set; }
+        public string MenuGuid { get; set; }
+        public string Icon { get; set; }
+        public IEnumerable<MenuVModel> Children { get; set; }
     }
 }

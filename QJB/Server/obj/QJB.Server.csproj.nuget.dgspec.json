@@ -647,6 +647,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AntDesign": {
+              "target": "Package",
+              "version": "[0.4.1, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[5.0.1, )"

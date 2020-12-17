@@ -1,4 +1,5 @@
 ﻿<StaticWebAssets Version="1.0">
   <ContentRoot BasePath="/" Path="D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\" />
   <ContentRoot BasePath="/" Path="D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/AntDesign" Path="C:\Users\Jabo\.nuget\packages\antdesign\0.4.1\build\..\staticwebassets\" />
 </StaticWebAssets>

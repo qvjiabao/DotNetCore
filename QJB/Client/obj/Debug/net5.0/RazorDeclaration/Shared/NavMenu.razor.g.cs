@@ -82,6 +82,13 @@ using QJB.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "D:\git\DotNetCore\QJB\Client\_Imports.razor"
+using AntDesign;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -90,16 +97,49 @@ using QJB.Client.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
-       
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+#line 15 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
+ 
+    private RenderFragment TitleTemplate(string icon, string title)
     {
-        collapseNavMenu = !collapseNavMenu;
-    }
+        return
+
+#line default
+#line hidden
+#nullable disable
+        (__builder2) => {
+            __builder2.OpenElement(0, "span");
+            __builder2.AddMarkupContent(1, "\r\n        ");
+            __builder2.OpenElement(2, "Icon");
+            __builder2.AddAttribute(3, "Type", 
+#nullable restore
+#line 19 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
+                    icon
+
+#line default
+#line hidden
+#nullable disable
+            );
+            __builder2.AddAttribute(4, "Theme", "outline");
+            __builder2.CloseElement();
+            __builder2.AddMarkupContent(5, "\r\n        ");
+            __builder2.OpenElement(6, "span");
+            __builder2.AddContent(7, 
+#nullable restore
+#line 20 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
+               title
+
+#line default
+#line hidden
+#nullable disable
+            );
+            __builder2.CloseElement();
+            __builder2.AddMarkupContent(8, "\r\n    ");
+            __builder2.CloseElement();
+        }
+#nullable restore
+#line 21 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
+           ;
+}
 
 #line default
 #line hidden

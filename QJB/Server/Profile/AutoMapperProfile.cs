@@ -12,9 +12,7 @@ namespace QJB.Server.Profile
 
         public AutoMapperProfile()
         {
-            CreateMap<MenuModel, MenuVModel>()
-                .ForMember(dest => dest.href, opt => opt.MapFrom(src => src.Url))
-                .ForMember(dest => dest.child, opts => opts.MapFrom(src => src.Children));
+            CreateMap<MenuModel, MenuVModel>();
 
             CreateMap<MenuModel, MenuTreeVModel>()
                 .ForMember(dest => dest.id, opts => opts.MapFrom(src => src.MenuGuid));

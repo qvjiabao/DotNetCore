@@ -36,7 +36,17 @@ namespace QJB.Server.Controllers
             return list;
         }
 
+        [HttpGet]
+        public JsonHttpActionResult GetDicListByTypeCode(string dicTypeCode)
+        {
+            var dicList = _dicService.GetDicListByTypeCode(dicTypeCode);
 
+            var list = _mapper.Map<IEnumerable<DicModel>, IEnumerable<DicVModel>>(dicList);
+
+            var j = new JsonHttpActionResult();
+
+            return j.SetData(list).SucceedMessage();
+        }
 
         ////public IActionResult DicList()
         ////{
@@ -83,17 +93,7 @@ namespace QJB.Server.Controllers
         //    return success ? j.SucceedMessage() : j.ErrorMessage();
         //}
 
-        //[HttpGet]
-        //public JsonHttpActionResult GetDicListByTypeCode(string dicTypeCode)
-        //{
-        //    var dicList = _dicService.GetDicListByTypeCode(dicTypeCode);
 
-        //    var list = _mapper.Map<IEnumerable<DicModel>, IEnumerable<DicVModel>>(dicList);
-
-        //    var j = new JsonHttpActionResult();
-
-        //    return j.SetData(list).SucceedMessage();
-        //}
 
         //[HttpGet]
         //public DicVModel GetDicByCode(string dicCode)

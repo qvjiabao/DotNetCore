@@ -1,17 +1,37 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<Layout Style="height:100%;">
+    <Header Class="site-layout-sub-header-background" Style="padding: 0;">    <div class="logo" /></Header>
+    <Layout>
+        <Sider>
+            <NavMenu />
+        </Sider>
+        <Content Style=" margin: 24px 16px 0;">
+            <Breadcrumb Style="margin: 16px 0;">
+                <BreadcrumbItem>Home</BreadcrumbItem>
+                <BreadcrumbItem>List</BreadcrumbItem>
+                <BreadcrumbItem>App</BreadcrumbItem>
+            </Breadcrumb>
+            <div class="site-layout-background" style="padding: 24px; min-height: 360px">
+                @Body
+            </div>
+        </Content>
+    </Layout>
+    <Footer Style="text-align: center;">Ant Design ©2018 Created by Ant UED</Footer>
+</Layout>
 
-    <div class="main">
-        <div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>
+<style>
+    #components-layout-demo-responsive .logo {
+        height: 32px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 16px;
+    }
 
-        <div class="content px-4">
-            @Body
-        </div>
-    </div>
-</div>
+    .site-layout-sub-header-background {
+        background: #fff;
+    }
+
+    .site-layout-background {
+        background: #fff;
+    }
+</style>
