@@ -1,6 +1,6 @@
 ﻿@page "/Setting/User/UserList"
 
-@*@using System.ComponentModel
+@using System.ComponentModel
 @using AntDesign.TableModels
 
 <Table @ref="table" TItem="WeatherForecast" DataSource="@forecasts" Total="_total" OnChange="@onChange" Style="height:500px;"
@@ -120,4 +120,4 @@
         forecasts = forecasts.Where(x => x.Id != id).ToArray();
         _total = forecasts.Length;
     }
-}*@
+}
