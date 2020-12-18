@@ -30,6 +30,7 @@ D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Exten
 D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Primitives.dll.gz
 D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.JSInterop.dll.gz
 D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.JSInterop.WebAssembly.dll.gz
+D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\Newtonsoft.Json.dll.gz
 D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\OneOf.dll.gz
 D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\System.IO.Pipelines.dll.gz
 D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.CSharp.dll.gz
@@ -229,6 +230,7 @@ D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Exten
 D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Primitives.dll
 D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.JSInterop.dll
 D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.JSInterop.WebAssembly.dll
+D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\Newtonsoft.Json.dll
 D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\OneOf.dll
 D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\System.IO.Pipelines.dll
 D:\git\DotNetCore\QJB\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.CSharp.dll
@@ -415,8 +417,10 @@ D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\QJB.Client.RazorComponent.input.ca
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Component.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
+D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Dic\DicList.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
+D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Settings\Users\UserList.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
@@ -429,8 +433,10 @@ D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\QJB.Client.RazorCoreGenerate.cache
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\App.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Pages\Component.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
+D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Pages\Dic\DicList.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
+D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Pages\Settings\Users\UserList.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
@@ -459,6 +465,7 @@ D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\KNLTyfZa.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\y0fgkWcN.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\+ZfBmO1V.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\eTnmw8xj.gz
+D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\93ley5Nm.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\+0uHkgM8.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\yBPyO8Km.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\f+T5PJg8.gz
@@ -644,7 +651,3 @@ D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\QJB.Client.csproj.CopyComplete
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\QJB.Client.dll
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\ref\QJB.Client.dll
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\QJB.Client.pdb
-D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Dic\DicList.razor.g.cs
-D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Pages\Dic\DicList.razor.g.cs
-D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Settings\Users\UserList.razor.g.cs
-D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Pages\Settings\Users\UserList.razor.g.cs

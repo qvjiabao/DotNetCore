@@ -106,21 +106,19 @@ namespace QJB.Server.Controllers
         }
 
         [HttpGet]
-        public Hashtable GetUserList(string displayName, int limit = 10, int page = 1)
+        public Hashtable GetUserList(string displayName, int pageSize = 10, int pageIndex = 0)
         {
             var all = _userService.GetAllUsers(displayName);
 
-            var list = all.Skip((page - 1) * limit).Take(limit);
+            var list = all.Skip(pageIndex * pageSize).Take(pageSize);
 
             var convertList = _mapper.Map<IEnumerable<UserModel>, IEnumerable<UserVModel>>(list);
 
             var tab = new Hashtable();
 
-            tab["count"] = all.Count();
+            tab["total"] = all.Count();
 
             tab["data"] = convertList;
-
-            tab["code"] = "0";
 
             return tab;
         }

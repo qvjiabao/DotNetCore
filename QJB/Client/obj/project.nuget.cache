@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nRxF18zkoM957XtoEnAh+PuQ24a19b7FrOMOR7ht0Hj8bcHyKI3n3VjHP6r+/v76HGFwXD1DI85BWcgJrnF49A==",
+  "dgSpecHash": "8KMwiv1ycSubeNACANBH3HQmNsyJcm2sEY3DpNvg/q5wqatIgpr2UB+vq5IQ4doSbrZ2YKiYi9qdUUN1W5ToEA==",
   "success": true,
   "projectFilePath": "D:\\git\\DotNetCore\\QJB\\Client\\QJB.Client.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,7 @@
     "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\oneof\\2.1.151\\oneof.2.1.151.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\runtime.any.system.collections\\4.3.0\\runtime.any.system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\runtime.any.system.diagnostics.tools\\4.3.0\\runtime.any.system.diagnostics.tools.4.3.0.nupkg.sha512",
