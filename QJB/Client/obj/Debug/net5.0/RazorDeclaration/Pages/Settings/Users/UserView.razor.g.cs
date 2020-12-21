@@ -90,14 +90,13 @@ using AntDesign;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserList.razor"
+#line 1 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserView.razor"
 using QJB.Shared;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/Setting/User/UserList")]
-    public partial class UserList : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class UserView : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -105,31 +104,17 @@ using QJB.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 50 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserList.razor"
- 
-    bool UserViewVisible;
+#line 54 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserView.razor"
+      
 
-    UserVModel user = new UserVModel();
+    [Parameter]
+    public UserVModel _userInfo { get; set; }
 
-    void CloseUserView()
-    {
-        UserViewVisible = false;
-    }
+    [Parameter]
+    public bool _visible { get; set; }
 
-    async Task EventNew()
-    {
-        user = new UserVModel();
-
-        UserViewVisible = true;
-    }
-
-    async Task EventEdit(string userCode)
-    {
-
-        user = await http.GetFromJsonAsync<UserVModel>($"User/GetUserByCode?userCode={userCode}");
-
-        UserViewVisible = true;
-    }
+    [Parameter]
+    public EventCallback _evenCloseUserView { get; set; }
 
 #line default
 #line hidden

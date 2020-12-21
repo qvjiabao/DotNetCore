@@ -651,3 +651,5 @@ D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\QJB.Client.csproj.CopyComplete
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\QJB.Client.dll
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\ref\QJB.Client.dll
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\QJB.Client.pdb
+D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Settings\Users\UserView.razor.g.cs
+D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Pages\Settings\Users\UserView.razor.g.cs

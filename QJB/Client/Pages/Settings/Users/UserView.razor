@@ -1,0 +1,64 @@
+﻿@using  QJB.Shared
+
+<div>
+    <Drawer Closable="true" Width="720" Visible="_visible" Title='("用户信息")' OnClose="_evenCloseUserView">
+        <Template style="height:90%">
+            <Row Gutter="16">
+                <AntDesign.Col Span="12">
+                    <Text>用户账号</Text>
+                    <Input @bind-Value="@_userInfo.UserName"></Input>
+                </AntDesign.Col>
+                <AntDesign.Col Span="12">
+                    <Text>用户姓名</Text>
+                    <Input @bind-Value="@_userInfo.DisplayName"></Input>
+                </AntDesign.Col>
+            </Row>
+            <br />
+            <Row Gutter="16">
+                <AntDesign.Col Span="12">
+                    <Text>密码</Text>
+                    <Input TValue="string" />
+                </AntDesign.Col>
+                <AntDesign.Col Span="12">
+                    <Text>确认密码</Text>
+                    <Input TValue="string" />
+                </AntDesign.Col>
+            </Row>
+            <br />
+            <Row Gutter="16">
+                <AntDesign.Col Span="12">
+                    <Text>电话</Text>
+                    <Input @bind-Value="@_userInfo.Phone"></Input>
+                </AntDesign.Col>
+                <AntDesign.Col Span="12">
+                    <Text>性别</Text> 
+                    <RadioGroup @bind-Value="@_userInfo.Sex">
+                        <Radio Value="@("男")">男</Radio>
+                        <Radio Value="@("女")">女</Radio>
+                    </RadioGroup>
+                </AntDesign.Col>
+            </Row>
+            <br />
+            <Row>
+                <AntDesign.Col Span="18">
+                </AntDesign.Col>
+                <AntDesign.Col Span="6">
+                    <Button OnClick="_evenCloseUserView" Type="default">取消</Button>
+                    <Button Type="primary">确认</Button>
+                </AntDesign.Col>
+            </Row>
+        </Template>
+    </Drawer>
+</div>
+
+@code{
+
+    [Parameter]
+    public UserVModel _userInfo { get; set; }
+
+    [Parameter]
+    public bool _visible { get; set; }
+
+    [Parameter]
+    public EventCallback _evenCloseUserView { get; set; }
+}

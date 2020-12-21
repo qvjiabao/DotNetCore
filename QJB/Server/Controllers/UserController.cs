@@ -110,7 +110,7 @@ namespace QJB.Server.Controllers
         {
             var all = _userService.GetAllUsers(displayName);
 
-            var list = all.Skip(pageIndex * pageSize).Take(pageSize);
+            var list = all.Skip((pageIndex - 1) * pageSize).Take(pageSize);
 
             var convertList = _mapper.Map<IEnumerable<UserModel>, IEnumerable<UserVModel>>(list);
 

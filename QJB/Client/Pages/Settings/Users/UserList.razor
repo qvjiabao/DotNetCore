@@ -1,43 +1,39 @@
 ﻿@page "/Setting/User/UserList"
-
 @using QJB.Shared
-@using System.ComponentModel
-@using AntDesign.TableModels
-@using System.Collections;
-@using Newtonsoft.Json;
-@inject HttpClient http;
+
 <div style="margin: 0 0 20px 10px;">
     <Row>
         <Col Span="2">
         <Text Style="vertical-align:middle">用户姓名：</Text>
         </Col>
         <Col Span="6">
-        <Input Placeholder="large size" @bind-Value="@txtValue" />
+        <Input @bind-Value="@txtDisplayName" />
         </Col>
         <Col Offset="1" Span="7">
-        <Button Type="dashed" Icon="search">查询</Button>
-        <Button Type="dashed" Icon="redo">重置</Button>
+        <Button Type="dashed" OnClick="() => { this.OnInitializedAsync(); }" Icon="search">查询</Button>
+        <Button Type="dashed" OnClick="() => { this.txtDisplayName = string.Empty; this.OnInitializedAsync(); }" Icon="redo">重置</Button>
         </Col>
         <Col Offset="6" Span="2">
-        <Button Icon="plus" Type="primary">新增</Button>
+        <Button Icon="plus" Type="primary" @onclick="() => EventNew()">新增</Button>
         </Col>
     </Row>
 </div>
 
-<Table @ref="table" TItem="UserVModel" DataSource="@data" Total="_total" Style="height:500px;" Size="TableSize.Small"
+<Table @ref="table" TItem="UserVModel" DataSource="@data" Total="_total" Size="TableSize.Small"
+       OnPageIndexChange="() => { this.OnInitializedAsync(); }"
        @bind-PageIndex="_pageIndex"
-       @bind-PageSize="_pageSize"
-       @bind-SelectedRows="selectedRows">
+       @bind-PageSize="_pageSize">
     <Selection Key="@(context.UserCode)" />
-    <Column Title="用户编码" @bind-Field="@context.UserCode" />
-    <Column Title="用户姓名" @bind-Field="@context.UserName" />
+    <Column Style="display:none" Title="用户编码" @bind-Field="@context.UserCode" />
+    <Column Title="用户账号" @bind-Field="@context.UserName" />
+    <Column Title="用户姓名" @bind-Field="@context.DisplayName" />
     <Column Title="手机" @bind-Field="@context.Phone" />
     <Column Title="性别" @bind-Field="@context.Sex" />
     <Column Title="创建日期" @bind-Field="@context.CreateDate" Format="yyyy-MM-dd" />
     <ActionColumn Title="操作">
         <Space>
             <SpaceItem>
-                <Button Size="small" Type="link" Icon="edit">
+                <Button Size="small" Type="link" Icon="edit" OnClick="()=>EventEdit(context.UserCode)">
                     编辑
                 </Button>
                 <Button Size="small" Type="link" Danger Icon="delete">
@@ -47,6 +43,35 @@
         </Space>
     </ActionColumn>
 </Table>
+
+<UserView _visible="UserViewVisible" _evenCloseUserView="CloseUserView" _userInfo="user" />
+
+@code
+{
+    bool UserViewVisible;
+
+    UserVModel user = new UserVModel();
+
+    void CloseUserView()
+    {
+        UserViewVisible = false;
+    }
+
+    void EventNew()
+    {
+        user = new UserVModel();
+
+        UserViewVisible = true;
+    }
+
+    async Task EventEdit(string userCode)
+    {
+
+        user = await http.GetFromJsonAsync<UserVModel>($"User/GetUserByCode?userCode={userCode}");
+
+        UserViewVisible = true;
+    }
+}
 
 @*@if (selectedRows != null && selectedRows.Any())
     {
@@ -58,46 +83,3 @@
         }
     }*@
 
-@code {
-
-    string txtValue { get; set; }
-
-    IEnumerable<UserVModel> data;
-
-    IEnumerable<UserVModel> selectedRows;
-    ITable table;
-
-    int _pageIndex = 1;
-    int _pageSize = 10;
-    int _total = 0;
-
-    protected override async Task OnInitializedAsync()
-    {
-        await GetForecastAsync(_pageIndex, _pageSize);
-    }
-
-    public async Task GetForecastAsync(int pageIndex, int pageSize)
-    {
-        var str = await http.GetStringAsync("User/GetUserList");
-
-        var dic = JsonConvert.DeserializeObject<Dictionary<string, object>>(str);
-
-        _total = Convert.ToInt32(dic["total"]);
-
-        data = JsonConvert.DeserializeObject<IEnumerable<UserVModel>>(dic["data"].ToString());
-    }
-
-    public void RemoveSelection(string userCode)
-    {
-        //var selected = selectedRows.Where(x => x.Id != id);
-        //selectedRows = selected;
-
-        //table.SetSelection(selected.Select(x => x.Id.ToString()).ToArray());
-    }
-
-    private void Delete(string userCode)
-    {
-        //forecasts = forecasts.Where(x => x.Id != id).ToArray();
-        //_total = forecasts.Length;
-    }
-}
