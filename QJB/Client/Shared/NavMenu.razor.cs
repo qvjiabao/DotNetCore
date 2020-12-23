@@ -19,8 +19,6 @@ namespace QJB.Client.Shared
         protected override async Task OnInitializedAsync()
         {
             menuList = await Http.GetFromJsonAsync<IEnumerable<MenuVModel>>("Home/GetAllMenu");
-
-            base.OnInitializedAsync();
         }
     }
 }

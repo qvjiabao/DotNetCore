@@ -441,7 +441,6 @@ D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
-D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\doACWhWD.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\RB6UUz6n.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\MH3jVH44.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\43IVH65m.gz
@@ -466,7 +465,6 @@ D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\y0fgkWcN.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\+ZfBmO1V.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\eTnmw8xj.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\93ley5Nm.gz
-D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\+0uHkgM8.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\yBPyO8Km.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\f+T5PJg8.gz
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\KYxaQxjP.gz
@@ -653,3 +651,5 @@ D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\ref\QJB.Client.dll
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\QJB.Client.pdb
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Settings\Users\UserView.razor.g.cs
 D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\Razor\Pages\Settings\Users\UserView.razor.g.cs
+D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\Fom057sO.gz
+D:\git\DotNetCore\QJB\Client\obj\Debug\net5.0\build-gz\jqKXJpaA.gz

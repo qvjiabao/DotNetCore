@@ -1,57 +1,46 @@
 ﻿@using  QJB.Shared
+@using System.ComponentModel.DataAnnotations;
 
 <div>
-    <Drawer Closable="true" Width="720" Visible="_visible" Title='("用户信息")' OnClose="_evenCloseUserView">
-        <Template style="height:90%">
-            <Row Gutter="16">
-                <AntDesign.Col Span="12">
-                    <Text>用户账号</Text>
+    <Drawer Closable="true" Width="520" Visible="_visible" Title='("用户信息")' OnClose="_evenCloseUserView">
+        <Form Model="@_userInfo"
+              LabelColSpan="8"
+              WrapperColSpan="16"
+              OnFinish="_onFinish"
+              OnFinishFailed="_onFinishFailed">
+            <Validator>
+                <CustomValidator @ref="_customValidator" />
+            </Validator>
+            <ChildContent>
+                <FormItem Label="用户账号">
                     <Input @bind-Value="@_userInfo.UserName"></Input>
-                </AntDesign.Col>
-                <AntDesign.Col Span="12">
-                    <Text>用户姓名</Text>
+                </FormItem>
+                <FormItem Label="用户姓名">
                     <Input @bind-Value="@_userInfo.DisplayName"></Input>
-                </AntDesign.Col>
-            </Row>
-            <br />
-            <Row Gutter="16">
-                <AntDesign.Col Span="12">
-                    <Text>密码</Text>
-                    <Input TValue="string" />
-                </AntDesign.Col>
-                <AntDesign.Col Span="12">
-                    <Text>确认密码</Text>
-                    <Input TValue="string" />
-                </AntDesign.Col>
-            </Row>
-            <br />
-            <Row Gutter="16">
-                <AntDesign.Col Span="12">
-                    <Text>电话</Text>
+                </FormItem>
+                <FormItem Label="手机号">
                     <Input @bind-Value="@_userInfo.Phone"></Input>
-                </AntDesign.Col>
-                <AntDesign.Col Span="12">
-                    <Text>性别</Text> 
+                </FormItem>
+                <FormItem Label="性别">
                     <RadioGroup @bind-Value="@_userInfo.Sex">
                         <Radio Value="@("男")">男</Radio>
                         <Radio Value="@("女")">女</Radio>
                     </RadioGroup>
-                </AntDesign.Col>
-            </Row>
-            <br />
-            <Row>
-                <AntDesign.Col Span="18">
-                </AntDesign.Col>
-                <AntDesign.Col Span="6">
-                    <Button OnClick="_evenCloseUserView" Type="default">取消</Button>
-                    <Button Type="primary">确认</Button>
-                </AntDesign.Col>
-            </Row>
-        </Template>
+                </FormItem>
+                <FormItem WrapperColOffset="8" WrapperColSpan="16">
+                    <Input Type="hidden" @bind-Value="@_userInfo.UserCode"></Input>
+                    <Button Type="@ButtonType.Primary" HtmlType="submit">
+                        确认
+                    </Button>
+                </FormItem>
+            </ChildContent>
+        </Form>
     </Drawer>
 </div>
 
 @code{
+
+    private CustomValidator _customValidator { get; set; }
 
     [Parameter]
     public UserVModel _userInfo { get; set; }
@@ -61,4 +50,52 @@
 
     [Parameter]
     public EventCallback _evenCloseUserView { get; set; }
+
+    public void ClearErrors()
+    {
+        _customValidator.ClearErrors();
+    }
+
+    private void _onFinish(EditContext editContext)
+    {
+        _customValidator.ClearErrors();
+
+        var errors = new Dictionary<string, List<string>>();
+
+        if (string.IsNullOrEmpty(_userInfo.UserName))
+        {
+            errors.Add(nameof(_userInfo.UserName),
+                new List<string>() { "请输入用户账号" });
+        }
+
+        if (string.IsNullOrEmpty(_userInfo.DisplayName))
+        {
+            errors.Add(nameof(_userInfo.DisplayName),
+                new List<string>() { "请输入用户姓名" });
+        }
+
+        if (string.IsNullOrEmpty(_userInfo.Phone))
+        {
+            errors.Add(nameof(_userInfo.Phone),
+                new List<string>() { "请输入手机号" });
+        }
+
+        if (string.IsNullOrEmpty(_userInfo.Sex))
+        {
+            errors.Add(nameof(_userInfo.Sex),
+                new List<string>() { "请选择性别" });
+        }
+
+        if (errors.Count() > 0)
+        {
+            _customValidator.DisplayErrors(errors);
+        }
+        else
+        {
+            // Process the form
+        }
+    }
+
+    [Parameter]
+    public Action<EditContext> _onFinishFailed { get; set; }
 }

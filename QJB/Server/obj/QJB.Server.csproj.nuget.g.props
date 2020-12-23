@@ -16,7 +16,7 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)antdesign\0.4.1\buildTransitive\AntDesign.props" Condition="Exists('$(NuGetPackageRoot)antdesign\0.4.1\buildTransitive\AntDesign.props')" />
+    <Import Project="$(NuGetPackageRoot)antdesign\0.5.0-nightly-2012210946\buildTransitive\AntDesign.props" Condition="Exists('$(NuGetPackageRoot)antdesign\0.5.0-nightly-2012210946\buildTransitive\AntDesign.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_AspNetCore_Components_WebAssembly_Server Condition=" '$(PkgMicrosoft_AspNetCore_Components_WebAssembly_Server)' == '' ">C:\Users\Jabo\.nuget\packages\microsoft.aspnetcore.components.webassembly.server\5.0.1</PkgMicrosoft_AspNetCore_Components_WebAssembly_Server>

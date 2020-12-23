@@ -44,13 +44,15 @@
     </ActionColumn>
 </Table>
 
-<UserView _visible="UserViewVisible" _evenCloseUserView="CloseUserView" _userInfo="user" />
+<UserView _visible="UserViewVisible" @ref="userView" _evenCloseUserView="CloseUserView" _userInfo="user" />
 
 @code
 {
     bool UserViewVisible;
 
     UserVModel user = new UserVModel();
+
+    UserView userView;
 
     void CloseUserView()
     {
@@ -59,6 +61,8 @@
 
     void EventNew()
     {
+        userView.ClearErrors();
+
         user = new UserVModel();
 
         UserViewVisible = true;
@@ -66,6 +70,7 @@
 
     async Task EventEdit(string userCode)
     {
+        userView.ClearErrors();
 
         user = await http.GetFromJsonAsync<UserVModel>($"User/GetUserByCode?userCode={userCode}");
 

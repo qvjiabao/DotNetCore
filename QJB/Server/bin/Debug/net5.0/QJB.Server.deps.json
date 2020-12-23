@@ -326,20 +326,20 @@
           "QJB.Server.dll": {}
         }
       },
-      "AntDesign/0.4.1": {
+      "AntDesign/0.5.0-nightly-2012210946": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.DataAnnotations.Validation": "3.2.0-rc1.20223.4",
           "Microsoft.AspNetCore.Components.Web": "5.0.1",
-          "OneOf": "2.1.151"
+          "OneOf": "2.1.155"
         },
         "runtime": {
-          "lib/netstandard2.1/AntDesign.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "lib/net5.0/AntDesign.dll": {
+            "assemblyVersion": "0.5.0.0",
+            "fileVersion": "0.5.0.0"
           }
         },
         "compile": {
-          "lib/netstandard2.1/AntDesign.dll": {}
+          "lib/net5.0/AntDesign.dll": {}
         }
       },
       "Autofac/6.1.0": {
@@ -824,7 +824,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "OneOf/2.1.151": {
+      "OneOf/2.1.155": {
         "dependencies": {
           "NETStandard.Library": "1.6.1"
         },
@@ -1685,7 +1685,7 @@
       },
       "QJB.Client/1.0.0": {
         "dependencies": {
-          "AntDesign": "0.4.1",
+          "AntDesign": "0.5.0-nightly-2012210946",
           "Microsoft.AspNetCore.Components.WebAssembly": "5.0.1",
           "Newtonsoft.Json": "12.0.3",
           "QJB.Shared": "1.0.0",
@@ -3478,12 +3478,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AntDesign/0.4.1": {
+    "AntDesign/0.5.0-nightly-2012210946": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7NKkHJlrQ1QV6uqM0QHFwQli4ScC++E7dmuQi4AEN4HBqnMj5FNwjiCKUkpnqCsCn/xJx9fBwhrXDcvjxisIVg==",
-      "path": "antdesign/0.4.1",
-      "hashPath": "antdesign.0.4.1.nupkg.sha512"
+      "sha512": "sha512-Wujfl4+VTz3kyuQpsddqUkjtEGbeAIsYerZyMPEuwU4YdqnXw1htU+qxVMGoY+LT4ncysytyqptMbIcFr8fYwg==",
+      "path": "antdesign/0.5.0-nightly-2012210946",
+      "hashPath": "antdesign.0.5.0-nightly-2012210946.nupkg.sha512"
     },
     "Autofac/6.1.0": {
       "type": "package",
@@ -3793,12 +3793,12 @@
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
-    "OneOf/2.1.151": {
+    "OneOf/2.1.155": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FzxOPV99ChA2VBtXNnysfarco2ORJdiS+EJoMRFqaPfJRGIXNkS0/SL7sUFQa8Jo6/QMMKNJKdPNkis86LFAsA==",
-      "path": "oneof/2.1.151",
-      "hashPath": "oneof.2.1.151.nupkg.sha512"
+      "sha512": "sha512-CvfkeLFoSrlQAXVJ7Tv59G0M8V5cMhJJdr65jOS9ouThbsQ6GD67TWvLAH2RgV5JEvlHw83eyfD74cGygEKGrw==",
+      "path": "oneof/2.1.155",
+      "hashPath": "oneof.2.1.155.nupkg.sha512"
     },
     "protobuf-net/3.0.73": {
       "type": "package",

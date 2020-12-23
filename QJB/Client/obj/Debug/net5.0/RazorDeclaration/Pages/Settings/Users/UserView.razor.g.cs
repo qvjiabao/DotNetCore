@@ -96,6 +96,13 @@ using QJB.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserView.razor"
+using System.ComponentModel.DataAnnotations;
+
+#line default
+#line hidden
+#nullable disable
     public partial class UserView : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -104,8 +111,10 @@ using QJB.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 54 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserView.razor"
+#line 41 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserView.razor"
       
+
+    private CustomValidator _customValidator { get; set; }
 
     [Parameter]
     public UserVModel _userInfo { get; set; }
@@ -115,6 +124,54 @@ using QJB.Shared;
 
     [Parameter]
     public EventCallback _evenCloseUserView { get; set; }
+
+    public void ClearErrors()
+    {
+        _customValidator.ClearErrors();
+    }
+
+    private void _onFinish(EditContext editContext)
+    {
+        _customValidator.ClearErrors();
+
+        var errors = new Dictionary<string, List<string>>();
+
+        if (string.IsNullOrEmpty(_userInfo.UserName))
+        {
+            errors.Add(nameof(_userInfo.UserName),
+                new List<string>() { "请输入用户账号" });
+        }
+
+        if (string.IsNullOrEmpty(_userInfo.DisplayName))
+        {
+            errors.Add(nameof(_userInfo.DisplayName),
+                new List<string>() { "请输入用户姓名" });
+        }
+
+        if (string.IsNullOrEmpty(_userInfo.Phone))
+        {
+            errors.Add(nameof(_userInfo.Phone),
+                new List<string>() { "请输入手机号" });
+        }
+
+        if (string.IsNullOrEmpty(_userInfo.Sex))
+        {
+            errors.Add(nameof(_userInfo.Sex),
+                new List<string>() { "请选择性别" });
+        }
+
+        if (errors.Count() > 0)
+        {
+            _customValidator.DisplayErrors(errors);
+        }
+        else
+        {
+            // Process the form
+        }
+    }
+
+    [Parameter]
+    public Action<EditContext> _onFinishFailed { get; set; }
 
 #line default
 #line hidden

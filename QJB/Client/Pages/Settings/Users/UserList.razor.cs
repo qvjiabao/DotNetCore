@@ -11,21 +11,19 @@ using Newtonsoft.Json;
 using AntDesign;
 using System.Net.Http;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Forms;
 
 namespace QJB.Client.Pages.Settings.Users
 {
-    public partial class UserList
+    public partial class UserList 
     {
         private string txtDisplayName { get; set; }
 
         [Inject]
         private HttpClient http { get; set; }
-
         IEnumerable<UserVModel> data;
-
         IEnumerable<UserVModel> selectedRows;
         ITable table;
-
         int _pageIndex = 1;
         int _pageSize = 10;
         int _total = 0;

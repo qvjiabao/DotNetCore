@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8KMwiv1ycSubeNACANBH3HQmNsyJcm2sEY3DpNvg/q5wqatIgpr2UB+vq5IQ4doSbrZ2YKiYi9qdUUN1W5ToEA==",
+  "dgSpecHash": "n+wlXjmpwgrSn8dyq9kO6Q3wcfSSiGWuE50x5c78iFlDCiMFPZZK7VrHVolBnAxjDnXLMpMo8UDHWGZLnZzA8w==",
   "success": true,
   "projectFilePath": "D:\\git\\DotNetCore\\QJB\\Client\\QJB.Client.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Jabo\\.nuget\\packages\\antdesign\\0.4.1\\antdesign.0.4.1.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\antdesign\\0.5.0-nightly-2012210946\\antdesign.0.5.0-nightly-2012210946.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.1\\microsoft.aspnetcore.authorization.5.0.1.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.1\\microsoft.aspnetcore.components.5.0.1.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\5.0.1\\microsoft.aspnetcore.components.analyzers.5.0.1.nupkg.sha512",
@@ -35,7 +35,7 @@
     "C:\\Users\\Jabo\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\Jabo\\.nuget\\packages\\oneof\\2.1.151\\oneof.2.1.151.nupkg.sha512",
+    "C:\\Users\\Jabo\\.nuget\\packages\\oneof\\2.1.155\\oneof.2.1.155.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\runtime.any.system.collections\\4.3.0\\runtime.any.system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\runtime.any.system.diagnostics.tools\\4.3.0\\runtime.any.system.diagnostics.tools.4.3.0.nupkg.sha512",
     "C:\\Users\\Jabo\\.nuget\\packages\\runtime.any.system.diagnostics.tracing\\4.3.0\\runtime.any.system.diagnostics.tracing.4.3.0.nupkg.sha512",

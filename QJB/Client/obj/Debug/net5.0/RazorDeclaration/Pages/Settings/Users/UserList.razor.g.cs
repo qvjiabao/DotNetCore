@@ -111,13 +111,17 @@ using QJB.Shared;
 
     UserVModel user = new UserVModel();
 
+    UserView userView;
+
     void CloseUserView()
     {
         UserViewVisible = false;
     }
 
-    async Task EventNew()
+    void EventNew()
     {
+        userView.ClearErrors();
+
         user = new UserVModel();
 
         UserViewVisible = true;
@@ -125,6 +129,7 @@ using QJB.Shared;
 
     async Task EventEdit(string userCode)
     {
+        userView.ClearErrors();
 
         user = await http.GetFromJsonAsync<UserVModel>($"User/GetUserByCode?userCode={userCode}");
 
