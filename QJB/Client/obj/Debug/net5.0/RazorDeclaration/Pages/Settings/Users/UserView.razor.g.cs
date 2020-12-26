@@ -125,6 +125,9 @@ using System.ComponentModel.DataAnnotations;
     [Parameter]
     public EventCallback _evenCloseUserView { get; set; }
 
+    [Parameter]
+    public Action<EditContext> _onFinishFailed { get; set; }
+
     public void ClearErrors()
     {
         _customValidator.ClearErrors();
@@ -138,26 +141,22 @@ using System.ComponentModel.DataAnnotations;
 
         if (string.IsNullOrEmpty(_userInfo.UserName))
         {
-            errors.Add(nameof(_userInfo.UserName),
-                new List<string>() { "请输入用户账号" });
+            errors.Add(nameof(_userInfo.UserName), new List<string>() { "请输入用户账号" });
         }
 
         if (string.IsNullOrEmpty(_userInfo.DisplayName))
         {
-            errors.Add(nameof(_userInfo.DisplayName),
-                new List<string>() { "请输入用户姓名" });
+            errors.Add(nameof(_userInfo.DisplayName), new List<string>() { "请输入用户姓名" });
         }
 
         if (string.IsNullOrEmpty(_userInfo.Phone))
         {
-            errors.Add(nameof(_userInfo.Phone),
-                new List<string>() { "请输入手机号" });
+            errors.Add(nameof(_userInfo.Phone), new List<string>() { "请输入手机号" });
         }
 
         if (string.IsNullOrEmpty(_userInfo.Sex))
         {
-            errors.Add(nameof(_userInfo.Sex),
-                new List<string>() { "请选择性别" });
+            errors.Add(nameof(_userInfo.Sex), new List<string>() { "请选择性别" });
         }
 
         if (errors.Count() > 0)
@@ -169,9 +168,6 @@ using System.ComponentModel.DataAnnotations;
             // Process the form
         }
     }
-
-    [Parameter]
-    public Action<EditContext> _onFinishFailed { get; set; }
 
 #line default
 #line hidden

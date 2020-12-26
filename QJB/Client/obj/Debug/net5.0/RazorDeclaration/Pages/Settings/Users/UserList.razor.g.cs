@@ -96,6 +96,20 @@ using QJB.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserList.razor"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserList.razor"
+using QJB.Shared.Core;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/Setting/User/UserList")]
     public partial class UserList : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,17 +119,19 @@ using QJB.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 50 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserList.razor"
- 
-    bool UserViewVisible;
+#line 56 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserList.razor"
+      
 
+    string txtDisplayName;
+    PageProperty<UserVModel> property = new PageProperty<UserVModel>();
+    bool _userViewVisible;
+    ITable table;
     UserVModel user = new UserVModel();
-
     UserView userView;
 
     void CloseUserView()
     {
-        UserViewVisible = false;
+        _userViewVisible = false;
     }
 
     void EventNew()
@@ -124,21 +140,62 @@ using QJB.Shared;
 
         user = new UserVModel();
 
-        UserViewVisible = true;
+        _userViewVisible = true;
     }
 
-    async Task EventEdit(string userCode)
+    async Task EventEditInfo(string userCode)
     {
         userView.ClearErrors();
 
         user = await http.GetFromJsonAsync<UserVModel>($"User/GetUserByCode?userCode={userCode}");
 
-        UserViewVisible = true;
+        _userViewVisible = true;
+    }
+
+    async Task EventDeleteInfo(UserVModel user)
+    {
+        var responseMessage = await http.PostAsJsonAsync($"User/RemoveUserByCode", new List<UserVModel>() { user });
+
+        var strJson = await responseMessage.Content.ReadAsStringAsync();
+
+        var result = JsonConvert.DeserializeObject<HttpJsonResult>(strJson);
+
+        if (result.Result)
+        {
+            _message.Success(result.Message);
+            await GeInitData();
+        }
+        else
+        {
+            _message.Error(result.Message);
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GeInitData();
+    }
+
+    async Task GeInitData()
+    {
+        property.Loading = true;
+
+        var str = await http.GetStringAsync($"User/GetUserList?pageIndex={property.PageIndex}&pageSize={property.PageSize}&displayName={txtDisplayName}");
+
+        var dic = JsonConvert.DeserializeObject<Dictionary<string, object>>(str);
+
+        property.Total = Convert.ToInt32(dic["total"]);
+
+        property.GridData = JsonConvert.DeserializeObject<List<UserVModel>>(dic["data"].ToString());
+
+        property.Loading = false;
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private MessageService _message { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient http { get; set; }
     }
 }
 #pragma warning restore 1591

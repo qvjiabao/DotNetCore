@@ -7,7 +7,8 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using QJB.IServices;
-using QJB.Server.Result;
+using QJB.Server.Core;
+using QJB.Server.Core;
 
 namespace QJB.Server.Controllers
 {

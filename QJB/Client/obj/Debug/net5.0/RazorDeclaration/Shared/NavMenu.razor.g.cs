@@ -89,6 +89,13 @@ using AntDesign;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
+using QJB.Shared;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -97,9 +104,16 @@ using AntDesign;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 15 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
+#line 18 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
  
-    private RenderFragment TitleTemplate(string icon, string title)
+    private IEnumerable<MenuVModel> menuList = new List<MenuVModel>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        menuList = await Http.GetFromJsonAsync<IEnumerable<MenuVModel>>("Home/GetAllMenu");
+    }
+
+    RenderFragment TitleTemplate(string icon, string title)
     {
         return
 
@@ -112,7 +126,7 @@ using AntDesign;
             __builder2.OpenElement(2, "Icon");
             __builder2.AddAttribute(3, "Type", 
 #nullable restore
-#line 19 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
+#line 29 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
                     icon
 
 #line default
@@ -125,7 +139,7 @@ using AntDesign;
             __builder2.OpenElement(6, "span");
             __builder2.AddContent(7, 
 #nullable restore
-#line 20 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
+#line 30 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
                title
 
 #line default
@@ -137,13 +151,14 @@ using AntDesign;
             __builder2.CloseElement();
         }
 #nullable restore
-#line 21 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
+#line 31 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
            ;
 }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591

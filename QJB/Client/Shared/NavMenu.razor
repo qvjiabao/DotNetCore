@@ -1,4 +1,7 @@
-﻿<Menu Theme="MenuTheme.Dark" Mode="MenuMode.Inline">
+﻿@using QJB.Shared
+@inject HttpClient Http
+
+<Menu Theme="MenuTheme.Dark" Mode="MenuMode.Inline">
     @foreach (var item in menuList)
     {
         <SubMenu Key="@item.MenuGuid" TitleTemplate="TitleTemplate(item.Icon,item.Title)">
@@ -13,7 +16,14 @@
 
 @code
 {
-    private RenderFragment TitleTemplate(string icon, string title)
+    private IEnumerable<MenuVModel> menuList = new List<MenuVModel>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        menuList = await Http.GetFromJsonAsync<IEnumerable<MenuVModel>>("Home/GetAllMenu");
+    }
+
+    RenderFragment TitleTemplate(string icon, string title)
     {
         return@<span>
         <Icon Type=@icon Theme="outline"></Icon>

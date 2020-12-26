@@ -1,16 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 
-namespace QJB.Server.Result
+namespace QJB.Server.Core
 {
     /// <summary>
     /// 表示一个类，该类用于将 JSON 格式的内容发送到响应。
@@ -20,8 +17,6 @@ namespace QJB.Server.Result
         private const string _successMessageCode = "S000000";
         private const string _errorMessageCode = "E000000";
 
-        //返回值信息
-        //public  JsonMessageData Data = new JsonMessageData();
         /// <summary>
         /// 是否成功标志0:失败;1:成功
         /// </summary>
@@ -86,7 +81,7 @@ namespace QJB.Server.Result
             return this;
         }
 
-        public JsonHttpActionResult SucceedMessage(string message = "执行成功！")
+        public JsonHttpActionResult SucceedMessage(string message = "操作成功！")
         {
             SetResult(true)
             .SetMessage(message)

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using QJB.IServices;
 using QJB.Models;
-using QJB.Server.Result;
+using QJB.Server.Core;
 using QJB.Shared;
 using System;
 using System.Collections;
@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
 using System.Threading.Tasks;
+using QJB.Server.Core;
 
 namespace QJB.Server.Controllers
 {

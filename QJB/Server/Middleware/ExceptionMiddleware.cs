@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 using QJB.MongoDB.Model;
 using QJB.MongoDB.Model.AppSettings;
 using QJB.MongoDB.Repository;
-using QJB.Server.Result;
+using QJB.Server.Core;
 using QJB.Tools;
 using System;
 using System.Collections.Generic;

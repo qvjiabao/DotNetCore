@@ -14,7 +14,7 @@ using OfficeOpenXml.Style;
 using QJB.IServices;
 using QJB.Models;
 using QJB.Server.Controllers;
-using QJB.Server.Result;
+using QJB.Server.Core;
 using QJB.Shared;
 using QJB.Tools;
 

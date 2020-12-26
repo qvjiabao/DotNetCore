@@ -10,11 +10,12 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using AutoMapper;
 using QJB.Server.Controllers;
-using QJB.Server.Result;
+using QJB.Server.Core;
 using QJB.Shared;
 using QJB.IServices;
 using QJB.Models;
 using QJB.LogExtend;
+using QJB.Server.Core;
 
 namespace QJB.Server.Controllers
 {

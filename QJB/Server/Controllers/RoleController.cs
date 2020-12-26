@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using QJB.IServices;
 using QJB.Models;
 using QJB.Server.Controllers;
-using QJB.Server.Result;
+using QJB.Server.Core;
 using QJB.Shared;
 
 namespace QJB.Server.Controllers

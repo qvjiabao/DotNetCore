@@ -1,5 +1,9 @@
 ﻿@page "/Setting/User/UserList"
 @using QJB.Shared
+@using Newtonsoft.Json
+@using QJB.Shared.Core
+@inject HttpClient http
+@inject MessageService _message
 
 <div style="margin: 0 0 20px 10px;">
     <Row>
@@ -10,8 +14,8 @@
         <Input @bind-Value="@txtDisplayName" />
         </Col>
         <Col Offset="1" Span="7">
-        <Button Type="dashed" OnClick="() => { this.OnInitializedAsync(); }" Icon="search">查询</Button>
-        <Button Type="dashed" OnClick="() => { this.txtDisplayName = string.Empty; this.OnInitializedAsync(); }" Icon="redo">重置</Button>
+        <Button Type="dashed" OnClick="async () => { await this.GeInitData(); }" Icon="search">查询</Button>
+        <Button Type="dashed" OnClick="async () => { this.txtDisplayName = string.Empty;  await this.GeInitData(); }" Icon="redo">重置</Button>
         </Col>
         <Col Offset="6" Span="2">
         <Button Icon="plus" Type="primary" @onclick="() => EventNew()">新增</Button>
@@ -19,10 +23,10 @@
     </Row>
 </div>
 
-<Table @ref="table" TItem="UserVModel" DataSource="@data" Total="_total" Size="TableSize.Small"
-       OnPageIndexChange="() => { this.OnInitializedAsync(); }"
-       @bind-PageIndex="_pageIndex"
-       @bind-PageSize="_pageSize">
+<Table @ref="table" TItem="UserVModel" DataSource="@property.GridData" Total="property.Total" Size="TableSize.Small" Loading="property.Loading"
+       OnPageIndexChange=" async () => {await this.GeInitData(); }"
+       @bind-PageIndex="property.PageIndex"
+       @bind-PageSize="property.PageSize">
     <Selection Key="@(context.UserCode)" />
     <Column Style="display:none" Title="用户编码" @bind-Field="@context.UserCode" />
     <Column Title="用户账号" @bind-Field="@context.UserName" />
@@ -33,58 +37,78 @@
     <ActionColumn Title="操作">
         <Space>
             <SpaceItem>
-                <Button Size="small" Type="link" Icon="edit" OnClick="()=>EventEdit(context.UserCode)">
+                <Button Size="small" Type="link" Icon="edit" OnClick="()=>EventEditInfo(context.UserCode)">
                     编辑
                 </Button>
-                <Button Size="small" Type="link" Danger Icon="delete">
-                    删除
-                </Button>
+                <Popconfirm Title="您确定删除吗?"
+                            OnConfirm="()=>EventDeleteInfo(context)"
+                            OkText="确认"
+                            CancelText="取消">
+                    <Button Size="small" Type="link" Danger Icon="delete"> 删除</Button>
+                </Popconfirm>
             </SpaceItem>
         </Space>
     </ActionColumn>
 </Table>
 
-<UserView _visible="UserViewVisible" @ref="userView" _evenCloseUserView="CloseUserView" _userInfo="user" />
+<UserView _visible="_userViewVisible" @ref="userView" _evenCloseUserView="CloseUserView" _userInfo="user" />
 
-@code
-{
-    bool UserViewVisible;
+@code{
 
+    string txtDisplayName;
+    PageProperty<UserVModel> property = new PageProperty<UserVModel>();
+    bool _userViewVisible;
+    ITable table;
     UserVModel user = new UserVModel();
-
     UserView userView;
 
     void CloseUserView()
     {
-        UserViewVisible = false;
+        _userViewVisible = false;
     }
 
     void EventNew()
     {
         userView.ClearErrors();
-
         user = new UserVModel();
-
-        UserViewVisible = true;
+        _userViewVisible = true;
     }
 
-    async Task EventEdit(string userCode)
+    async Task EventEditInfo(string userCode)
     {
         userView.ClearErrors();
-
         user = await http.GetFromJsonAsync<UserVModel>($"User/GetUserByCode?userCode={userCode}");
+        _userViewVisible = true;
+    }
 
-        UserViewVisible = true;
+    async Task EventDeleteInfo(UserVModel user)
+    {
+        var responseMessage = await http.PostAsJsonAsync($"User/RemoveUserByCode", new List<UserVModel>() { user });
+        var strJson = await responseMessage.Content.ReadAsStringAsync();
+        var result = JsonConvert.DeserializeObject<HttpJsonResult>(strJson);
+        if (result.Result)
+        {
+            _message.Success(result.Message);
+            await GeInitData();
+        }
+        else
+        {
+            _message.Error(result.Message);
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GeInitData();
+    }
+
+    async Task GeInitData()
+    {
+        property.Loading = true;
+        var str = await http.GetStringAsync($"User/GetUserList?pageIndex={property.PageIndex}&pageSize={property.PageSize}&displayName={txtDisplayName}");
+        var dic = JsonConvert.DeserializeObject<Dictionary<string, object>>(str);
+        property.Total = Convert.ToInt32(dic["total"]);
+        property.GridData = JsonConvert.DeserializeObject<List<UserVModel>>(dic["data"].ToString());
+        property.Loading = false;
     }
 }
-
-@*@if (selectedRows != null && selectedRows.Any())
-    {
-        <Button Danger Size="small" OnClick="@(e => { selectedRows = null; })">Clear</Button>
-
-        @foreach (var selected in selectedRows)
-        {
-            <Tag @key="selected.Id" Closable OnClose="e=>RemoveSelection(selected.Id)">@selected.Id - @selected.Summary</Tag>
-        }
-    }*@
-
