@@ -6,3 +6,4 @@ D:\git\DotNetCore\QJB.LogExtend\obj\Debug\netstandard2.0\QJB.LogExtend.AssemblyI
 D:\git\DotNetCore\QJB.LogExtend\obj\Debug\netstandard2.0\QJB.LogExtend.csproj.CoreCompileInputs.cache
 D:\git\DotNetCore\QJB.LogExtend\obj\Debug\netstandard2.0\QJB.LogExtend.dll
 D:\git\DotNetCore\QJB.LogExtend\obj\Debug\netstandard2.0\QJB.LogExtend.pdb
+D:\git\DotNetCore\QJB.LogExtend\obj\Debug\netstandard2.0\QJB.LogExtend.csprojAssemblyReference.cache

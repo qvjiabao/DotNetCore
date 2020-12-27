@@ -14,8 +14,8 @@
         <Input @bind-Value="@txtDisplayName" />
         </Col>
         <Col Offset="1" Span="7">
-        <Button Type="dashed" OnClick="async () => { await this.GeInitData(); }" Icon="search">查询</Button>
-        <Button Type="dashed" OnClick="async () => { this.txtDisplayName = string.Empty;  await this.GeInitData(); }" Icon="redo">重置</Button>
+        <Button Type="dashed" OnClick="async () => { await this.InitDataGrid(); }" Icon="search">查询</Button>
+        <Button Type="dashed" OnClick="async () => { this.txtDisplayName = string.Empty;  await this.InitDataGrid(); }" Icon="redo">重置</Button>
         </Col>
         <Col Offset="6" Span="2">
         <Button Icon="plus" Type="primary" @onclick="() => EventNew()">新增</Button>
@@ -24,7 +24,7 @@
 </div>
 
 <Table @ref="table" TItem="UserVModel" DataSource="@property.GridData" Total="property.Total" Size="TableSize.Small" Loading="property.Loading"
-       OnPageIndexChange=" async () => {await this.GeInitData(); }"
+       OnPageIndexChange=" async () => {await this.InitDataGrid(); }"
        @bind-PageIndex="property.PageIndex"
        @bind-PageSize="property.PageSize">
     <Selection Key="@(context.UserCode)" />
@@ -51,7 +51,7 @@
     </ActionColumn>
 </Table>
 
-<UserView _visible="_userViewVisible" @ref="userView" _evenCloseUserView="CloseUserView" _userInfo="user" />
+<UserView _visible="_userViewVisible" @ref="userView" _evenCloseUserView="CloseUserView" _userInfo="user" _eventInitDataGrid="InitDataGrid" />
 
 @code{
 
@@ -89,7 +89,7 @@
         if (result.Result)
         {
             _message.Success(result.Message);
-            await GeInitData();
+            await InitDataGrid();
         }
         else
         {
@@ -99,10 +99,10 @@
 
     protected override async Task OnInitializedAsync()
     {
-        await GeInitData();
+        await InitDataGrid();
     }
 
-    async Task GeInitData()
+    async Task InitDataGrid()
     {
         property.Loading = true;
         var str = await http.GetStringAsync($"User/GetUserList?pageIndex={property.PageIndex}&pageSize={property.PageSize}&displayName={txtDisplayName}");
@@ -110,5 +110,6 @@
         property.Total = Convert.ToInt32(dic["total"]);
         property.GridData = JsonConvert.DeserializeObject<List<UserVModel>>(dic["data"].ToString());
         property.Loading = false;
+        _userViewVisible = false;
     }
 }

@@ -137,33 +137,26 @@ using QJB.Shared.Core;
     void EventNew()
     {
         userView.ClearErrors();
-
         user = new UserVModel();
-
         _userViewVisible = true;
     }
 
     async Task EventEditInfo(string userCode)
     {
         userView.ClearErrors();
-
         user = await http.GetFromJsonAsync<UserVModel>($"User/GetUserByCode?userCode={userCode}");
-
         _userViewVisible = true;
     }
 
     async Task EventDeleteInfo(UserVModel user)
     {
         var responseMessage = await http.PostAsJsonAsync($"User/RemoveUserByCode", new List<UserVModel>() { user });
-
         var strJson = await responseMessage.Content.ReadAsStringAsync();
-
         var result = JsonConvert.DeserializeObject<HttpJsonResult>(strJson);
-
         if (result.Result)
         {
             _message.Success(result.Message);
-            await GeInitData();
+            await InitDataGrid();
         }
         else
         {
@@ -173,22 +166,18 @@ using QJB.Shared.Core;
 
     protected override async Task OnInitializedAsync()
     {
-        await GeInitData();
+        await InitDataGrid();
     }
 
-    async Task GeInitData()
+    async Task InitDataGrid()
     {
         property.Loading = true;
-
         var str = await http.GetStringAsync($"User/GetUserList?pageIndex={property.PageIndex}&pageSize={property.PageSize}&displayName={txtDisplayName}");
-
         var dic = JsonConvert.DeserializeObject<Dictionary<string, object>>(str);
-
         property.Total = Convert.ToInt32(dic["total"]);
-
         property.GridData = JsonConvert.DeserializeObject<List<UserVModel>>(dic["data"].ToString());
-
         property.Loading = false;
+        _userViewVisible = false;
     }
 
 #line default

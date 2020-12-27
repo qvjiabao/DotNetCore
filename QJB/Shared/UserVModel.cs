@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QJB.Shared.Attribute;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace QJB.Shared
         public string UserCode { get; set; }
 
         [Required]
+        [Disabled(Disabled = true)]
         public string UserName { get; set; }
 
         [Required]

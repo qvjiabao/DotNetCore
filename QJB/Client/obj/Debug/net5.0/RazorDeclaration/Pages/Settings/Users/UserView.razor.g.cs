@@ -98,7 +98,21 @@ using QJB.Shared;
 #nullable disable
 #nullable restore
 #line 2 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserView.razor"
-using System.ComponentModel.DataAnnotations;
+using QJB.Shared.Core;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserView.razor"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserView.razor"
+using QJB.Shared.Attribute.Common;
 
 #line default
 #line hidden
@@ -111,7 +125,7 @@ using System.ComponentModel.DataAnnotations;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 41 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserView.razor"
+#line 45 "D:\git\DotNetCore\QJB\Client\Pages\Settings\Users\UserView.razor"
       
 
     private CustomValidator _customValidator { get; set; }
@@ -126,6 +140,9 @@ using System.ComponentModel.DataAnnotations;
     public EventCallback _evenCloseUserView { get; set; }
 
     [Parameter]
+    public EventCallback _eventInitDataGrid { get; set; }
+
+    [Parameter]
     public Action<EditContext> _onFinishFailed { get; set; }
 
     public void ClearErrors()
@@ -133,7 +150,7 @@ using System.ComponentModel.DataAnnotations;
         _customValidator.ClearErrors();
     }
 
-    private void _onFinish(EditContext editContext)
+    private async Task _onFinish(EditContext editContext)
     {
         _customValidator.ClearErrors();
 
@@ -165,13 +182,27 @@ using System.ComponentModel.DataAnnotations;
         }
         else
         {
-            // Process the form
+            var responseMessage = await http.PostAsJsonAsync($"User/SaveUserInfo", _userInfo);
+            var strJson = await responseMessage.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<HttpJsonResult>(strJson);
+            if (result.Result)
+            {
+                _message.Success(result.Message);
+                _evenCloseUserView.InvokeAsync();
+                _eventInitDataGrid.InvokeAsync();
+            }
+            else
+            {
+                _message.Error(result.Message);
+            }
         }
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private MessageService _message { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient http { get; set; }
     }
 }
 #pragma warning restore 1591

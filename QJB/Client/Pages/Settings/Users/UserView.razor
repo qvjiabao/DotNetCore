@@ -1,5 +1,9 @@
 ﻿@using  QJB.Shared
-@using System.ComponentModel.DataAnnotations;
+@using  QJB.Shared.Core
+@using Newtonsoft.Json
+@using QJB.Shared.Attribute.Common
+@inject HttpClient http
+@inject MessageService _message
 
 <div>
     <Drawer Closable="true" Width="520" Visible="_visible" Title='("用户信息")' OnClose="_evenCloseUserView">
@@ -13,7 +17,7 @@
             </Validator>
             <ChildContent>
                 <FormItem Label="用户账号">
-                    <Input @bind-Value="@_userInfo.UserName"></Input>
+                    <Input @bind-Value="@_userInfo.UserName" Disabled="!string.IsNullOrEmpty(_userInfo.UserCode)"></Input>
                 </FormItem>
                 <FormItem Label="用户姓名">
                     <Input @bind-Value="@_userInfo.DisplayName"></Input>
@@ -52,6 +56,9 @@
     public EventCallback _evenCloseUserView { get; set; }
 
     [Parameter]
+    public EventCallback _eventInitDataGrid { get; set; }
+
+    [Parameter]
     public Action<EditContext> _onFinishFailed { get; set; }
 
     public void ClearErrors()
@@ -59,7 +66,7 @@
         _customValidator.ClearErrors();
     }
 
-    private void _onFinish(EditContext editContext)
+    private async Task _onFinish(EditContext editContext)
     {
         _customValidator.ClearErrors();
 
@@ -91,7 +98,19 @@
         }
         else
         {
-            // Process the form
+            var responseMessage = await http.PostAsJsonAsync($"User/SaveUserInfo", _userInfo);
+            var strJson = await responseMessage.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<HttpJsonResult>(strJson);
+            if (result.Result)
+            {
+                _message.Success(result.Message);
+                _evenCloseUserView.InvokeAsync();
+                _eventInitDataGrid.InvokeAsync();
+            }
+            else
+            {
+                _message.Error(result.Message);
+            }
         }
     }
 }
