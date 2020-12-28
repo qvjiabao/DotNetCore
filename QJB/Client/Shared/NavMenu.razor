@@ -1,22 +1,24 @@
 ﻿@using QJB.Shared
 @inject HttpClient Http
 
-<Menu Theme="MenuTheme.Dark" Mode="MenuMode.Inline">
-    @foreach (var item in menuList)
-    {
-        <SubMenu Key="@item.MenuGuid" TitleTemplate="TitleTemplate(item.Icon,item.Title)">
+@if (menuList != null)
+{
+    <Menu Theme="MenuTheme.Dark" Mode="MenuMode.Inline">
+        @foreach (var item in menuList)
+        {
+            <SubMenu Key="@item.MenuGuid" TitleTemplate="TitleTemplate(item.Icon,item.Title)">
 
-            @foreach (var subItem in item.Children)
-            {
-                <MenuItem RouterMatch="NavLinkMatch.All" RouterLink="@subItem.Url" Key="@subItem.MenuGuid">@subItem.Title</MenuItem>
-            }
-        </SubMenu>
-    }
-</Menu>
-
+                @foreach (var subItem in item.Children)
+                {
+                    <MenuItem RouterMatch="NavLinkMatch.All" RouterLink="@subItem.Url" Key="@subItem.MenuGuid">@subItem.Title</MenuItem>
+                }
+            </SubMenu>
+        }
+    </Menu>
+}
 @code
 {
-    private IEnumerable<MenuVModel> menuList = new List<MenuVModel>();
+    IEnumerable<MenuVModel> menuList;
 
     protected override async Task OnInitializedAsync()
     {

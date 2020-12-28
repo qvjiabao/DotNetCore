@@ -104,9 +104,9 @@ using QJB.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 18 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
+#line 20 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
  
-    private IEnumerable<MenuVModel> menuList = new List<MenuVModel>();
+    IEnumerable<MenuVModel> menuList;
 
     protected override async Task OnInitializedAsync()
     {
@@ -126,7 +126,7 @@ using QJB.Shared;
             __builder2.OpenElement(2, "Icon");
             __builder2.AddAttribute(3, "Type", 
 #nullable restore
-#line 29 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
+#line 31 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
                     icon
 
 #line default
@@ -139,7 +139,7 @@ using QJB.Shared;
             __builder2.OpenElement(6, "span");
             __builder2.AddContent(7, 
 #nullable restore
-#line 30 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
+#line 32 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
                title
 
 #line default
@@ -151,7 +151,7 @@ using QJB.Shared;
             __builder2.CloseElement();
         }
 #nullable restore
-#line 31 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
+#line 33 "D:\git\DotNetCore\QJB\Client\Shared\NavMenu.razor"
            ;
 }
 
