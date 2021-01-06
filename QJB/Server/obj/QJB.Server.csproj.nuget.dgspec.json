@@ -73,6 +73,71 @@
         }
       }
     },
+    "D:\\git\\DotNetCore\\QJB.Elasticsearch\\QJB.Elasticsearch.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\DotNetCore\\QJB.Elasticsearch\\QJB.Elasticsearch.csproj",
+        "projectName": "QJB.Elasticsearch",
+        "projectPath": "D:\\git\\DotNetCore\\QJB.Elasticsearch\\QJB.Elasticsearch.csproj",
+        "packagesPath": "C:\\Users\\Jabo\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\DotNetCore\\QJB.Elasticsearch\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.10.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\git\\DotNetCore\\QJB.ImplRepository\\QJB.ImplRepository.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -723,6 +788,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "D:\\git\\DotNetCore\\QJB.Elasticsearch\\QJB.Elasticsearch.csproj": {
+                "projectPath": "D:\\git\\DotNetCore\\QJB.Elasticsearch\\QJB.Elasticsearch.csproj"
+              },
               "D:\\git\\DotNetCore\\QJB.ImplRepository\\QJB.ImplRepository.csproj": {
                 "projectPath": "D:\\git\\DotNetCore\\QJB.ImplRepository\\QJB.ImplRepository.csproj"
               },

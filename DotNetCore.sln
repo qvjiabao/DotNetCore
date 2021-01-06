@@ -36,6 +36,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QJB.MongoDB", "QJB.MongoDB\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QJB.ImplServices", "QJB.ImplServices\QJB.ImplServices.csproj", "{4FA48F5E-EA0F-41C7-8A60-DB09247E03E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QJB.Elasticsearch", "QJB.Elasticsearch\QJB.Elasticsearch.csproj", "{20A5F38D-DBF9-49C3-AD3F-2C416E5C4678}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +92,10 @@ Global
 		{4FA48F5E-EA0F-41C7-8A60-DB09247E03E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FA48F5E-EA0F-41C7-8A60-DB09247E03E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FA48F5E-EA0F-41C7-8A60-DB09247E03E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20A5F38D-DBF9-49C3-AD3F-2C416E5C4678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20A5F38D-DBF9-49C3-AD3F-2C416E5C4678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20A5F38D-DBF9-49C3-AD3F-2C416E5C4678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20A5F38D-DBF9-49C3-AD3F-2C416E5C4678}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,6 +113,7 @@ Global
 		{DAB77E77-1096-4387-90F0-D9682034C903} = {FD6631AC-34DE-4E54-B9B9-733726824595}
 		{496590A0-50B5-4FF6-8662-E90C27543471} = {FD6631AC-34DE-4E54-B9B9-733726824595}
 		{4FA48F5E-EA0F-41C7-8A60-DB09247E03E4} = {FE8B6C17-A63A-4F4C-850C-CAD58D6ADE13}
+		{20A5F38D-DBF9-49C3-AD3F-2C416E5C4678} = {FD6631AC-34DE-4E54-B9B9-733726824595}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3527AD37-31E6-4830-A8CF-D675A5E34E4F}

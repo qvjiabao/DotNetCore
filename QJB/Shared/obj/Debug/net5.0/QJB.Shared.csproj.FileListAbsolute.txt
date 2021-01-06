@@ -2,7 +2,6 @@ D:\git\DotNetCore\QJB\Shared\bin\Debug\net5.0\QJB.Shared.deps.json
 D:\git\DotNetCore\QJB\Shared\bin\Debug\net5.0\QJB.Shared.dll
 D:\git\DotNetCore\QJB\Shared\bin\Debug\net5.0\ref\QJB.Shared.dll
 D:\git\DotNetCore\QJB\Shared\bin\Debug\net5.0\QJB.Shared.pdb
-D:\git\DotNetCore\QJB\Shared\obj\Debug\net5.0\QJB.Shared.csprojAssemblyReference.cache
 D:\git\DotNetCore\QJB\Shared\obj\Debug\net5.0\QJB.Shared.GeneratedMSBuildEditorConfig.editorconfig
 D:\git\DotNetCore\QJB\Shared\obj\Debug\net5.0\QJB.Shared.AssemblyInfoInputs.cache
 D:\git\DotNetCore\QJB\Shared\obj\Debug\net5.0\QJB.Shared.AssemblyInfo.cs

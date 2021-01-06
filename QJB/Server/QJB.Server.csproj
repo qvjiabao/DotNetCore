@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\QJB.Elasticsearch\QJB.Elasticsearch.csproj" />
     <ProjectReference Include="..\..\QJB.ImplRepository\QJB.ImplRepository.csproj" />
     <ProjectReference Include="..\..\QJB.ImplServices\QJB.ImplServices.csproj" />
     <ProjectReference Include="..\..\QJB.IRepository\QJB.IRepository.csproj" />

@@ -104,3 +104,7 @@ D:\git\DotNetCore\QJB\Server\obj\Debug\net5.0\QJB.Server.dll
 D:\git\DotNetCore\QJB\Server\obj\Debug\net5.0\ref\QJB.Server.dll
 D:\git\DotNetCore\QJB\Server\obj\Debug\net5.0\QJB.Server.pdb
 D:\git\DotNetCore\QJB\Server\obj\Debug\net5.0\QJB.Server.genruntimeconfig.cache
+D:\git\DotNetCore\QJB\Server\bin\Debug\net5.0\Elasticsearch.Net.dll
+D:\git\DotNetCore\QJB\Server\bin\Debug\net5.0\Nest.dll
+D:\git\DotNetCore\QJB\Server\bin\Debug\net5.0\QJB.Elasticsearch.dll
+D:\git\DotNetCore\QJB\Server\bin\Debug\net5.0\QJB.Elasticsearch.pdb

@@ -10,6 +10,10 @@ using QJB.Server.Profile;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using QJB.Server.Autofac;
+using QJB.Elasticsearch.Config;
+using QJB.Elasticsearch.Base;
+using System.Reflection;
+using System;
 
 namespace QJB.Server
 {
@@ -29,6 +33,16 @@ namespace QJB.Server
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddAutoMapper(typeof(AutoMapperProfile));
+
+            services.Configure<EsConfig>(options =>
+                  {
+                      options.Urls = Configuration.GetSection("EsConfig:ConnectionStrings").GetChildren().ToList().Select(p => p.Value).ToList();
+
+                  });
+
+            services.AddSingleton<IEsClientProvider, EsClientProvider>();
+            var types = Assembly.GetEntryAssembly().GetTypes().Where(p => !p.IsAbstract && (p.GetInterfaces().Any(i => i == typeof(IBaseEsContext)))).ToList();
+            types.ForEach(p => services.AddTransient(p));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
